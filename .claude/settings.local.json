@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C \"d:/GitHub/Doc\" log --oneline -10)"
+      "Bash(git -C \"d:/GitHub/Doc\" log --oneline -10)",
+      "Bash(git fetch origin)",
+      "Bash(git ls-tree -r origin/main --name-only)"
     ]
   }
 }
