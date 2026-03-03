@@ -1,0 +1,9 @@
+{
+    "db_path": "./chroma_db",
+    "collection_name": "knowledge_base",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "embedding_model": "default",
+    "claude_api_key": null,
+    "claude_model": "claude-sonnet-4-20250514"
+}
