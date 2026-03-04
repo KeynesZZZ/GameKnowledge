@@ -170,4 +170,4 @@ All documents are written in **Chinese (Simplified)**. When editing or creating 
 | **Ask AI question** | `cd tools/knowledge_base && python knowledge_base.py ask "<question>"` |
 | **Import new docs** | `cd tools/knowledge_base && python knowledge_base.py import <path>` |
 | **Check knowledge status** | `cd tools/knowledge_base && python knowledge_base.py status` |
-| **Setup private RAG** | Read [个人知识库搭建.md](e:\Other\Doc\个人知识库搭建.md) for Dify + Ollama guide |
+| **Setup private RAG** | Read `个人知识库搭建.md` for Dify + Ollama guide |

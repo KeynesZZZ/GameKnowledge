@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls -d 学习/*/)"
+      "Bash(ls -d 学习/*/)",
+      "Read(//Users/keynes/git/Doc/**)",
+      "Bash(done)",
+      "Read(//Users/keynes/git/Doc/UnityKnowledge/10_架构设计/**)",
+      "Bash(ls -la *.md)"
+    ],
+    "additionalDirectories": [
+      "/[[设计原理-为什么要用设计模式]]",
+      "/[[最佳实践-单例模式]]",
+      "/[[架构演进-从Demo到量产]]"
     ]
   }
 }

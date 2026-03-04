@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "d545bd2454aefd11",
+    "type": "split",
+    "children": [
+      {
+        "id": "c875201407e37ceb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7f74bab78169ccbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_元数据与模板/元数据规范.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "元数据规范"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a73946dfaedb842b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea83460495753cc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7dd16ee1098b9d26",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "fbda868ec8e7277d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "81669d85f57b4f15",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e2d74f676e4cf367",
+    "type": "split",
+    "children": [
+      {
+        "id": "f679a8e0ef196013",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a889887476681d0b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "00_元数据与模板/元数据规范.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "元数据规范 的反向链接列表"
+            }
+          },
+          {
+            "id": "a1a91f012e3dc868",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "00_元数据与模板/元数据规范.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "元数据规范 的出链列表"
+            }
+          },
+          {
+            "id": "70e1417bc9155315",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "5087a3e161d4c4a1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "56afe6f06ba2c1f9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "00_元数据与模板/元数据规范.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "元数据规范 的大纲"
+            }
+          },
+          {
+            "id": "6f3fb51ca4ba3ea2",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "7f74bab78169ccbf",
+  "lastOpenFiles": [
+    "other/开发规则清单.md",
+    "other/个人知识库搭建.md",
+    "other/知识库完善方案.md",
+    "other",
+    "00_元数据与模板/模板-Bug记录.md",
+    "00_元数据与模板/模板-性能分析.md",
+    "00_元数据与模板/模板-通用编程笔记.md",
+    "00_元数据与模板/模板-代码片段.md",
+    "00_元数据与模板/开发规则清单.md",
+    "未命名.canvas",
+    "未命名 1.base",
+    "未命名.base",
+    "20_核心系统/物理系统/物理材质与摩擦力.md",
+    "10_架构设计/代码片段-策略模式.md",
+    "00_元数据与模板/标签体系.md"
+  ]
+}
