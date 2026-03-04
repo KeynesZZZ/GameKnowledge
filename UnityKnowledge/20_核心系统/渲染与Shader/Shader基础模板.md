@@ -631,6 +631,6 @@ Shader "Custom/UI/Mask"
 
 ## 相关链接
 
-- 深入学习: [HLSL与Shader基础](../../../学习/02-渲染与图形/HLSL与Shader基础.md)
-- URP: [URP_Lit_Shader](../../../学习/02-渲染与图形/URP_Lit_Shader.md)
-- 渲染管线: [渲染管线基础](../../../学习/02-渲染与图形/渲染管线基础.md)
+- 深入学习: [HLSL与Shader基础](../../20_核心系统/渲染系统/教程-HLSL与Shader基础.md)
+- URP: [URP_Lit_Shader](../../20_核心系统/渲染系统/教程-URP_Lit_Shader.md)
+- 渲染管线: [渲染管线基础](../../20_核心系统/渲染系统/教程-渲染管线基础.md)

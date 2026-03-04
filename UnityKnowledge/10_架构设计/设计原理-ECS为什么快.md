@@ -455,4 +455,4 @@ public struct MovementSystem : ISystem
 
 - [[教程-ECS入门与迁移指南]]
 - [[设计原理-为什么要用设计模式]]
-- [学习/07-DOTS技术栈](../../../学习/07-DOTS技术栈/)
+- [学习/07-DOTS技术栈](../../25_DOTS技术栈/教程-)

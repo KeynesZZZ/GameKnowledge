@@ -551,4 +551,4 @@ foreach (var kvp in new Dictionary<int, string>(dict))
 
 - 最佳实践: [GC优化清单](../内存管理/最佳实践-GC优化清单.md)
 - 性能数据: [foreach vs for](性能数据-foreach-vs-for.md)
-- 深入学习: [C#高级编程](../../../学习/06-高级编程/)
+- 深入学习: [C#高级编程](../../36_高级编程/教程-)

@@ -1,3 +1,13 @@
+---
+title: 【教程】Unity脚本生命周期
+tags: [C#, Unity, 架构, 教程, MonoBehaviour, 生命周期, Unity基础]
+category: 架构设计/教程
+created: 2024-01-02 09:00
+updated: 2026-03-04 23:00
+description: 深入理解Unity脚本生命周期，包含Awake、Start、Update等函数的执行顺序和最佳实践
+unity_version: 2021.3+
+---
+
 # Unity脚本生命周期深度解析
 
 > 第1课 | 脚本与架构模块

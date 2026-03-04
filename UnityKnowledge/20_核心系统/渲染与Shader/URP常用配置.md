@@ -390,6 +390,6 @@ public class DynamicResolution : MonoBehaviour
 
 ## 相关链接
 
-- 深入学习: [渲染管线基础](../../../学习/02-渲染与图形/渲染管线基础.md)
+- 深入学习: [渲染管线基础](../../20_核心系统/渲染系统/教程-渲染管线基础.md)
 - Shader: [Shader基础模板](Shader基础模板.md)
-- 后处理: [后处理(Post Processing)](../../../学习/02-渲染与图形/后处理(Post%20Processing).md)
+- 后处理: [后处理(Post Processing)](../../20_核心系统/渲染系统/教程-后处理(Post%20Processing).md)

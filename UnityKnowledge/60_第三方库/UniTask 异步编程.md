@@ -555,4 +555,4 @@ await UniTask.Delay(1000).AttachExternalTrace("MyDelay");
 ## 相关链接
 
 - GitHub: [UniTask](https://github.com/Cysharp/UniTask)
-- 高级编程: [高级编程学习路径](../../学习/06-高级编程/高级编程_学习路径.md)
+- 高级编程: [高级编程学习路径](../36_高级编程/教程-高级编程_学习路径.md)

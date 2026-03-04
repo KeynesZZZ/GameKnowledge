@@ -1,1 +1,8 @@
-{}
+{
+  "theme": "system",
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "baseFontSize": 19,
+  "baseFontSizeAction": true,
+  "translucency": false
+}
