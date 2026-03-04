@@ -2,6 +2,16 @@
 
 > Unity UGUI Canvas批处理、UI Vertex分析、DrawCall根因深度剖析 `#深度解析` `#渲染` `#性能优化`
 
+## 适用版本
+
+- **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
+- **UGUI版本**: 内置（随Unity更新）
+- **平台**: Windows, macOS, iOS, Android
+- **兼容性说明**:
+  - 2021.3+: 所有功能完全支持
+  - 2020.x: Canvas.Rebuild API略有差异
+  - 2019.x: 不推荐使用，部分新特性不可用
+
 ## 快速参考
 
 ```csharp

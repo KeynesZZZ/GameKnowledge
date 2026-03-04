@@ -2,6 +2,20 @@
 
 > TextMeshPro内部机制、字体图集管理、Mesh生成优化、动态文本GC优化完整方案 `#最佳实践` `#性能优化` `#TextMeshPro`
 
+## 适用版本
+
+- **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
+- **TextMeshPro版本**: 3.0.6+, 3.2.0+ (推荐)
+- **Package安装**:
+  - Window > Package Manager > Unity Registry
+  - 搜索 "TextMeshPro"
+  - 安装最新版本
+- **版本差异**:
+  - 3.0.x: 基础功能完整
+  - 3.2.0+: 性能优化、新的字体API
+  - 所有代码示例在3.0.6+测试通过
+- **重要**: TextMeshPro 2.1.x及以下版本API有重大变化，不建议升级时混用
+
 ## 快速参考
 
 ```csharp

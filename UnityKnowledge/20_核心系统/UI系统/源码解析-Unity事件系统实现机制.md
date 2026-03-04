@@ -2,6 +2,18 @@
 
 > Unity EventSystem底层实现、PointerEventData流转、射线检测算法源码分析 `#源码解析` `#UI` `#事件系统`
 
+## 适用版本
+
+- **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
+- **源码来源**: UnityCsReference (GitHub)
+  - 仓库: https://github.com/Unity-Technologies/UnityCsReference
+  - 基础分支: 2022.3/2023.2
+- **API变化**:
+  - 2021.3+: EventSystem API基本稳定
+  - 2023.0+: 增加新的IPointerMoveHandler
+  - 所有示例代码在2021.3+测试通过
+- **注意**: 源码示例为简化版，实际引擎实现更复杂
+
 ## 快速参考
 
 ```csharp

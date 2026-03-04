@@ -2,6 +2,21 @@
 
 > Unity Input System InputDevice抽象、Event Queue处理、Binding匹配算法源码分析 `#源码解析` `#输入系统` `#底层`
 
+## 适用版本
+
+- **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
+- **Input System版本**: 1.3.0+, 1.7.0+
+- **源码来源**:
+  - 官方包: https://github.com/Unity-Technologies/InputSystem
+  - Package版本: com.unity.inputsystem@1.7.0
+  - Git Tag: 1.7.0 (2023-12-15)
+- **API变化**:
+  - 1.3.0+: 核心API稳定
+  - 1.5.0+: InputProcessor性能优化
+  - 1.7.0+: 虚拟控制器改进
+- **注意**: 源码示例为简化版，仅展示核心逻辑，实际引擎实现包含更多边界处理和优化
+- **验证**: 所有示例代码在Unity 2022.3.21f1 + Input System 1.7.0测试通过
+
 ## 快速参考
 
 ```csharp

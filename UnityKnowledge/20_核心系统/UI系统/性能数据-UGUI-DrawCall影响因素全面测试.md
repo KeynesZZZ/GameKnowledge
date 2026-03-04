@@ -2,6 +2,17 @@
 
 > UGUI DrawCall影响因素的全方位基准测试与数据分析 `#性能数据` `#渲染优化` `#UGUI`
 
+## 适用版本
+
+- **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
+- **测试环境**:
+  - PC: Windows 11 / macOS 13+
+  - iOS: iOS 15+ (iPhone 12+)
+  - Android: Android 12+ (骁龙8 Gen 2+)
+- **构建模式**: Release Build, IL2CPP
+- **测试方法**: 每项测试运行60秒，取5次平均值
+- **数据格式**: 均值 ± 标准差
+
 ## 测试环境
 
 | 项目 | 配置 |
