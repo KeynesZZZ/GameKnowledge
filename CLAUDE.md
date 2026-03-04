@@ -49,9 +49,17 @@ UnityKnowledge/
 
 Chinese translation of Unity Entities 1.3.2 documentation (ChatGPT-translated with additional explanations).
 
+**Online version**: https://zhangkeng.gitbook.io/entities-zhong-wen-fan-yi/
+
 ### 4. `tools/knowledge_base/` - Semantic Search Tool
 
 ChromaDB-based knowledge management for semantic search and RAG Q&A.
+
+**Prerequisites**: Requires Python 3.8+ and dependencies (`pip install chromadb anthropic`)
+
+### 5. `个人知识库搭建.md` - Private Knowledge Base Setup
+
+Guide for setting up a private RAG system using Dify + Ollama for local AI-powered knowledge management.
 
 ## When to Use Which Directory
 
@@ -91,6 +99,15 @@ Identified by filename prefix:
 - `系统架构-*` - System architecture overviews
 - `实战案例-*` - Real-world case studies
 
+### Unity Version Coverage
+
+Documentation primarily covers **Unity 2021.3 LTS** and later versions, including:
+- Unity 2021.3 LTS (Linerenderer & URP)
+- Unity 2022.3 LTS (URP & HDRP)
+- Unity 6 (when applicable)
+
+When creating code examples, specify the minimum Unity version required if using features from specific versions.
+
 ### Tag System
 
 Documents in `UnityKnowledge/` use tags (defined in `00_元数据与模板/标签体系.md`):
@@ -102,7 +119,19 @@ Documents in `UnityKnowledge/` use tags (defined in `00_元数据与模板/标�
 
 ## Knowledge Base Tool
 
-Located at `tools/knowledge_base/`. Commands:
+Located at `tools/knowledge_base/`.
+
+### Prerequisites
+
+```bash
+# Install Python dependencies
+pip install chromadb anthropic
+
+# Configure API key in config.json or set environment variable
+export ANTHROPIC_API_KEY="your-api-key-here"
+```
+
+### Common Commands
 
 ```bash
 # Import documents
@@ -132,3 +161,13 @@ All documents are written in **Chinese (Simplified)**. When editing or creating 
 3. Add at least 2 tags to UnityKnowledge documents
 4. Include Unity version compatibility
 5. Update relevant README files
+
+## Quick Tasks
+
+| Task | Command |
+|------|---------|
+| **Search knowledge base** | `cd tools/knowledge_base && python knowledge_base.py search "<query>"` |
+| **Ask AI question** | `cd tools/knowledge_base && python knowledge_base.py ask "<question>"` |
+| **Import new docs** | `cd tools/knowledge_base && python knowledge_base.py import <path>` |
+| **Check knowledge status** | `cd tools/knowledge_base && python knowledge_base.py status` |
+| **Setup private RAG** | Read [个人知识库搭建.md](e:\Other\Doc\个人知识库搭建.md) for Dify + Ollama guide |

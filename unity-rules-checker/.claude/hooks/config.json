@@ -1,0 +1,13 @@
+{
+  "block_on": "CRITICAL",
+  "warn_on": "HIGH",
+  "check_patterns": ["Assets/**/*.cs", "**/*.cs"],
+  "exclude_patterns": [
+    "**/Generated/**/*.cs",
+    "**/Temp/**/*.cs",
+    "**/Plugins/**/*.cs",
+    "**/Library/**/*.cs"
+  ],
+  "auto_fix": false,
+  "fail_on_violations": true
+}
