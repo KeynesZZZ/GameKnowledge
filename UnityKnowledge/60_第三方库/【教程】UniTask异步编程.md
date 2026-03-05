@@ -1,3 +1,12 @@
+---
+title: 【教程】UniTask异步编程
+tags: [Unity, 第三方库, UniTask, 教程]
+category: 第三方库
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: UniTask异步编程教程
+unity_version: 2021.3+
+---
 # UniTask 异步编程
 
 > Unity专用零GC异步解决方案完整指南 `#第三方库` `#异步编程` `#最佳实践`

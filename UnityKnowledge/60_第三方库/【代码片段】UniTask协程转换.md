@@ -1,3 +1,12 @@
+---
+title: 【代码片段】UniTask协程转换
+tags: [Unity, 第三方库, UniTask, 代码片段]
+category: 第三方库
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: 协程转UniTask代码片段
+unity_version: 2021.3+
+---
 # 代码片段 - UniTask协程转换
 
 > Coroutine到UniTask的迁移对照表 `#第三方库` `#异步编程` `#代码片段`

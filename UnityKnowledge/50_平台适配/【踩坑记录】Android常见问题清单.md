@@ -1,3 +1,12 @@
+---
+title: 【踩坑记录】Android常见问题清单
+tags: [Unity, 平台适配, Android, 踩坑记录]
+category: 平台适配
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: Unity Android平台常见问题
+unity_version: 2021.3+
+---
 # Android 常见问题清单
 
 > Android平台开发常见问题与解决方案 `#Android` `#平台适配` `#踩坑记录`

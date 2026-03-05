@@ -1,3 +1,12 @@
+---
+title: 【教程】WebGL限制与方案
+tags: [Unity, 平台适配, WebGL, 教程]
+category: 平台适配
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: Unity WebGL平台限制与解决方案
+unity_version: 2021.3+
+---
 # WebGL 限制与方案
 
 > Unity WebGL平台的限制与解决方案
