@@ -1,3 +1,12 @@
+---
+title: 【设计原理】Unity内存管理
+tags: [Unity, 高级主题, 内存管理, 设计原理]
+category: 高级主题
+created: 2026-03-05 08:41
+updated: 2026-03-05 08:41
+description: Unity内存管理机制深度分析
+unity_version: 2021.3+
+---
 # Unity内存管理
 
 > 专题课程 | 性能优化核心
