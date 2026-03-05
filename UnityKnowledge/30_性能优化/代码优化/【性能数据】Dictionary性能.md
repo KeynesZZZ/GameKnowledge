@@ -1,3 +1,12 @@
+---
+title: 【性能数据】Dictionary性能
+tags: [Unity, 性能优化, 代码优化, 性能数据]
+category: 性能优化
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: Dictionary性能基准测试数据
+unity_version: 2021.3+
+---
 # 性能数据 - Dictionary性能
 
 > C# Dictionary各种操作的性能分析 `#性能优化` `#性能数据` `#数据结构`

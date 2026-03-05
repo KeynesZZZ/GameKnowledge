@@ -1,3 +1,12 @@
+---
+title: 【性能数据】foreach vs for
+tags: [Unity, 性能优化, 代码优化, 性能数据]
+category: 性能优化
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: foreach vs for性能对比测试
+unity_version: 2021.3+
+---
 # 性能数据 - foreach vs for
 
 > C#中不同循环方式的性能对比 `#性能优化` `#性能数据` `#代码优化`

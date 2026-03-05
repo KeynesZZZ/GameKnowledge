@@ -1,3 +1,12 @@
+---
+title: 【最佳实践】UI性能优化
+tags: [Unity, 性能优化, 渲染优化, 最佳实践]
+category: 性能优化
+created: 2026-03-05 08:44
+updated: 2026-03-05 08:44
+description: Unity UI性能优化最佳实践
+unity_version: 2021.3+
+---
 # 最佳实践 - UI性能优化
 
 > UGUI性能优化完整指南 `#性能优化` `#渲染` `#UI` `#最佳实践`
