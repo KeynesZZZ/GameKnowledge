@@ -4,138 +4,78 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is a **Unity game development learning documentation repository** containing systematic study notes in Chinese for a Match-3 + Roguelike game project. It is not a code repository - it stores learning notes, code examples, design documents, and project retrospectives.
+This is a **Unity game development learning documentation repository** in Chinese. It is not a code repository - it stores learning notes, code examples, design documents, and project retrospectives. The repository contains **182+ markdown documents** organized by technical domain.
 
 ## Content Structure
 
-This repository has **three main documentation areas** with different purposes:
+### `UnityKnowledge/` - Primary Knowledge Base
 
-### 1. `学习/` - Systematic Learning Path
-
-Tutorial-focused content organized by learning progression:
-
-```
-学习/
-├── 01-脚本与架构/      # Unity 基础与设计模式
-├── 02-渲染与图形/      # Shader、渲染管线、视觉效果
-├── 03-游戏系统开发/    # UI、三消、战斗、Roguelike
-├── 04-性能优化/        # 分析工具、CPU/渲染优化
-├── 05-高级主题/        # 内存、网络、热更新
-├── 06-高级编程/        # C#高级特性、并发、高性能编程
-├── 07-DOTS技术栈/      # Job System、Burst、ECS
-├── 08-编辑器扩展/      # EditorWindow、Inspector、Gizmos
-├── 09-动画系统/        # Animator、混合树、IK、Playables
-└── 10-网络编程实战/    # Socket、同步模型、服务器架构
-```
-
-### 2. `UnityKnowledge/` - Quick Reference Knowledge Base
-
-Structured for rapid lookup, organized by technical domain with numbered prefixes:
+The main documentation area, organized by technical domain with numbered prefixes:
 
 ```
 UnityKnowledge/
-├── 00_元数据与模板/    # Templates (代码片段, Bug记录, 性能分析) + 标签体系
-├── 10_架构设计/        # Design patterns, architecture decisions
-├── 20_核心系统/        # Physics, Animation, Rendering, Audio, Network
-├── 30_性能优化/        # Memory, Rendering, Code optimization
-├── 40_工具链/          # Editor, Addressables, Build pipeline
-├── 50_平台适配/        # iOS, Android, WebGL, Consoles
-├── 60_第三方库/        # DOTween, UniTask, Zenject, Odin
+├── 00_元数据与模板/    # Templates, metadata standards, tag system
+├── 10_架构设计/        # Design patterns, architecture decisions (36 docs)
+├── 20_核心系统/        # Unity core systems (30+ docs)
+│   ├── 21_动画系统/   # Animation, State Machine
+│   ├── 22_渲染系统/   # Rendering, Shaders, URP
+│   ├── 23_物理系统/   # Physics engine
+│   ├── 24_输入系统/   # Input management
+│   ├── 25_音频系统/   # Audio system
+│   └── 游戏系统/      # Game systems
+├── 25_DOTS技术栈/     # ECS, Job System, Burst (4 docs)
+├── 30_性能优化/        # Performance optimization
+│   ├── 31_代码优化/   # Code optimization
+│   ├── 32_内存管理/   # Memory management
+│   ├── 33_渲染优化/   # Rendering optimization
+│   └── 34_启动时间优化/ # Startup time optimization
+├── 35_高级主题/        # Advanced topics (4 docs)
+├── 36_高级编程/        # Advanced programming (4 docs)
+├── 40_工具链/          # Editor extensions, tooling (3 docs)
+├── 50_平台适配/        # Platform adaptation (iOS, Android, WebGL)
+├── 60_第三方库/        # Third-party libraries (DOTween, UniTask, etc.)
 ├── 90_项目复盘/        # Project retrospectives
-└── 100_项目实战/       # Real-world implementations (e.g., Cloud Save System)
+└── 100_项目实战/       # Real-world implementations
+    ├── 01_休闲游戏云存档系统/  # Cloud save system
+    └── 02_休闲游戏框架/        # Casual game framework
 ```
 
-### 3. `entities/` - Unity DOTS Entities Documentation
+**Numbering System**:
+- `00` - Metadata & templates
+- `10` - Architecture & design
+- `20` - Core Unity systems
+- `25` - DOTS technology stack
+- `30` - Performance optimization
+- `35-36` - Advanced topics
+- `40` - Tooling
+- `50-60` - Platform & libraries
+- `90-100` - Real-world experience
 
-Chinese translation of Unity Entities 1.3.2 documentation (ChatGPT-translated with additional explanations).
+See [UnityKnowledge/README.md](UnityKnowledge/README.md) for detailed index.
 
-**Online version**: https://zhangkeng.gitbook.io/entities-zhong-wen-fan-yi/
+## Tools
 
-### 4. `tools/knowledge_base/` - Semantic Search Tool
+### 1. `tools/knowledge_base/` - Semantic Search & RAG
 
-ChromaDB-based knowledge management for semantic search and RAG Q&A.
+ChromaDB + Claude powered knowledge management system.
 
-**Prerequisites**: Requires Python 3.8+ and dependencies (`pip install chromadb anthropic`)
+**Features**:
+- Intelligent document chunking by Markdown structure
+- Vector-based semantic search
+- RAG (Retrieval-Augmented Generation) Q&A with Claude
+- Knowledge relationship discovery
 
-### 5. `个人知识库搭建.md` - Private Knowledge Base Setup
-
-Guide for setting up a private RAG system using Dify + Ollama for local AI-powered knowledge management.
-
-## When to Use Which Directory
-
-| Scenario | Use Directory |
-|----------|---------------|
-| Learning a topic from scratch | `学习/` |
-| Quick code snippet lookup | `UnityKnowledge/` |
-| Finding best practices | `UnityKnowledge/` |
-| DOTS/Entities reference | `entities/` |
-| Project implementation examples | `UnityKnowledge/100_项目实战/` |
-
-## Document Conventions
-
-### Code Examples
-
-All code examples use C# and follow Unity conventions:
-- Use `[SerializeField]` for Inspector-exposed fields
-- Include `/// <summary>` XML documentation comments
-- Follow Unity naming conventions (PascalCase for public methods)
-- Comments in Chinese for consistency
-
-### Document Format
-
-- Markdown format with Chinese content
-- ASCII diagrams for architecture visualization
-- Self-contained documents with clear objectives
-
-### UnityKnowledge Document Types
-
-Identified by filename prefix:
-- `代码片段-*` - Reusable code snippets
-- `最佳实践-*` - Recommended practices
-- `踩坑记录-*` - Common pitfalls and solutions
-- `性能数据-*` - Performance benchmarks
-- `设计原理-*` - Design rationale ("why" not just "how")
-- `架构决策-*` - Architecture decision records
-- `系统架构-*` - System architecture overviews
-- `实战案例-*` - Real-world case studies
-
-### Unity Version Coverage
-
-Documentation primarily covers **Unity 2021.3 LTS** and later versions, including:
-- Unity 2021.3 LTS (Linerenderer & URP)
-- Unity 2022.3 LTS (URP & HDRP)
-- Unity 6 (when applicable)
-
-When creating code examples, specify the minimum Unity version required if using features from specific versions.
-
-### Tag System
-
-Documents in `UnityKnowledge/` use tags (defined in `00_元数据与模板/标签体系.md`):
-- Technical domain: `#架构`, `#渲染`, `#UI`, `#网络`, etc.
-- Quality: `#最佳实践`, `#反模式`, `#踩坑记录`
-- Document type: `#教程`, `#深度解析`, `#代码片段`
-- Platform: `#iOS`, `#Android`, `#WebGL`
-- Status: `#草稿`, `#待验证`, `#已归档`
-
-## Knowledge Base Tool
-
-Located at `tools/knowledge_base/`.
-
-### Prerequisites
-
+**Prerequisites**:
 ```bash
-# Install Python dependencies
 pip install chromadb anthropic
-
-# Configure API key in config.json or set environment variable
-export ANTHROPIC_API_KEY="your-api-key-here"
 ```
 
-### Common Commands
-
+**Common Commands**:
 ```bash
+cd tools/knowledge_base
+
 # Import documents
-python knowledge_base.py import ../../学习
+python knowledge_base.py import ../../UnityKnowledge
 
 # Semantic search
 python knowledge_base.py search "如何优化UGUI的DrawCall?"
@@ -150,24 +90,175 @@ python knowledge_base.py related "内存管理"
 python knowledge_base.py status
 ```
 
-## Language
+**Configuration**: Edit `config.json` to set Claude API key and adjust parameters.
 
-All documents are written in **Chinese (Simplified)**. When editing or creating documents, maintain Chinese language consistency.
+### 2. `unity-rules-checker/` - Unity Code Quality Checker
+
+A standalone tool for checking Unity C# code against 60 development rules. Integrates with Claude Code via SKILL and Git hooks.
+
+**Features**:
+- 60 rules covering GC, memory, UI, architecture, physics, etc.
+- AI-powered checking using Claude Code
+- Git hook integration for pre-commit checks
+- Cross-platform support (Windows, macOS, Linux)
+
+**Installation**:
+```bash
+cd unity-rules-checker
+./install.sh          # Linux/Mac
+# or
+powershell -File install.ps1    # Windows
+```
+
+**Usage in Claude Code**:
+```bash
+# Check single file
+/check-rules Assets/Scripts/PlayerController.cs
+
+# Check directory
+/check-rules Assets/Scripts
+
+# Check specific rule categories
+/check-rules Assets/Scripts --rules=GC,MEMORY
+
+# Check specific severity
+/check-rules Assets/Scripts --severity=CRITICAL
+```
+
+**Rule Categories**: GC, MEMORY, POOL, ARCH, ASYNC, REFACTOR, UI, PHYSICS, RES, PERF, SAFE
+
+See [unity-rules-checker/README.md](unity-rules-checker/README.md) for complete documentation.
+
+### 3. `.claude/` - Claude Code Configuration
+
+- **hooks/** - Git hook specifications (e.g., pre-commit.md)
+- **skills/** - Reusable skills (e.g., check-rules.md for Unity code validation)
+- **settings.json** - Permission and directory configurations
+
+## Document Conventions
+
+### Document Types (Filename Prefix)
+
+- `代码片段-*` - Reusable code snippets
+- `最佳实践-*` - Recommended practices
+- `踩坑记录-*` - Common pitfalls and solutions
+- `性能数据-*` - Performance benchmarks
+- `设计原理-*` - Design rationale ("why" not just "how")
+- `架构决策-*` - Architecture decision records
+- `系统架构-*` - System architecture overviews
+- `实战案例-*` - Real-world case studies
+- `教程-*` - Tutorial content
+- `反模式-*` - Common anti-patterns
+
+### YAML Frontmatter (Required for New Docs)
+
+All documents should include YAML frontmatter:
+
+```yaml
+---
+title: 【代码片段】对象池通用实现
+tags: [C#, Unity, 架构, 性能优化, 代码片段]
+category: 架构设计/代码片段
+created: 2024-01-15 10:30
+updated: 2024-03-04 15:20
+description: C#泛型对象池的基础实现，减少GC分配
+unity_version: 2021.3+
+---
+```
+
+See [元数据规范.md](UnityKnowledge/00_元数据与模板/元数据规范.md) for complete standards.
+
+### Tag System
+
+Documents use tags (defined in [标签体系.md](UnityKnowledge/00_元数据与模板/标签体系.md)):
+- **Technical domain**: `#架构`, `#渲染`, `#UI`, `#网络`, `#DOTS`, etc.
+- **Quality**: `#最佳实践`, `#反模式`, `#踩坑记录`
+- **Document type**: `#教程`, `#深度解析`, `#代码片段`
+- **Platform**: `#iOS`, `#Android`, `#WebGL`
+- **Status**: `#草稿`, `#待验证`, `#已归档`
+
+Minimum 2 tags per document.
+
+### Code Examples
+
+All code examples follow Unity conventions:
+- Use `[SerializeField]` for Inspector-exposed fields
+- Include `/// <summary>` XML documentation comments
+- Follow Unity naming conventions (PascalCase for public methods)
+- Comments in Chinese for consistency
+- Specify minimum Unity version if using version-specific features
+
+**Primary coverage**: Unity 2021.3 LTS, Unity 2022.3 LTS, Unity 6
+
+### Obsidian Integration
+
+- Uses Obsidian双向链接 format: `[[文档名]]`
+- `.obsidian/` directory contains workspace configuration
+- Supports Smart Connections plugin for local AI Q&A
 
 ## When Creating New Documents
 
-1. **For tutorials/learning** → `学习/` - follow learning path structure
-2. **For quick reference** → `UnityKnowledge/` - use appropriate template from `00_元数据与模板/`
-3. Add at least 2 tags to UnityKnowledge documents
-4. Include Unity version compatibility
-5. Update relevant README files
+1. **Choose directory** based on technical domain (use numbering system)
+2. **Use template** from `UnityKnowledge/00_元数据与模板/模板-*.md`
+3. **Add YAML frontmatter** with title, tags, category, dates
+4. **Include code examples** following Unity conventions
+5. **Add minimum 2 tags** from tag system
+6. **Use internal links** with `[[文档名]]` format for related docs
+7. **Update README** in parent directory if needed
 
-## Quick Tasks
+## Quick Reference
 
-| Task | Command |
-|------|---------|
+| Task | Command/Location |
+|------|------------------|
 | **Search knowledge base** | `cd tools/knowledge_base && python knowledge_base.py search "<query>"` |
 | **Ask AI question** | `cd tools/knowledge_base && python knowledge_base.py ask "<question>"` |
 | **Import new docs** | `cd tools/knowledge_base && python knowledge_base.py import <path>` |
 | **Check knowledge status** | `cd tools/knowledge_base && python knowledge_base.py status` |
-| **Setup private RAG** | Read `个人知识库搭建.md` for Dify + Ollama guide |
+| **Check Unity code** | `/check-rules <path>` (in Claude Code) |
+| **Setup rules checker** | `cd unity-rules-checker && ./install.sh` |
+| **Find document template** | `UnityKnowledge/00_元数据与模板/模板-*.md` |
+| **Read tag system** | `UnityKnowledge/00_元数据与模板/标签体系.md` |
+| **View main index** | `UnityKnowledge/README.md` |
+| **View projects** | `UnityKnowledge/100_项目实战/README.md` |
+
+## Language
+
+All documents are written in **Chinese (Simplified)**. When editing or creating documents, maintain Chinese language consistency.
+
+## File Relationships
+
+```
+CLAUDE.md (this file)
+    ├── Repository overview and workflow guidance
+    └── Quick reference for common tasks
+
+UnityKnowledge/
+    ├── README.md → Complete document index
+    ├── 00_元数据与模板/
+    │   ├── 元数据规范.md → YAML frontmatter standards
+    │   ├── 标签体系.md → Tag taxonomy
+    │   └── 模板-*.md → Document templates
+    └── [技术领域]/
+        └── README.md → Domain-specific navigation
+
+tools/knowledge_base/
+    ├── knowledge_base.py → Semantic search & RAG implementation
+    ├── README.md → Tool documentation
+    └── config.json → Configuration
+
+unity-rules-checker/
+    ├── README.md → Tool documentation
+    ├── docs/开发规则清单.md → Complete 60 rules reference
+    └── .claude/skills/check-rules.md → Claude Code integration
+
+.claude/
+    ├── hooks/pre-commit.md → Git hook specification
+    └── skills/ → Reusable Claude Code skills
+```
+
+## Statistics
+
+- **Total documents**: 182+ Markdown files
+- **Primary domains**: 12 technical areas
+- **Tools**: 2 (knowledge base, rules checker)
+- **Languages**: Chinese (content), English (code/tooling)
