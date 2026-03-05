@@ -1,3 +1,12 @@
+---
+title: 【教程】Provider接口设计
+tags: [Unity, 项目实战, 云存档, 教程]
+category: 项目实战/休闲游戏云存档系统
+created: 2026-03-05 09:21
+updated: 2026-03-05 09:21
+description: Provider接口设计模式
+unity_version: 2021.3+
+---
 # 04-Provider接口设计
 
 > 云存档提供者接口的完整设计与工厂模式实现 `#接口设计` `#工厂模式` `#依赖注入`

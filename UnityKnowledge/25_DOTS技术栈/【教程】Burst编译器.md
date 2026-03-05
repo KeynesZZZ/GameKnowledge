@@ -1,3 +1,12 @@
+---
+title: 【教程】Burst编译器
+tags: [Unity, DOTS技术栈, Burst, 教程]
+category: DOTS技术栈
+created: 2026-03-05 09:21
+updated: 2026-03-05 09:21
+description: Unity Burst编译器优化教程
+unity_version: 2021.3+
+---
 # Burst Compiler 详解
 
 > 第2课 | DOTS 技术栈模块

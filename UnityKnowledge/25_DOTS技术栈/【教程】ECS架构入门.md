@@ -1,3 +1,12 @@
+---
+title: 【教程】ECS架构入门
+tags: [Unity, DOTS技术栈, ECS, 教程]
+category: DOTS技术栈
+created: 2026-03-05 09:21
+updated: 2026-03-05 09:21
+description: Unity ECS架构入门教程
+unity_version: 2021.3+
+---
 # ECS 架构入门
 
 > 第3课 | DOTS 技术栈模块
