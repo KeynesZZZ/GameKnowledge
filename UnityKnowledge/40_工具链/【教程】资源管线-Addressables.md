@@ -1,3 +1,12 @@
+---
+title: 【教程】资源管线-Addressables
+tags: [Unity, 工具链, Addressables, 教程]
+category: 工具链
+created: 2026-03-05 08:42
+updated: 2026-03-05 08:42
+description: Unity Addressables资源系统教程
+unity_version: 2021.3+
+---
 # 资源管线 - Addressables
 
 > Unity官方资源管理系统完整指南 `#资源管理` `#热更新` `#工具链`

@@ -1,3 +1,12 @@
+---
+title: 【教程】自定义Inspector
+tags: [Unity, 工具链, Inspector, 教程]
+category: 工具链
+created: 2026-03-05 08:42
+updated: 2026-03-05 08:42
+description: Unity自定义Inspector教程
+unity_version: 2021.3+
+---
 # 自定义 Inspector
 
 > 第2课 | 编辑器扩展模块
