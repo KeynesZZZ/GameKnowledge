@@ -1,6 +1,6 @@
 ---
 title: 【教程】常用Shader技术
-tags: [Unity, 渲染系统, Shader, 教程]
+tags: [Unity, 渲染, 渲染系统, Shader, 教程]
 category: 核心系统/渲染系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # 常用Shader技术
 
 > 第3课 | 渲染与图形模块
+
+## 文档定位
+
+本文档从**使用角度**讲解常用Shader技术。
+
+**相关文档**：
+
+---
 
 ## 1. UV动画
 
@@ -361,7 +369,7 @@ half pulse2 = sin(_Time.y * speed * 6.28);
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity Shader Lab](https://docs.unity3d.com/Manual/SL-Reference.html)
 - [Shader Graph Examples](https://unity.com/features/shader-graph)

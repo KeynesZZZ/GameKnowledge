@@ -1,6 +1,6 @@
 ---
 title: 【最佳实践】URP常用配置
-tags: [Unity, 渲染系统, URP, 最佳实践]
+tags: [Unity, 渲染, 渲染系统, URP, 最佳实践]
 category: 核心系统/渲染系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -11,7 +11,15 @@ unity_version: 2021.3+
 
 > Universal Render Pipeline 配置指南 `#渲染` `#URP` `#配置`
 
-## 快速参考
+## 文档定位
+
+本文档从**最佳实践角度**总结URP常用配置的推荐做法。
+
+**相关文档**：
+
+---
+
+## 相关链接
 
 ```
 URP Asset 结构：

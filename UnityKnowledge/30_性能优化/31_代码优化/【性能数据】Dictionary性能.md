@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > C# Dictionary各种操作的性能分析 `#性能优化` `#性能数据` `#数据结构`
 
+## 文档定位
+
+本文档从**性能测试角度**提供Dictionary性能的客观数据和测试结果。
+
+**相关文档**：[[【性能数据】Dictionary性能]]
+
+---
+
 ## 测试环境
 
 | 配置 | 值 |
@@ -558,6 +566,6 @@ foreach (var kvp in new Dictionary<int, string>(dict))
 
 ## 相关链接
 
-- 最佳实践: [GC优化清单](../内存管理/最佳实践-GC优化清单.md)
+- 最佳实践: [GC优化清单](../32_内存管理/【最佳实践】GC优化清单.md)
 - 性能数据: [foreach vs for](性能数据-foreach-vs-for.md)
 - 深入学习: [C#高级编程](../../36_高级编程/教程-)

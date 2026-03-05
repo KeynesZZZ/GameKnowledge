@@ -1,6 +1,6 @@
 ---
 title: 【设计原理】Animator深度解析
-tags: [Unity, 动画系统, Animator, 设计原理]
+tags: [Unity, 动画, 动画系统, Animator, 设计原理]
 category: 核心系统/动画系统
 created: 2026-03-05 08:30
 updated: 2026-03-05 08:30
@@ -11,7 +11,15 @@ unity_version: 2021.3+
 
 > Unity Animator Controller内部机制、动画状态机工作原理、混合树实现深度剖析 `#设计原理` `#动画系统` `#状态机`
 
-## 快速参考
+## 文档定位
+
+本文档从**底层机制角度**深入讲解Animator深度解析的本质原理。
+
+**相关文档**：、、
+
+---
+
+## 相关链接
 
 ```csharp
 // Animator Controller深度使用

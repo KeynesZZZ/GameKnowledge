@@ -11,7 +11,15 @@ unity_version: 2021.3+
 
 > Unity官方资源管理系统完整指南 `#资源管理` `#热更新` `#工具链`
 
-## 快速参考
+## 文档定位
+
+本文档从**使用角度**讲解资源管线-Addressables。
+
+**相关文档**：[[【教程】资源管线-Addressables]]
+
+---
+
+## 相关链接
 
 ```csharp
 // 加载资源
@@ -579,6 +587,6 @@ public async UniTask<IList<T>> LoadBatchAsync<T>(string label) where T : Object
 
 ## 相关链接
 
-- 深入学习: [打包与热更新](../35_高级主题/教程-打包与热更新.md)
+- 深入学习: [打包与热更新](../35_高级主题/【教程】打包与热更新.md)
 - 热更新对比: [热更新方案对比](热更新方案对比.md)
 - 官方文档: [Addressables Package](https://docs.unity3d.com/Packages/com.unity.addressables@latest)

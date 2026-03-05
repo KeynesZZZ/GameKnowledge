@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > TextMeshPro内部机制、字体图集管理、Mesh生成优化、动态文本GC优化完整方案 `#最佳实践` `#性能优化` `#TextMeshPro`
 
+## 文档定位
+
+本文档从**最佳实践角度**总结TextMeshPro性能优化实战的推荐做法。
+
+**相关文档**：
+
+---
+
 ## 适用版本
 
 - **Unity版本**: 2021.3 LTS+, 2022.3 LTS+, 2023.2 LTS+
@@ -25,7 +33,7 @@ unity_version: 2021.3+
   - 所有代码示例在3.0.6+测试通过
 - **重要**: TextMeshPro 2.1.x及以下版本API有重大变化，不建议升级时混用
 
-## 快速参考
+## 相关链接
 
 ```csharp
 // 基础优化配置
@@ -1023,10 +1031,10 @@ public class OptimizedChatSystem : MonoBehaviour
 
 ## 相关链接
 
-- 设计原理: [UGUI合批机制深度解析](设计原理-UGUI合批机制深度解析.md)
+- 设计原理: [UGUI合批机制深度解析](【设计原理】UGUI合批机制深度解析.md)
 - 性能测试: [UGUI DrawCall影响因素全面测试](性能数据-UGUI-DrawCall影响因素全面测试.md)
-- 源码解析: [Unity事件系统实现机制](源码解析-Unity事件系统实现机制.md)
-- 踩坑记录: [UGUI常见性能陷阱与根因分析](踩坑记录-UGUI常见性能陷阱与根因分析.md)
+- 源码解析: [Unity事件系统实现机制](【源码解析】Unity事件系统实现机制.md)
+- 踩坑记录: [UGUI常见性能陷阱与根因分析](【踩坑记录】UGUI常见性能陷阱与根因分析.md)
 
 ---
 

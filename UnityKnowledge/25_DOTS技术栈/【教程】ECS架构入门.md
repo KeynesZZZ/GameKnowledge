@@ -1,6 +1,6 @@
 ---
 title: 【教程】ECS架构入门
-tags: [Unity, DOTS技术栈, ECS, 教程]
+tags: [Unity, DOTS, DOTS技术栈, ECS, 教程]
 category: DOTS技术栈
 created: 2026-03-05 09:21
 updated: 2026-03-05 09:21
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # ECS 架构入门
 
 > 第3课 | DOTS 技术栈模块
+
+## 文档定位
+
+本文档从**使用角度**讲解ECS架构入门。
+
+**相关文档**：[[【教程】ECS架构入门]]
+
+---
 
 ## 1. ECS 核心概念
 
@@ -606,7 +614,7 @@ public partial struct SecondSystem : ISystem { }
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [ECS 官方文档](https://docs.unity3d.com/Packages/com.unity.entities@latest)
 - [ECS FAQ](https://docs.unity3d.com/Packages/com.unity.entities@latest/manual/ecs_faq.html)

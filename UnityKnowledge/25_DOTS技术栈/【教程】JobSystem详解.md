@@ -1,6 +1,6 @@
 ---
 title: 【教程】JobSystem详解
-tags: [Unity, DOTS技术栈, JobSystem, 教程]
+tags: [Unity, DOTS, DOTS技术栈, JobSystem, 教程]
 category: DOTS技术栈
 created: 2026-03-05 09:21
 updated: 2026-03-05 09:21
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # Job System 详解
 
 > 第1课 | DOTS 技术栈模块
+
+## 文档定位
+
+本文档从**使用角度**讲解JobSystem详解。
+
+**相关文档**：[[【教程】JobSystem详解]]
+
+---
 
 ## 1. 什么是 Job System？
 
@@ -443,7 +451,7 @@ struct ParticleSoA
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity Job System 官方文档](https://docs.unity3d.com/Manual/JobSystem.html)
 - [Unity C# Job System Cookbook](https://github.com/stella3d/job-system-cookbook)

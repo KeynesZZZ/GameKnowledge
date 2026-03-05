@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 可复用的DOTween动画效果库 `#第三方库` `#动画` `#代码片段`
 
+## 文档定位
+
+本文档从**实践角度**提供DOTween常用动画的可复制代码。
+
+**相关文档**：[[【代码片段】DOTween常用动画]]、[[【教程】DOTween深度使用]]
+
+---
+
 ## 弹出动画
 
 ### 缩放弹出
@@ -620,5 +628,5 @@ await SequenceEffects.StaggerPopOut(container).AsyncWaitForCompletion();
 
 ## 相关链接
 
-- [DOTween 深度使用](DOTween%20深度使用.md)
+- [DOTween 深度使用](DOTween 深度使用.md)
 - [动画系统](../20_核心系统/21_动画系统/)

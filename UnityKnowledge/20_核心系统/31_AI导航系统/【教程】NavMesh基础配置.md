@@ -1,6 +1,6 @@
 ---
 title: 【教程】NavMesh基础配置
-tags: [Unity, AI导航系统, NavMesh, 教程]
+tags: [Unity, AI, AI导航系统, NavMesh, 教程]
 category: 核心系统/AI导航系统
 created: 2026-03-05 08:32
 updated: 2026-03-05 08:32
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # NavMesh 基础配置
 
 > Unity NavMesh 导航系统完整配置指南 `#AI与导航系统` `#NavMesh` `#寻路`
+
+## 文档定位
+
+本文档从**使用角度**讲解NavMesh基础配置。
+
+**相关文档**：
+
+---
 
 ## 概述
 
@@ -228,7 +236,7 @@ public class OptimizedPathfinding : MonoBehaviour
 
 ## 相关链接
 
-- [AI行为树实现](./AI行为树实现.md)
+- [AI行为树实现](./【教程】AI行为树实现.md)
 - [状态机AI设计](./状态机AI设计.md)
 - [寻路算法对比](./寻路算法对比.md)
 

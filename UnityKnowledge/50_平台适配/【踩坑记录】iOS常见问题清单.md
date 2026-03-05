@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > iOS平台开发常见问题与解决方案 `#iOS` `#平台适配` `#踩坑记录`
 
+## 文档定位
+
+本文档从**问题解决角度**记录iOS常见问题清单的常见问题和解决方案。
+
+**相关文档**：[[【踩坑记录】iOS常见问题清单]]
+
+---
+
 ## 内存管理
 
 ### 内存限制
@@ -434,6 +442,6 @@ private void OnLogMessage(string condition, string stackTrace, LogType type)
 
 ## 相关链接
 
-- [Android 专项](Android%20专项.md)
+- [Android 专项](Android 专项.md)
 - [性能优化](../30_性能优化/)
 - [官方文档](https://docs.unity3d.com/Manual/ios.html)

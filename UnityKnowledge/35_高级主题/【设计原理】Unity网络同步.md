@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 专题课程 | 多人游戏开发核心
 
+## 文档定位
+
+本文档从**底层机制角度**深入讲解Unity网络同步的本质原理。
+
+**相关文档**：[[../10_架构设计/【教程】Unity脚本生命周期]]、、
+
+---
+
 ## 1. 网络基础架构
 
 ### 1.1 网络模型对比
@@ -1537,7 +1545,7 @@ public class RoomManager : MonoBehaviour
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Netcode for GameObjects](https://docs-multiplayer.unity3d.com/netcode-for-gameobjects/)
 - [Mirror Documentation](https://mirror-networking.gitbook.io/)

@@ -1,6 +1,6 @@
 ---
 title: 【教程】URP Lit Shader
-tags: [Unity, 渲染系统, URP, Shader, 教程]
+tags: [Unity, 渲染, 渲染系统, URP, Shader, 教程]
 category: 核心系统/渲染系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # URP Lit Shader
 
 > 第4课 | 渲染与图形模块
+
+## 文档定位
+
+本文档从**使用角度**讲解URP Lit Shader。
+
+**相关文档**：
+
+---
 
 ## 1. 光照基础概念
 
@@ -339,8 +347,8 @@ Shader "Match3/GemSimpleLit"
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [URP Lighting](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/manual/lighting.html)
 - [Unity PBR](https://docs.unity3d.com/Manual/StandardShaderPhysicallyBasedRendering.html)
-- [Blinn-Phong Model](https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model)
+- [Blinn-Phong Model](https://en.wikipedia.org/wiki/Blinn–Phong_reflection_model)

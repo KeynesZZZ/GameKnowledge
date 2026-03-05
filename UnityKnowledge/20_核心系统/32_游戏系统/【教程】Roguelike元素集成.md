@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第5课 | 游戏系统开发模块
 
+## 文档定位
+
+本文档从**使用角度**讲解Roguelike元素集成。
+
+**相关文档**：
+
+---
+
 ## 1. Roguelike核心元素
 
 ```
@@ -1342,7 +1350,7 @@ public static class ItemDatabase
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Roguelike Development](https://www.gamasutra.com/blogs/JoshGe/20181226/332424/How_to_Make_a_Roguelike.php)
 - [Procedural Generation](https://www.procjam.com/)

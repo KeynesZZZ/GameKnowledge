@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第1课 | 高级编程模块
 
+## 文档定位
+
+本文档从**使用角度**讲解C#高级特性。
+
+**相关文档**：
+
+---
+
 ## 1. async/await 异步编程
 
 ### 1.1 基础概念
@@ -518,7 +526,7 @@ await ProcessAsync(buffer);
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [C# in Depth](https://csharpindepth.com/)
 - [Span<T> 性能指南](https://docs.microsoft.com/en-us/dotnet/standard/memory-and-spans/)

@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第2课 | 性能优化与发布模块
 
+## 文档定位
+
+本文档从**使用角度**讲解CPU优化技术。
+
+**相关文档**：[[【教程】CPU优化技术]]
+
+---
+
 ## 1. GC（垃圾回收）优化
 
 ### 1.1 GC基础原理
@@ -1140,7 +1148,7 @@ public class Gem : MonoBehaviour
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity Job System](https://docs.unity3d.com/Manual/JobSystem.html)
 - [Burst Compiler](https://docs.unity3d.com/Packages/com.unity.burst@latest)

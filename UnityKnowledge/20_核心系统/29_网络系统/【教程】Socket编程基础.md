@@ -1,6 +1,6 @@
 ---
 title: 【教程】Socket编程基础
-tags: [Unity, 网络系统, Socket, 教程]
+tags: [Unity, 网络, 网络系统, Socket, 教程]
 category: 核心系统/网络系统
 created: 2026-03-05 08:32
 updated: 2026-03-05 08:32
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # Socket 编程基础
 
 > 第1课 | 网络编程实战模块
+
+## 文档定位
+
+本文档从**使用角度**讲解Socket编程基础。
+
+**相关文档**：、
+
+---
 
 ## 1. TCP 编程
 
@@ -509,7 +517,7 @@ public class Heartbeat
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Socket 编程指南](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/)
 - [TCP/IP 详解](https://book.douban.com/subject/1088054/)

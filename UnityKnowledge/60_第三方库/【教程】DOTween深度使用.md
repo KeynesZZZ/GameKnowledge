@@ -11,7 +11,15 @@ unity_version: 2021.3+
 
 > Unity最流行的动画补间库完整指南 `#第三方库` `#动画` `#最佳实践`
 
-## 快速参考
+## 文档定位
+
+本文档从**使用角度**讲解DOTween深度使用。
+
+**相关文档**：[[【代码片段】DOTween常用动画]]、[[【教程】DOTween深度使用]]
+
+---
+
+## 相关链接
 
 ```csharp
 // 基础动画
@@ -533,5 +541,5 @@ tween.ChangeEndValue(targetB, true);  // true = 计算剩余时间
 ## 相关链接
 
 - 官方文档: [DOTween Documentation](http://dotween.demigiant.com/documentation.php)
-- 代码片段: [DOTween常用动画](代码片段-DOTween常用动画.md)
+- 代码片段: [DOTween常用动画](【代码片段】DOTween常用动画.md)
 - 动画系统: [动画系统](../20_核心系统/21_动画系统/)

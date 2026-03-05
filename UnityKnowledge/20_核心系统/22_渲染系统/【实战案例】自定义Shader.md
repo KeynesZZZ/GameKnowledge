@@ -1,6 +1,6 @@
 ---
 title: 【实战案例】自定义Shader
-tags: [Unity, 渲染系统, Shader, 实战案例]
+tags: [Unity, 渲染, 渲染系统, Shader, 实战案例]
 category: 核心系统/渲染系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31

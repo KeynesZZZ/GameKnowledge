@@ -1,6 +1,6 @@
 ---
 title: 【教程】HLSL与Shader基础
-tags: [Unity, 渲染系统, HLSL, 教程]
+tags: [Unity, 渲染, 渲染系统, HLSL, 教程]
 category: 核心系统/渲染系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # HLSL与Shader基础
 
 > 第2课 | 渲染与图形模块
+
+## 文档定位
+
+本文档从**使用角度**讲解HLSL与Shader基础。
+
+**相关文档**：
+
+---
 
 ## 1. 什么是Shader？
 
@@ -560,7 +568,7 @@ Shader "Match3/GemShader"
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-Reference.html)
 - [URP Shader Templates](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/manual/shaders-in-universal.html)

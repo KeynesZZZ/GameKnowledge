@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 专题课程 | 性能优化核心
 
+## 文档定位
+
+本文档从**底层机制角度**深入讲解Unity内存管理的本质原理。
+
+**相关文档**：[[../10_架构设计/【教程】Unity脚本生命周期]]、、
+
+---
+
 ## 1. Unity内存模型
 
 ### 1.1 内存架构
@@ -1350,7 +1358,7 @@ public static class MemoryOptimizationChecklist
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity Memory Management](https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity7.html)
 - [Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@latest)

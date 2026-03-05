@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Unity game development learning documentation repository** in Chinese. It is not a code repository - it stores learning notes, code examples, design documents, and project retrospectives. The repository contains **182+ markdown documents** organized by technical domain.
 
+**Repository**: https://github.com/KeynesZZZ/Doc
+
 ## Content Structure
 
 ### `UnityKnowledge/` - Primary Knowledge Base
@@ -129,7 +131,22 @@ powershell -File install.ps1    # Windows
 
 See [unity-rules-checker/README.md](unity-rules-checker/README.md) for complete documentation.
 
-### 3. `.claude/` - Claude Code Configuration
+### 3. `UnityKnowledge/check_links.py` - Link Validation Tool
+
+Python script to validate Obsidian-style `[[WikiLinks]]` across the documentation.
+
+**Usage**:
+```bash
+# From repository root
+python UnityKnowledge/check_links.py
+
+# The script checks all .md files in UnityKnowledge/
+# Reports broken internal links that reference non-existent files
+```
+
+**Purpose**: Ensures internal documentation links remain valid after reorganization or deletions.
+
+### 4. `.claude/` - Claude Code Configuration
 
 - **hooks/** - Git hook specifications (e.g., pre-commit.md)
 - **skills/** - Reusable skills (e.g., check-rules.md for Unity code validation)
@@ -210,11 +227,14 @@ All code examples follow Unity conventions:
 
 | Task | Command/Location |
 |------|------------------|
+| **Create new document** | `/create-doc "主题"` (in Claude Code) |
 | **Search knowledge base** | `cd tools/knowledge_base && python knowledge_base.py search "<query>"` |
 | **Ask AI question** | `cd tools/knowledge_base && python knowledge_base.py ask "<question>"` |
 | **Import new docs** | `cd tools/knowledge_base && python knowledge_base.py import <path>` |
 | **Check knowledge status** | `cd tools/knowledge_base && python knowledge_base.py status` |
 | **Check Unity code** | `/check-rules <path>` (in Claude Code) |
+| **Validate doc links** | `python UnityKnowledge/check_links.py` |
+| **Check doc compliance** | `python tools/check_docs_compliance.py` |
 | **Setup rules checker** | `cd unity-rules-checker && ./install.sh` |
 | **Find document template** | `UnityKnowledge/00_元数据与模板/模板-*.md` |
 | **Read tag system** | `UnityKnowledge/00_元数据与模板/标签体系.md` |
@@ -238,6 +258,7 @@ UnityKnowledge/
     │   ├── 元数据规范.md → YAML frontmatter standards
     │   ├── 标签体系.md → Tag taxonomy
     │   └── 模板-*.md → Document templates
+    ├── check_links.py → Validate Obsidian [[WikiLinks]]
     └── [技术领域]/
         └── README.md → Domain-specific navigation
 

@@ -1,6 +1,6 @@
 ---
 title: 【教程】Burst编译器
-tags: [Unity, DOTS技术栈, Burst, 教程]
+tags: [Unity, DOTS, DOTS技术栈, Burst, 教程]
 category: DOTS技术栈
 created: 2026-03-05 09:21
 updated: 2026-03-05 09:21
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # Burst Compiler 详解
 
 > 第2课 | DOTS 技术栈模块
+
+## 文档定位
+
+本文档从**使用角度**讲解Burst编译器。
+
+**相关文档**：[[【教程】Burst编译器]]
+
+---
 
 ## 1. 什么是 Burst？
 
@@ -404,7 +412,7 @@ public struct LoggingJob : IJob
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Burst 官方文档](https://docs.unity3d.com/Packages/com.unity.burst@latest)
 - [Unity Mathematics](https://docs.unity3d.com/Packages/com.unity.mathematics@latest)

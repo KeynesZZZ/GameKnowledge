@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第1课 | 编辑器扩展模块
 
+## 文档定位
+
+本文档从**使用角度**讲解EditorWindow开发。
+
+**相关文档**：[[../../40_工具链/【教程】Editor扩展开发]]、
+
+---
+
 ## 1. 基础 EditorWindow
 
 ### 1.1 创建窗口
@@ -515,7 +523,7 @@ public class AutoRefreshWindow : EditorWindow
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [EditorWindow 官方文档](https://docs.unity3d.com/ScriptReference/EditorWindow.html)
 - [EditorGUILayout 官方文档](https://docs.unity3d.com/ScriptReference/EditorGUILayout.html)

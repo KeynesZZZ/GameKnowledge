@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > Odin Inspector编辑器增强指南
 
+## 文档定位
+
+本文档从**使用角度**讲解Odin Inspector。
+
+**相关文档**：[[【教程】Odin Inspector]]
+
+---
+
 ## 概述
 
 Odin Inspector大幅增强Unity Inspector功能。

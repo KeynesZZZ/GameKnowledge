@@ -1,5 +1,5 @@
 ---
-title: 【源码解析】UGUI深度解析
+title: 【设计原理】源码解析-UGUI深度解析
 tags: [Unity, 游戏系统, UGUI, 源码解析]
 category: 核心系统/游戏系统
 created: 2026-03-05 08:32
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # UGUI深度解析
 
 > 专题课程 | UI系统进阶 | 源码分析版
+
+## 文档定位
+
+本文档从**底层机制角度**深入讲解源码解析-UGUI深度解析的本质原理。
+
+**相关文档**：、、
+
+---
 
 ---
 
@@ -4405,7 +4413,7 @@ namespace UnityEngine.UI
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 ### 官方资源
 - [Unity UI Best Practices](https://docs.unity3d.com/Manual/UIBestPracticeGuides.html)
@@ -4418,6 +4426,6 @@ namespace UnityEngine.UI
 - `UnityEngine.EventSystems/` - 事件系统实现
 
 ### 相关文档
-- [UI系统架构](./UI系统架构.md)
+- [UI系统架构](./【教程】UI系统架构.md)
 - [Unity内存管理](../04-性能优化/Unity内存管理.md)
 - [渲染管线基础](../02-渲染与图形/渲染管线基础.md)

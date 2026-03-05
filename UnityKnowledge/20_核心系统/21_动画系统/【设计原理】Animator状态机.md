@@ -1,6 +1,6 @@
 ---
 title: 【设计原理】Animator状态机
-tags: [Unity, 动画系统, 状态机, 设计原理]
+tags: [Unity, 动画, 动画系统, 状态机, 设计原理]
 category: 核心系统/动画系统
 created: 2026-03-05 08:30
 updated: 2026-03-05 08:30
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # Animator 状态机
 
 > 第1课 | 动画系统模块
+
+## 文档定位
+
+本文档从**底层机制角度**深入讲解Animator状态机的本质原理。
+
+**相关文档**：、、
+
+---
 
 ## 1. Animator 组件
 
@@ -424,7 +432,7 @@ public class AvatarSwitcher : MonoBehaviour
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Animator 官方文档](https://docs.unity3d.com/ScriptReference/Animator.html)
 - [Animation System Overview](https://docs.unity3d.com/Manual/AnimationOverview.html)

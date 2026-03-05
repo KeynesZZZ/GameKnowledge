@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > Zenject/Extenject依赖注入框架指南
 
+## 文档定位
+
+本文档从**使用角度**讲解Zenject依赖注入。
+
+**相关文档**：[[【教程】Zenject依赖注入]]
+
+---
+
 ## 概述
 
 Zenject（现Extenject）是Unity中最流行的DI框架。

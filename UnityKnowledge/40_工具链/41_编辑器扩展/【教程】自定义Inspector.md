@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第2课 | 编辑器扩展模块
 
+## 文档定位
+
+本文档从**使用角度**讲解自定义Inspector。
+
+**相关文档**：
+
+---
+
 ## 1. CustomEditor 基础
 
 ### 1.1 基本用法
@@ -461,7 +469,7 @@ public class MultiTargetEditor : Editor
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [CustomEditor 官方文档](https://docs.unity3d.com/ScriptReference/CustomEditor.html)
 - [PropertyDrawer 官方文档](https://docs.unity3d.com/ScriptReference/PropertyDrawer.html)

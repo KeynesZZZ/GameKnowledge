@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > Coroutine到UniTask的迁移对照表 `#第三方库` `#异步编程` `#代码片段`
 
+## 文档定位
+
+本文档从**实践角度**提供UniTask协程转换的可复制代码。
+
+**相关文档**：[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]、[[【代码片段】UniTask协程转换]]、[[【教程】UniTask异步编程]]
+
+---
+
 ## 完整对照表
 
 | Coroutine | UniTask | 说明 |
@@ -452,5 +460,5 @@ Safe().Forget();
 
 ## 相关链接
 
-- [UniTask 异步编程](UniTask%20异步编程.md)
+- [UniTask 异步编程](UniTask 异步编程.md)
 - [高级编程](../36_高级编程/教程-)

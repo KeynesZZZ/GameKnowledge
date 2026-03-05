@@ -11,6 +11,14 @@ unity_version: 2021.3+
 
 > 第1课 | 游戏系统开发模块
 
+## 文档定位
+
+本文档从**使用角度**讲解UI系统架构。
+
+**相关文档**：
+
+---
+
 ## 1. UGUI核心概念
 
 ### Canvas渲染模式
@@ -1000,8 +1008,8 @@ public struct HintRequestedEvent { }
 
 ---
 
-## 延伸阅读
+## 相关链接
 
 - [Unity UGUI优化指南](https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity7.html)
 - [Unity UI Extensions](https://github.com/Unity-UI-Extensions/com.unity.ui.extensions)
-- [MVP Pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
+- [MVP Pattern](https://en.wikipedia.org/wiki/Model–view–presenter)

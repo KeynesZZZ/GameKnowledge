@@ -1,6 +1,6 @@
 ---
 title: 【性能数据】UGUI DrawCall影响因素全面测试
-tags: [Unity, UI系统, UGUI, 性能测试, 性能数据]
+tags: [Unity, UI, UI系统, UGUI, 性能测试, 性能数据]
 category: 核心系统/UI系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # 性能数据 - UGUI DrawCall影响因素全面测试
 
 > UGUI DrawCall影响因素的全方位基准测试与数据分析 `#性能数据` `#渲染优化` `#UGUI`
+
+## 文档定位
+
+本文档从**性能测试角度**提供UGUI DrawCall影响因素全面测试的客观数据和测试结果。
+
+**相关文档**：、、
+
+---
 
 ## 适用版本
 
@@ -994,10 +1002,10 @@ public class UIPerformanceBenchmark : MonoBehaviour
 
 ## 相关链接
 
-- 设计原理: [UGUI合批机制深度解析](设计原理-UGUI合批机制深度解析.md)
-- 最佳实践: [UI性能优化](../../30_性能优化/渲染优化/最佳实践-UI性能优化.md)
-- 文本优化: [TextMeshPro性能优化实战](最佳实践-TextMeshPro性能优化实战.md)
-- 踩坑记录: [UGUI常见性能陷阱与根因分析](踩坑记录-UGUI常见性能陷阱与根因分析.md)
+- 设计原理: [UGUI合批机制深度解析](【设计原理】UGUI合批机制深度解析.md)
+- 最佳实践: [UI性能优化](../../30_性能优化/33_渲染优化/【最佳实践】UI性能优化.md)
+- 文本优化: [TextMeshPro性能优化实战](【最佳实践】TextMeshPro性能优化实战.md)
+- 踩坑记录: [UGUI常见性能陷阱与根因分析](【踩坑记录】UGUI常见性能陷阱与根因分析.md)
 
 ---
 

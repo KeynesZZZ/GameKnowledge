@@ -1,6 +1,6 @@
 ---
 title: 【教程】DOTS学习路径
-tags: [Unity, DOTS技术栈, 学习路径, 教程]
+tags: [Unity, DOTS, DOTS技术栈, 学习路径, 教程]
 category: DOTS技术栈
 created: 2026-03-05 09:21
 updated: 2026-03-05 09:21
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # DOTS 技术栈学习路径
 
 > 目标：掌握 Unity 的数据导向技术栈，实现高性能游戏逻辑
+
+## 文档定位
+
+本文档从**使用角度**讲解DOTS学习路径。
+
+**相关文档**：[[DOTS专题索引]]、[[【教程】DOTS学习路径]]
+
+---
 
 ## 什么是 DOTS？
 

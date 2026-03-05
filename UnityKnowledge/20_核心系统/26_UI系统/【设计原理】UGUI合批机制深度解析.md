@@ -1,6 +1,6 @@
 ---
 title: 【设计原理】UGUI合批机制深度解析
-tags: [Unity, UI系统, UGUI, 合批, 设计原理]
+tags: [Unity, UI, UI系统, UGUI, 合批, 设计原理]
 category: 核心系统/UI系统
 created: 2026-03-05 08:31
 updated: 2026-03-05 08:31
@@ -10,6 +10,14 @@ unity_version: 2021.3+
 # 设计原理 - UGUI合批机制深度解析
 
 > Unity UGUI Canvas批处理、UI Vertex分析、DrawCall根因深度剖析 `#深度解析` `#渲染` `#性能优化`
+
+## 文档定位
+
+本文档从**底层机制角度**深入讲解UGUI合批机制深度解析的本质原理。
+
+**相关文档**：、、
+
+---
 
 ## 适用版本
 
@@ -21,7 +29,7 @@ unity_version: 2021.3+
   - 2020.x: Canvas.Rebuild API略有差异
   - 2019.x: 不推荐使用，部分新特性不可用
 
-## 快速参考
+## 相关链接
 
 ```csharp
 // 检查Canvas合批状态
@@ -949,10 +957,10 @@ public class DepthManager : MonoBehaviour
 ## 相关链接
 
 - 性能测试: [UGUI DrawCall影响因素全面测试](性能数据-UGUI-DrawCall影响因素全面测试.md)
-- 源码解析: [Unity事件系统实现机制](源码解析-Unity事件系统实现机制.md)
-- 最佳实践: [TextMeshPro性能优化实战](最佳实践-TextMeshPro性能优化实战.md)
-- 踩坑记录: [UGUI常见性能陷阱与根因分析](踩坑记录-UGUI常见性能陷阱与根因分析.md)
-- 渲染优化: [UGUI性能优化](../../30_性能优化/渲染优化/最佳实践-UI性能优化.md)
+- 源码解析: [Unity事件系统实现机制](【源码解析】Unity事件系统实现机制.md)
+- 最佳实践: [TextMeshPro性能优化实战](【最佳实践】TextMeshPro性能优化实战.md)
+- 踩坑记录: [UGUI常见性能陷阱与根因分析](【踩坑记录】UGUI常见性能陷阱与根因分析.md)
+- 渲染优化: [UGUI性能优化](../../30_性能优化/33_渲染优化/【最佳实践】UI性能优化.md)
 
 ---
 
