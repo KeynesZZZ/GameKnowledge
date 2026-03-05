@@ -3,7 +3,11 @@
     "allow": [
       "Bash(git -C \"d:/GitHub/Doc\" log --oneline -10)",
       "Bash(git fetch origin)",
-      "Bash(git ls-tree -r origin/main --name-only)"
+      "Bash(git ls-tree -r origin/main --name-only)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git remote set-url origin git@github.com:KeynesZZZ/GameKnowledge.git)",
+      "Bash(git add -A)"
     ]
   }
 }

@@ -1,0 +1,314 @@
+# OpenClaw 配置文件
+# 用于自动监听 Obsidian 笔记并同步到向量库
+
+# 基础配置
+server:
+  host: "0.0.0.0"
+  port: 18789
+  debug: false
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "json"
+  file: "~/.openclaw/logs/openclaw.log"
+
+# 工具配置
+tools:
+  # 文件监听配置
+  file:
+    # 监听的文件路径（支持多个路径）
+    watchPaths:
+      - "/Users/$(whoami)/Documents/Obsidian笔记库"
+      - "/Users/$(whoami)/git/Doc/UnityKnowledge"  # 备用路径
+    
+    # 文件类型过滤
+    fileTypes:
+      - ".md"
+      - ".txt"
+      - ".rst"
+    
+    # 忽略的文件模式
+    ignorePatterns:
+      - "*.tmp"
+      - "*.swp"
+      - ".git/*"
+      - ".obsidian/*"
+      - "node_modules/*"
+    
+    # 自动索引
+    autoIndex: true
+    
+    # 索引间隔（秒）
+    indexInterval: 300
+    
+    # 文件变化检测延迟（毫秒）
+    watchDelay: 1000
+    
+    # 批量处理大小
+    batchSize: 10
+
+  # 向量数据库配置
+  vector:
+    # 向量数据库类型
+    type: "qdrant"  # 支持: qdrant, milvus, chroma, weaviate
+    
+    # 连接配置
+    connection:
+      host: "localhost"
+      port: 6333
+      api_key: ""
+      
+    # 集合配置
+    collection:
+      name: "obsidian_notes"
+      vector_size: 1024  # bge-m3 向量维度
+      distance: "Cosine"
+      
+    # 索引配置
+    index:
+      hnsw:
+        m: 16
+        ef_construct: 200
+        ef: 100
+
+  # 嵌入模型配置
+  embedding:
+    # 嵌入模型类型
+    type: "ollama"
+    
+    # 模型配置
+    model:
+      name: "bge-m3"
+      base_url: "http://localhost:11434"
+      timeout: 60
+      
+    # 批处理配置
+    batch:
+      size: 8
+      timeout: 30
+      
+    # 缓存配置
+    cache:
+      enabled: true
+      size: 1000
+      ttl: 3600
+
+  # 文本处理配置
+  text_processing:
+    # 分块配置
+    chunking:
+      strategy: "recursive"  # recursive, sliding_window, fixed
+      chunk_size: 1000
+      chunk_overlap: 200
+      separators:
+        - "\n\n"
+        - "\n"
+        - "。"
+        - "！"
+        - "？"
+        - ". "
+        - "! "
+        - "? "
+    
+    # 预处理
+    preprocessing:
+      remove_extra_spaces: true
+      remove_urls: true
+      remove_emails: true
+      normalize_unicode: true
+      lowercase: false
+    
+    # 元数据提取
+    metadata:
+      extract_title: true
+      extract_tags: true
+      extract_links: true
+      extract_headers: true
+
+# 知识库配置
+knowledge_base:
+  # 知识库名称
+  name: "Obsidian知识库"
+  
+  # 描述
+  description: "个人 Obsidian 笔记知识库"
+  
+  # 语言
+  language: "zh"
+  
+  # 分类标签
+  categories:
+    - "技术笔记"
+    - "学习资料"
+    - "项目文档"
+    - "个人知识"
+  
+  # 访问权限
+  access_control:
+    enabled: false
+    users: []
+    roles: []
+
+# 同步配置
+sync:
+  # 同步模式
+  mode: "realtime"  # realtime, scheduled, manual
+  
+  # 定时同步（如果 mode 为 scheduled）
+  schedule:
+    cron: "0 2 * * *"  # 每天凌晨2点
+    timezone: "Asia/Shanghai"
+  
+  # 增量同步
+  incremental: true
+  
+  # 冲突解决
+  conflict_resolution:
+    strategy: "latest_wins"  # latest_wins, merge, manual
+    backup_on_conflict: true
+  
+  # 重试配置
+  retry:
+    max_attempts: 3
+    delay: 5
+    exponential_backoff: true
+
+# 监控配置
+monitoring:
+  # 启用监控
+  enabled: true
+  
+  # 指标收集
+  metrics:
+    - "sync_count"
+    - "sync_errors"
+    - "index_size"
+    - "query_count"
+    - "response_time"
+  
+  # 告警配置
+  alerting:
+    enabled: true
+    thresholds:
+      sync_error_rate: 0.1
+      response_time: 5.0
+      index_size: 1000000
+    
+    # 通知方式
+    notifications:
+      - type: "log"
+        level: "ERROR"
+      - type: "email"
+        recipients: []
+
+# API 配置
+api:
+  # REST API 配置
+  rest:
+    enabled: true
+    base_path: "/api/v1"
+    cors:
+      enabled: true
+      origins: ["*"]
+      methods: ["GET", "POST", "PUT", "DELETE"]
+      headers: ["*"]
+  
+  # GraphQL 配置
+  graphql:
+    enabled: false
+    path: "/graphql"
+    playground: false
+  
+  # 认证配置
+  auth:
+    enabled: false
+    type: "bearer"  # bearer, basic, api_key
+    secret_key: ""
+
+# 插件配置
+plugins:
+  # 启用插件
+  enabled: true
+  
+  # 插件目录
+  directory: "~/.openclaw/plugins"
+  
+  # 已启用的插件
+  enabled_plugins:
+    - "obsidian_parser"
+    - "markdown_processor"
+    - "vector_search"
+    - "text_summarizer"
+  
+  # 插件配置
+  configurations:
+    obsidian_parser:
+      extract_frontmatter: true
+      parse_wikilinks: true
+      parse_tags: true
+      parse_attachments: true
+    
+    markdown_processor:
+      convert_to_html: false
+      extract_code_blocks: true
+      syntax_highlighting: true
+    
+    vector_search:
+      top_k: 10
+      score_threshold: 0.7
+      rerank: true
+      rerank_top_k: 5
+    
+    text_summarizer:
+      enabled: true
+      max_length: 200
+      min_length: 50
+      extract_keywords: true
+
+# 性能优化
+performance:
+  # 并发设置
+  concurrency:
+    max_workers: 8
+    max_connections: 100
+    timeout: 30
+  
+  # 缓存配置
+  cache:
+    enabled: true
+    type: "memory"  # memory, redis, memcached
+    max_size: 1000
+    ttl: 3600
+  
+  # 批处理
+  batch:
+    enabled: true
+    size: 32
+    max_wait_time: 5
+  
+  # 连接池
+  connection_pool:
+    enabled: true
+    max_size: 20
+    min_size: 5
+    idle_timeout: 300
+
+# 日志配置
+debugging:
+  # 调试模式
+  debug: false
+  
+  # 详细日志
+  verbose: false
+  
+  # 性能分析
+  profiling:
+    enabled: false
+    output_file: "~/.openclaw/profiling/profiling.json"
+  
+  # 错误追踪
+  error_tracking:
+    enabled: true
+    include_stacktrace: true
+    max_stacktrace_depth: 10
