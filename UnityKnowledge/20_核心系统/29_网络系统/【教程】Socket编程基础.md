@@ -1,3 +1,12 @@
+---
+title: 【教程】Socket编程基础
+tags: [Unity, 网络系统, Socket, 教程]
+category: 核心系统/网络系统
+created: 2026-03-05 08:32
+updated: 2026-03-05 08:32
+description: Socket网络编程基础教程
+unity_version: 2021.3+
+---
 # Socket 编程基础
 
 > 第1课 | 网络编程实战模块

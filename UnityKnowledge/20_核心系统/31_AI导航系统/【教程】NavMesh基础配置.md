@@ -1,3 +1,12 @@
+---
+title: 【教程】NavMesh基础配置
+tags: [Unity, AI导航系统, NavMesh, 教程]
+category: 核心系统/AI导航系统
+created: 2026-03-05 08:32
+updated: 2026-03-05 08:32
+description: NavMesh导航系统基础配置教程
+unity_version: 2021.3+
+---
 # NavMesh 基础配置
 
 > Unity NavMesh 导航系统完整配置指南 `#AI与导航系统` `#NavMesh` `#寻路`

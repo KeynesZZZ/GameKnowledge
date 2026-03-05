@@ -1,3 +1,12 @@
+---
+title: 【最佳实践】Animator状态机最佳实践
+tags: [Unity, 动画系统, 状态机, 最佳实践]
+category: 核心系统/动画系统
+created: 2026-03-05 08:30
+updated: 2026-03-05 08:30
+description: Animator状态机设计与优化最佳实践
+unity_version: 2021.3+
+---
 # Animator 状态机最佳实践
 
 > Unity动画控制器的优化与最佳实践 `#动画系统` `#最佳实践` `#性能优化`

@@ -1,3 +1,12 @@
+---
+title: 【最佳实践】TextMeshPro性能优化实战
+tags: [Unity, UI系统, TextMeshPro, 性能优化, 最佳实践]
+category: 核心系统/UI系统
+created: 2026-03-05 08:31
+updated: 2026-03-05 08:31
+description: TextMeshPro性能优化实战指南
+unity_version: 2021.3+
+---
 # 最佳实践 - TextMeshPro性能优化实战
 
 > TextMeshPro内部机制、字体图集管理、Mesh生成优化、动态文本GC优化完整方案 `#最佳实践` `#性能优化` `#TextMeshPro`

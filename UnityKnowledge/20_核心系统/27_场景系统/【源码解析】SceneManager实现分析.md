@@ -1,3 +1,12 @@
+---
+title: 【源码解析】SceneManager实现分析
+tags: [Unity, 场景系统, SceneManager, 源码解析]
+category: 核心系统/场景系统
+created: 2026-03-05 08:32
+updated: 2026-03-05 08:32
+description: SceneManager底层实现机制分析
+unity_version: 2021.3+
+---
 # 源码解析 - SceneManager实现分析
 
 > Unity SceneManager源码级别分析、场景加载流程、场景管理系统内部机制 `#源码解析` `#场景管理` `#底层`

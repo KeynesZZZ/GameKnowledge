@@ -1,3 +1,12 @@
+---
+title: 【教程】AI行为树实现
+tags: [Unity, AI导航系统, 行为树, 教程]
+category: 核心系统/AI导航系统
+created: 2026-03-05 08:32
+updated: 2026-03-05 08:32
+description: AI行为树系统实现教程
+unity_version: 2021.3+
+---
 # AI 行为树实现
 
 > Unity 行为树（Behavior Tree）系统完整实现指南 `#AI与导航系统` `#行为树` `#AI`

@@ -1,3 +1,12 @@
+---
+title: 【教程】UI系统架构
+tags: [Unity, 游戏系统, UI, 教程]
+category: 核心系统/游戏系统
+created: 2026-03-05 08:32
+updated: 2026-03-05 08:32
+description: 游戏UI系统架构设计
+unity_version: 2021.3+
+---
 # UI系统架构
 
 > 第1课 | 游戏系统开发模块

@@ -1,3 +1,12 @@
+---
+title: 【教程】URP Lit Shader
+tags: [Unity, 渲染系统, URP, Shader, 教程]
+category: 核心系统/渲染系统
+created: 2026-03-05 08:31
+updated: 2026-03-05 08:31
+description: URP Lit Shader光照模型详解
+unity_version: 2021.3+
+---
 # URP Lit Shader
 
 > 第4课 | 渲染与图形模块

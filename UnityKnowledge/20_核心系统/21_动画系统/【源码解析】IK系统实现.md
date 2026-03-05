@@ -1,3 +1,12 @@
+---
+title: 【源码解析】IK系统实现
+tags: [Unity, 动画系统, IK, 源码解析]
+category: 核心系统/动画系统
+created: 2026-03-05 08:30
+updated: 2026-03-05 08:30
+description: Unity反向动力学系统实现原理
+unity_version: 2021.3+
+---
 # IK 系统实现
 
 > Unity IK（反向运动学）系统完整实现指南 `#动画系统` `#IK` `#反向运动学`

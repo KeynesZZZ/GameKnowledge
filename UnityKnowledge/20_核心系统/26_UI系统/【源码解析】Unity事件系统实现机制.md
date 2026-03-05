@@ -1,3 +1,12 @@
+---
+title: 【源码解析】Unity事件系统实现机制
+tags: [Unity, UI系统, 事件系统, 源码解析]
+category: 核心系统/UI系统
+created: 2026-03-05 08:31
+updated: 2026-03-05 08:31
+description: Unity事件系统底层实现机制
+unity_version: 2021.3+
+---
 # 源码解析 - Unity事件系统实现机制
 
 > Unity EventSystem底层实现、PointerEventData流转、射线检测算法源码分析 `#源码解析` `#UI` `#事件系统`

@@ -1,3 +1,12 @@
+---
+title: 【设计原理】UGUI合批机制深度解析
+tags: [Unity, UI系统, UGUI, 合批, 设计原理]
+category: 核心系统/UI系统
+created: 2026-03-05 08:31
+updated: 2026-03-05 08:31
+description: UGUI合批机制原理深度分析
+unity_version: 2021.3+
+---
 # 设计原理 - UGUI合批机制深度解析
 
 > Unity UGUI Canvas批处理、UI Vertex分析、DrawCall根因深度剖析 `#深度解析` `#渲染` `#性能优化`

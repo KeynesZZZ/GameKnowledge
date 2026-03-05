@@ -1,3 +1,12 @@
+---
+title: 【踩坑记录】UGUI常见性能陷阱与根因分析
+tags: [Unity, UI系统, UGUI, 性能, 踩坑记录]
+category: 核心系统/UI系统
+created: 2026-03-05 08:31
+updated: 2026-03-05 08:31
+description: UGUI常见性能陷阱及根因分析
+unity_version: 2021.3+
+---
 # 踩坑记录 - UGUI常见性能陷阱与根因分析
 
 > UGUI RecalculateLayout、Rebuild、Canvas层级导致的性能问题深度分析与解决方案 `#踩坑记录` `#性能优化` `#UI`
