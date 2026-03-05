@@ -269,4 +269,4 @@ public class DrawCallBenchmark : MonoBehaviour
 ## 相关链接
 
 - 最佳实践: [UI性能优化](../渲染优化/最佳实践-UI性能优化.md)
-- 深入学习: [UGUI深度解析](../../20_核心系统/游戏系统/教程-UGUI深度解析.md)
+- 深入学习: [UGUI深度解析](../../20_核心系统/32_游戏系统/【源码解析】UGUI深度解析.md)

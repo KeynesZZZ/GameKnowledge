@@ -525,4 +525,4 @@ tween.ChangeEndValue(targetB, true);  // true = 计算剩余时间
 
 - 官方文档: [DOTween Documentation](http://dotween.demigiant.com/documentation.php)
 - 代码片段: [DOTween常用动画](代码片段-DOTween常用动画.md)
-- 动画系统: [动画系统](../20_核心系统/动画系统/)
+- 动画系统: [动画系统](../20_核心系统/21_动画系统/)

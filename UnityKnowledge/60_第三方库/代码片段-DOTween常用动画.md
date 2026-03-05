@@ -612,4 +612,4 @@ await SequenceEffects.StaggerPopOut(container).AsyncWaitForCompletion();
 ## 相关链接
 
 - [DOTween 深度使用](DOTween%20深度使用.md)
-- [动画系统](../20_核心系统/动画系统/)
+- [动画系统](../20_核心系统/21_动画系统/)
