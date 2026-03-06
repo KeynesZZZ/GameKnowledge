@@ -78,7 +78,36 @@ def extract_links(filepath: Path) -> List[Tuple[str, str, int]]:
 
 def resolve_obsidian_link(link: str, source_file: Path, root: Path, file_index: Dict[str, Path]) -> bool:
     """解析Obsidian链接，判断目标是否存在"""
-    link_clean = link.split("#")[0].strip()
+    link_clean = link.strip()
+
+    # 先尝试完整链接（不截断 #），处理 C# 等文件名
+    if link_clean in file_index or (link_clean + ".md") in file_index:
+        return True
+    basename = link_clean.split("/")[-1]
+    if basename in file_index or (basename + ".md") in file_index:
+        return True
+
+    # 再尝试截断锚点
+    anchor_pos = link_clean.rfind("#")
+    if anchor_pos > 0:
+        before = link_clean[:anchor_pos].strip()
+        if not before:
+            return True
+        if before in file_index or (before + ".md") in file_index:
+            return True
+        basename2 = before.split("/")[-1]
+        if basename2 in file_index or (basename2 + ".md") in file_index:
+            return True
+        # 相对路径
+        source_dir = source_file.parent
+        target = (source_dir / before).resolve()
+        if target.exists():
+            return True
+        target_md = (source_dir / (before + ".md")).resolve()
+        if target_md.exists():
+            return True
+        link_clean = before
+
     if not link_clean:
         return True
 
@@ -117,13 +146,27 @@ def resolve_obsidian_link(link: str, source_file: Path, root: Path, file_index: 
 
 def resolve_markdown_link(link: str, source_file: Path, root: Path) -> bool:
     """解析Markdown链接，判断目标是否存在"""
-    link_clean = link.split("#")[0].split("?")[0].strip()
+    # 去掉查询参数
+    link_clean = link.split("?")[0].strip()
     if not link_clean:
         return True
 
+    # 先尝试完整路径（不截断 #），处理 C# 等文件名
     source_dir = source_file.parent
-    target = source_dir / link_clean
-    return target.exists()
+    target_full = (source_dir / link_clean).resolve()
+    if target_full.exists():
+        return True
+
+    # 再尝试截断锚点
+    anchor_pos = link_clean.rfind("#")
+    if anchor_pos > 0:
+        before = link_clean[:anchor_pos]
+        if before:
+            target = (source_dir / before).resolve()
+            if target.exists():
+                return True
+
+    return False
 
 
 def find_similar(link: str, file_index: Dict[str, Path]) -> List[str]:

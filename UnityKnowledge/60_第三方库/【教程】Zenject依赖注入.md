@@ -68,4 +68,4 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
 ## 相关链接
 
-- [依赖注入与服务定位器模式](../10_架构设计/教程-依赖注入与服务定位器模式.md)
+- [依赖注入与服务定位器模式](../10_架构设计/【教程】依赖注入与服务定位器.md)

@@ -72,4 +72,4 @@ public string description;
 
 ## 相关链接
 
-- [编辑器扩展](../40_工具链/Editor扩展开发.md)
+- [编辑器扩展](../40_工具链/【教程】Editor扩展开发.md)

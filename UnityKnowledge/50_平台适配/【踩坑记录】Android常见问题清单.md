@@ -546,6 +546,6 @@ OnDemandRendering.renderFrameInterval = 2;
 
 ## 相关链接
 
-- [iOS 专项](iOS 专项.md)
+- [iOS 专项](【最佳实践】iOS专项.md)
 - [性能优化](../30_性能优化/)
 - [官方文档](https://docs.unity3d.com/Manual/android.html)

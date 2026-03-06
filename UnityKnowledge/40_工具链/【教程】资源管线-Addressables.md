@@ -588,5 +588,5 @@ public async UniTask<IList<T>> LoadBatchAsync<T>(string label) where T : Object
 ## 相关链接
 
 - 深入学习: [打包与热更新](../35_高级主题/【教程】打包与热更新.md)
-- 热更新对比: [热更新方案对比](热更新方案对比.md)
+- 热更新对比: [热更新方案对比](【设计原理】热更新方案对比.md)
 - 官方文档: [Addressables Package](https://docs.unity3d.com/Packages/com.unity.addressables@latest)
