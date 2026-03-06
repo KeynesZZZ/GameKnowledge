@@ -270,7 +270,7 @@ void Kernel (uint3 id : SV_DispatchThreadID)
 
 ## 相关链接
 
-- [Shader基础语法](./Shader基础语法.md)
+- [Shader基础语法](./【教程】HLSL与Shader基础.md)
 - [性能优化指南](../../30_性能优化/README.md)
 
 ---

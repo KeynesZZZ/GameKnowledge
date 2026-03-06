@@ -354,8 +354,8 @@ SubShader
 
 ## 相关链接
 
-- [Shader基础语法](./Shader基础语法.md)
-- [URP管线配置](./URP管线配置.md)
+- [Shader基础语法](./【教程】HLSL与Shader基础.md)
+- [URP管线配置](./【最佳实践】URP常用配置.md)
 
 ---
 

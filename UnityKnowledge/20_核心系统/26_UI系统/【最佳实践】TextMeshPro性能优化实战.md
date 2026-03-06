@@ -1032,7 +1032,7 @@ public class OptimizedChatSystem : MonoBehaviour
 ## 相关链接
 
 - 设计原理: [UGUI合批机制深度解析](【设计原理】UGUI合批机制深度解析.md)
-- 性能测试: [UGUI DrawCall影响因素全面测试](性能数据-UGUI-DrawCall影响因素全面测试.md)
+- 性能测试: [UGUI DrawCall影响因素全面测试](【性能数据】UGUI DrawCall影响因素全面测试.md)
 - 源码解析: [Unity事件系统实现机制](【源码解析】Unity事件系统实现机制.md)
 - 踩坑记录: [UGUI常见性能陷阱与根因分析](【踩坑记录】UGUI常见性能陷阱与根因分析.md)
 

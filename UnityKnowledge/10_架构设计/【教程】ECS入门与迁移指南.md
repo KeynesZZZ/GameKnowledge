@@ -166,5 +166,5 @@ public class UnitAuthoring : MonoBehaviour
 
 ## 相关链接
 
-- [DOTS 学习路径](【教程】DOTS学习路径.md)
-- [Job System 详解](【教程】Job System.md)
+- [DOTS 学习路径](../25_DOTS技术栈/【教程】DOTS学习路径.md)
+- [Job System 详解](../25_DOTS技术栈/【教程】JobSystem详解.md)
