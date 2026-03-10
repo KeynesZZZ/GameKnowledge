@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>平面卷曲成圆筒 — 从边缘开始卷 · 数学原理详解 + 交互演示</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #1a1a2e; color: #e0e0e0;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  overflow-y: auto; min-height: 100vh;
+}
+.hero {
+  background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+  padding: 32px 40px; text-align: center;
+  border-bottom: 2px solid #e94560;
+}
+.hero h1 { font-size: 26px; color: #e94560; margin-bottom: 6px; }
+.hero p  { font-size: 14px; color: #8090b0; }
+
+.section { max-width: 1000px; margin: 0 auto; padding: 32px 40px; }
+.section h2 { color: #e94560; font-size: 20px; margin-bottom: 16px; border-left: 4px solid #e94560; padding-left: 12px; }
+.section h3 { color: #53a8b6; font-size: 16px; margin: 24px 0 10px; }
+.section p { font-size: 14px; line-height: 2; color: #c0c0d8; }
+.fb {
+  background: #0f3460; padding: 14px 20px; border-radius: 8px;
+  font-family: 'Consolas','Courier New',monospace; font-size: 13.5px;
+  color: #7ec8e3; margin: 12px 0; white-space: pre-wrap;
+  border-left: 3px solid #e94560; overflow-x: auto;
+}
+.hl { color: #e94560; font-weight: bold; }
+.note {
+  background: rgba(83,168,182,0.12); border: 1px solid #53a8b6;
+  border-radius: 8px; padding: 12px 16px; margin: 12px 0;
+  font-size: 13px; color: #a0d0d8;
+}
+.sn {
+  display: inline-block; width: 28px; height: 28px; line-height: 28px;
+  text-align: center; background: #e94560; color: #fff; border-radius: 50%;
+  font-size: 14px; font-weight: bold; margin-right: 8px;
+}
+.dw { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 20px 0; }
+.dw canvas { border: 1px solid #0f3460; border-radius: 8px; background: #0d1b36; }
+.dl { text-align: center; font-size: 12px; color: #8090b0; margin-top: 4px; }
+.et { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+.et th { background: #0f3460; color: #7ec8e3; padding: 8px 12px; text-align: center; }
+.et td { background: #16213e; color: #c0c0d8; padding: 8px 12px; text-align: center; border: 1px solid #0f3460; }
+
+.demo-section { max-width: 1000px; margin: 0 auto; padding: 0 40px 40px; }
+.demo-section h2 { color: #e94560; font-size: 20px; margin-bottom: 16px; border-left: 4px solid #e94560; padding-left: 12px; }
+#ctrl-bar { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+.ctrl { display: flex; align-items: center; gap: 6px; }
+.ctrl label { font-size: 13px; color: #a0a0c0; white-space: nowrap; }
+.ctrl input[type=range] { width: 150px; accent-color: #e94560; }
+.ctrl span { font-size: 13px; color: #fff; min-width: 36px; }
+.ctrl select { background: #0f3460; color: #7ec8e3; border: 1px solid #53a8b6; border-radius: 4px; padding: 4px 8px; font-size: 13px; cursor: pointer; }
+#canvas-3d { width: 100%; height: 520px; display: block; border: 1px solid #0f3460; border-radius: 8px; background: #0d1b36; }
+.tip { font-size: 12px; color: #607090; margin-top: 6px; }
+.mdesc { background: #16213e; border: 1px solid #0f3460; border-radius: 8px; padding: 12px 16px; margin: 10px 0; font-size: 13px; color: #a0c0d8; min-height: 36px; }
+
+.code-section { max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+.code-section h2 { color: #e94560; font-size: 20px; margin-bottom: 16px; border-left: 4px solid #e94560; padding-left: 12px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>512×512 Plane → 圆筒（从边缘开始卷）</h1>
+  <p>像真的卷纸一样：从左边缘 / 底边缘 / 外边缘逐步卷起，已卷部分贴合圆弧，未卷部分保持平面</p>
+</div>
+
+<!-- ==================== 原理讲解 ==================== -->
+<div class="section">
+
+<h2>一、"从边缘卷"和"全局 Lerp"的区别</h2>
+<p>
+之前的做法是全局 lerp：所有顶点同时从平面位置向圆筒位置过渡，中间状态是一个"均匀弯曲的弧面"。但这不像真实的卷纸——真实卷纸时，<span class="hl">已经卷过去的部分完全贴在圆筒上</span>，<span class="hl">还没卷到的部分还是平的</span>，两者之间有一条<span class="hl">"卷曲前沿"</span>。
+</p>
+
+<div class="dw">
+  <div>
+    <canvas id="dia-compare" width="560" height="200"></canvas>
+    <div class="dl">左：全局 Lerp（均匀弯曲） · 右：从边缘卷（前沿推进，左侧已卷，右侧仍平）</div>
+  </div>
+</div>
+
+<h2>二、核心数学：卷曲前沿 + 分段处理</h2>
+
+<h3><span class="sn">1</span>定义卷曲前沿位置 f</h3>
+<p>
+参数 <span class="hl">t ∈ [0, 1]</span> 控制卷曲进度。以"沿 X 轴从左边缘开始卷"为例，前沿位置 f 表示"已经卷到了 X 轴上的哪个位置"：
+</p>
+<div class="fb">前沿位置：f = -W/2 + t × W = -256 + t × 512
+
+t = 0  →  f = -256（最左边，还没开始卷）
+t = 0.5 →  f = 0   （卷到正中间）
+t = 1  →  f = +256 （卷到最右边，完全卷完）</div>
+
+<h3><span class="sn">2</span>每个顶点的分段判断</h3>
+<p>
+对于每个顶点的 x 坐标，和前沿 f 比较，分两种情况：
+</p>
+<div class="fb"><span style="color:#e94560;font-weight:bold">if (x ≤ f)  →  已卷区域：这个顶点已经贴在圆筒弧面上</span>
+<span style="color:#53a8b6;font-weight:bold">if (x > f)  →  未卷区域：这个顶点还在平面上，但要跟着前沿平移</span></div>
+
+<h3><span class="sn">3</span>已卷区域的坐标计算</h3>
+<p>
+已卷部分的顶点，其 x 坐标到前沿 f 的距离就是它在圆筒弧面上走过的<span class="hl">弧长</span>。从前沿处开始，沿圆筒表面"贴"上去：
+</p>
+<div class="fb">弧长（从前沿量起）：arcLen = f - x    （x ≤ f，所以 arcLen ≥ 0）
+
+半径：R = W / (2π) ≈ 81.49
+
+弧长对应的角度：θ = arcLen / R
+
+前沿在圆筒上的切点位置（圆筒和平面相切的地方）：
+  切点 X = f
+  切点 Z = 0   （和平面齐平）
+
+从切点沿圆弧走角度 θ：
+<span style="color:#e94560;font-weight:bold">  newX = f - R × sin(θ)</span>      ← 从前沿往左（已卷方向）走
+<span style="color:#e94560;font-weight:bold">  newZ = R - R × cos(θ)</span>      ← 向上抬起（离开平面）
+<span style="color:#e94560;font-weight:bold">  newY = y</span>                    ← 高度不变</div>
+
+<div class="dw">
+  <div>
+    <canvas id="dia-math" width="480" height="280"></canvas>
+    <div class="dl">从边缘卷的几何关系：圆筒在前沿处与平面相切，已卷部分贴在圆弧上</div>
+  </div>
+</div>
+
+<h3><span class="sn">4</span>未卷区域的坐标计算</h3>
+<p>
+未卷部分保持平面（Z=0），但要注意：随着卷曲推进，平面的未卷部分不动，因为前沿就是圆筒和平面的切点，未卷部分自然还在原位。
+</p>
+<div class="fb">if (x > f):
+  newX = x       ← 保持原位
+  newZ = 0       ← 还在平面上
+  newY = y       ← 高度不变</div>
+
+<h3><span class="sn">5</span>为什么是 R - R×cos(θ) 而不是别的？</h3>
+<p>
+想象圆筒放在平面上方，圆心在 (f, R)。圆筒在 f 处和平面相切（切点 Z=0）。从切点沿圆弧走角度 θ：
+</p>
+<div class="fb">圆心位置：(f, R)    ← 在前沿正上方，距平面 R
+
+圆弧上的点（从切点逆时针走 θ）：
+  X = 圆心X - R×sin(θ) = f - R×sin(θ)
+  Z = 圆心Z - R×cos(θ) = R - R×cos(θ)
+
+验证：
+  θ=0 → X=f, Z=0        ✓ 切点，在平面上
+  θ=π → X=f, Z=2R       ✓ 圆筒顶部
+  θ=2π → X=f, Z=0       ✓ 绕一圈回到切点</div>
+
+<h2>三、三种卷曲方向</h2>
+
+<table class="et">
+<tr><th>模式</th><th>卷曲方向</th><th>前沿轴</th><th>弧长计算</th><th>最终形状</th></tr>
+<tr><td><span class="hl">沿 X 卷</span></td><td>从左边缘 → 右</td><td>f 沿 X 轴推进</td><td>arcLen = f - x</td><td>竖直圆筒（轴 = Y）</td></tr>
+<tr><td><span class="hl">沿 Y 卷</span></td><td>从底边缘 → 上</td><td>f 沿 Y 轴推进</td><td>arcLen = f - y</td><td>水平圆筒（轴 = X）</td></tr>
+<tr><td><span class="hl">从中心卷</span></td><td>从外边缘 → 中心</td><td>f 沿径向收缩</td><td>arcLen = r - f</td><td>漏斗/碗形向上卷起</td></tr>
+</table>
+
+<h3>沿 X 轴卷（从左边缘开始）</h3>
+<div class="fb">f = -256 + t × 512        // 前沿从左到右
+R = 512 / (2π)
+
+对每个顶点 (x, y):
+  if (x ≤ f):
+    arcLen = f - x
+    θ = arcLen / R
+    newX = f - R × sin(θ)
+    newZ = R - R × cos(θ)
+    newY = y
+  else:
+    newX = x,  newZ = 0,  newY = y</div>
+
+<h3>沿 Y 轴卷（从底边缘开始）</h3>
+<div class="fb">f = -256 + t × 512        // 前沿从下到上
+R = 512 / (2π)
+
+对每个顶点 (x, y):
+  if (y ≤ f):
+    arcLen = f - y
+    θ = arcLen / R
+    newY = f - R × sin(θ)
+    newZ = R - R × cos(θ)
+    newX = x
+  else:
+    newX = x,  newZ = 0,  newY = y</div>
+
+<h3>从中心卷（从外边缘向内收）</h3>
+<div class="fb">rMax = √(256² + 256²) ≈ 362
+f = rMax × (1 - t)        // 前沿从外向内收缩
+R = rMax / π
+
+对每个顶点 (x, y):
+  r = √(x² + y²)
+  φ = atan2(y, x)
+  if (r ≥ f):              // 已超过前沿 → 已卷
+    arcLen = r - f
+    θ = arcLen / R
+    newR = f + R × sin(θ)  // 注意：这里是从前沿向外"翻"上去
+    → 但为了向上卷，我们让它在径向收缩的同时抬高：
+    flatR = f               // 水平投影收缩到前沿位置
+    newX = (f × cos(φ)) - (R×sin(θ)) × cos(φ)  // 简化处理
+    ... 实际用极坐标更直观：
+    
+    horizR = f - R × sin(θ)  // 水平径向距离（向内卷）
+    newX = horizR × cos(φ)
+    newY = horizR × sin(φ)
+    newZ = R - R × cos(θ)    // 向上抬起
+  else:
+    newX = x,  newY = y,  newZ = 0</div>
+
+<h2>四、完整变换流程图</h2>
+<div class="fb" style="text-align:center;font-size:13px;line-height:2.2">
+                    t ∈ [0, 1]
+                        │
+                        ▼
+              ┌─────────────────┐
+              │ 计算前沿位置 f   │
+              │ f = start + t×L │
+              └────────┬────────┘
+                       │
+              ┌────────▼────────┐
+              │ 对每个顶点判断   │
+              │ 坐标 s vs 前沿 f │
+              └───┬─────────┬───┘
+                  │         │
+          s ≤ f   │         │  s > f
+      ┌───────────▼──┐  ┌──▼───────────┐
+      │ 已卷区域      │  │ 未卷区域      │
+      │ arcLen = f - s│  │ 保持原位      │
+      │ θ = arcLen / R│  │ X=x, Z=0     │
+      │ 贴到圆弧上    │  │               │
+      └──────────────┘  └───────────────┘
+</div>
+
+</div>
+
+<!-- ==================== 3D 交互演示 ==================== -->
+<div class="demo-section">
+<h2>五、3D 交互演示</h2>
+<div id="ctrl-bar">
+  <div class="ctrl">
+    <label>卷曲方向：</label>
+    <select id="sel-mode">
+      <option value="x" selected>沿 X 卷（从左边缘）</option>
+      <option value="y">沿 Y 卷（从底边缘）</option>
+      <option value="center">从中心卷（外边缘向内）</option>
+    </select>
+  </div>
+  <div class="ctrl">
+    <label>卷曲进度 t：</label>
+    <input type="range" id="slider-t" min="0" max="100" value="0">
+    <span id="val-t">0%</span>
+  </div>
+  <div class="ctrl">
+    <label>密度：</label>
+    <input type="range" id="slider-seg" min="8" max="80" value="40">
+    <span id="val-seg">40</span>
+  </div>
+  <div class="ctrl">
+    <label>贴图</label>
+    <input type="checkbox" id="chk-tex" checked>
+  </div>
+  <div class="ctrl">
+    <label>线框</label>
+    <input type="checkbox" id="chk-wire" checked>
+  </div>
+</div>
+<div class="mdesc" id="mode-desc">
+  沿 X 轴从左边缘开始卷：前沿从 x=-256 推进到 x=+256，左侧已卷贴合圆弧，右侧未卷保持平面。
+</div>
+<canvas id="canvas-3d"></canvas>
+<p class="tip">鼠标拖拽旋转 · 滚轮缩放 · 拖动滑块看"卷纸"过程</p>
+</div>
+
+<!-- ==================== Unity C# ==================== -->
+<div class="code-section">
+<h2>六、Unity C# 完整实现</h2>
+<div class="fb" style="font-size:12.5px;line-height:1.65">using UnityEngine;
+
+public enum CurlDir { AlongX, AlongY, FromCenter }
+
+[RequireComponent(typeof(MeshFilter))]
+public class EdgeCurl : MonoBehaviour
+{
+    [Range(0f, 1f)] public float t = 0f;
+    [Range(8, 128)]  public int segments = 64;
+    public float planeSize = 512f;
+    public CurlDir dir = CurlDir.AlongX;
+
+    Vector3[] baseVerts;
+    Mesh mesh;
+
+    void Start()
+    {
+        mesh = GenPlane(planeSize, planeSize, segments, segments);
+        GetComponent&lt;MeshFilter&gt;().mesh = mesh;
+        baseVerts = mesh.vertices.Clone() as Vector3[];
+    }
+
+    void Update() =&gt; Deform(t);
+
+    void Deform(float t)
+    {
+        float W = planeSize;
+        float R = W / (2f * Mathf.PI);
+        var nv = new Vector3[baseVerts.Length];
+
+        for (int i = 0; i &lt; baseVerts.Length; i++)
+        {
+            float x = baseVerts[i].x, y = baseVerts[i].y;
+
+            switch (dir)
+            {
+                case CurlDir.AlongX:
+                {
+                    float f = -W/2f + t * W;  // 前沿位置
+                    if (x &lt;= f) {
+                        float arc = f - x;
+                        float th = arc / R;
+                        nv[i] = new Vector3(
+                            f - R * Mathf.Sin(th),   // 贴圆弧
+                            y,
+                            R - R * Mathf.Cos(th));   // 抬起
+                    } else {
+                        nv[i] = new Vector3(x, y, 0); // 保持平面
+                    }
+                    break;
+                }
+                case CurlDir.AlongY:
+                {
+                    float f = -W/2f + t * W;
+                    if (y &lt;= f) {
+                        float arc = f - y;
+                        float th = arc / R;
+                        nv[i] = new Vector3(
+                            x,
+                            f - R * Mathf.Sin(th),
+                            R - R * Mathf.Cos(th));
+                    } else {
+                        nv[i] = new Vector3(x, y, 0);
+                    }
+                    break;
+                }
+                case CurlDir.FromCenter:
+                {
+                    float rMax = Mathf.Sqrt(W*W/4f + W*W/4f);
+                    float Rc = rMax / Mathf.PI;
+                    float f = rMax * (1f - t);  // 前沿从外向内
+                    float r = Mathf.Sqrt(x*x + y*y);
+                    float phi = Mathf.Atan2(y, x);
+                    if (r &gt;= f) {
+                        float arc = r - f;
+                        float th = arc / Rc;
+                        float hr = f - Rc * Mathf.Sin(th);
+                        nv[i] = new Vector3(
+                            hr * Mathf.Cos(phi),
+                            hr * Mathf.Sin(phi),
+                            Rc - Rc * Mathf.Cos(th));
+                    } else {
+                        nv[i] = new Vector3(x, y, 0);
+                    }
+                    break;
+                }
+            }
+        }
+        mesh.vertices = nv;
+        mesh.RecalculateNormals();
+        mesh.RecalculateBounds();
+    }
+
+    Mesh GenPlane(float w, float h, int sx, int sy)
+    {
+        var m = new Mesh();
+        var v = new Vector3[(sx+1)*(sy+1)];
+        var uv = new Vector2[(sx+1)*(sy+1)];
+        var tri = new int[sx*sy*6];
+        for (int iy=0;iy&lt;=sy;iy++)
+          for (int ix=0;ix&lt;=sx;ix++){
+            int id=iy*(sx+1)+ix;
+            float u=(float)ix/sx, vv=(float)iy/sy;
+            v[id]=new Vector3(u*w-w/2f, vv*h-h/2f, 0);
+            uv[id]=new Vector2(u,vv);
+          }
+        int ti=0;
+        for(int iy=0;iy&lt;sy;iy++)
+          for(int ix=0;ix&lt;sx;ix++){
+            int a=iy*(sx+1)+ix,b=a+1,c=a+(sx+1),d=c+1;
+            tri[ti++]=a;tri[ti++]=c;tri[ti++]=b;
+            tri[ti++]=b;tri[ti++]=c;tri[ti++]=d;
+          }
+        m.vertices=v; m.uv=uv; m.triangles=tri;
+        m.RecalculateNormals(); m.RecalculateBounds();
+        return m;
+    }
+}</div>
+</div>
+
+<!-- ==================== 脚本 ==================== -->
+<script>
+// ============================================================
+//  2D 示意图
+// ============================================================
+
+// --- 对比图 ---
+(function(){
+  const c=document.getElementById('dia-compare'), ctx=c.getContext('2d');
+  ctx.fillStyle='#0d1b36'; ctx.fillRect(0,0,560,200);
+
+  // 左半：全局 lerp
+  ctx.fillStyle='#607090'; ctx.font='bold 12px Microsoft YaHei';
+  ctx.fillText('全局 Lerp（t=0.5）',40,20);
+  // 画一个均匀弯曲的弧
+  ctx.strokeStyle='#53a8b6'; ctx.lineWidth=2.5;
+  ctx.beginPath();
+  for(let i=0;i<=40;i++){
+    const u=i/40;
+    // 均匀弯曲：所有点都弯了一半
+    const angle=u*Math.PI*0.5; // 半卷
+    const px=40+u*200;
+    const pz=Math.sin(angle*0.5)*40;
+    const drawX=40+140*u+30*Math.sin(u*Math.PI);
+    const drawY=100-pz;
+    if(i===0) ctx.moveTo(40,100); 
+    // 简化：画一个均匀弧
+  }
+  // 简化画法
+  const cxL=140, cyL=130, rL=80;
+  ctx.beginPath();
+  ctx.arc(cxL, cyL, rL, -Math.PI*0.8, -Math.PI*0.2);
+  ctx.stroke();
+  ctx.fillStyle='#53a8b680'; ctx.font='10px Consolas';
+  ctx.fillText('所有点均匀弯曲',60,170);
+
+  // 分隔线
+  ctx.strokeStyle='#304060'; ctx.lineWidth=1;
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(280,10); ctx.lineTo(280,190); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // 右半：从边缘卷
+  ctx.fillStyle='#607090'; ctx.font='bold 12px Microsoft YaHei';
+  ctx.fillText('从边缘卷（t=0.5）',330,20);
+
+  const ox=420, oy=140, R=45;
+  // 圆弧部分（已卷）
+  ctx.strokeStyle='#e94560'; ctx.lineWidth=2.5;
+  ctx.beginPath();
+  ctx.arc(ox, oy-R, R, Math.PI/2, Math.PI*1.5);
+  ctx.stroke();
+  // 平面部分（未卷）
+  ctx.strokeStyle='#53a8b6'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(ox, oy); ctx.lineTo(ox+100, oy); ctx.stroke();
+  // 前沿标注
+  ctx.fillStyle='#f0a040';
+  ctx.beginPath(); ctx.arc(ox, oy, 5, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle='#f0a040'; ctx.font='11px Consolas';
+  ctx.fillText('前沿 f',ox+8,oy+16);
+  ctx.fillStyle='#e94560'; ctx.font='10px Consolas';
+  ctx.fillText('已卷（圆弧）',ox-80,oy-R-10);
+  ctx.fillStyle='#53a8b6';
+  ctx.fillText('未卷（平面）',ox+30,oy-10);
+})();
+
+// --- 几何关系图 ---
+(function(){
+  const c=document.getElementById('dia-math'), ctx=c.getContext('2d');
+  ctx.fillStyle='#0d1b36'; ctx.fillRect(0,0,480,280);
+
+  const fx=260, fy=220, R=70; // 前沿位置，平面Y，半径
+  const ccx=fx, ccy=fy-R; // 圆心
+
+  // 坐标轴
+  ctx.strokeStyle='#304060'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(30,fy); ctx.lineTo(460,fy); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(fx,260); ctx.lineTo(fx,15); ctx.stroke();
+  ctx.fillStyle='#607090'; ctx.font='11px Consolas';
+  ctx.fillText('X',450,fy-6); ctx.fillText('Z',fx+4,22);
+  ctx.fillText('f (前沿)',fx+6,fy+16);
+
+  // 平面（未卷部分）
+  ctx.strokeStyle='#53a8b6'; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.moveTo(fx,fy); ctx.lineTo(440,fy); ctx.stroke();
+  ctx.fillStyle='#53a8b6'; ctx.font='10px Microsoft YaHei';
+  ctx.fillText('未卷（平面 Z=0）',350,fy-8);
+
+  // 圆筒截面
+  ctx.strokeStyle='#e9456060'; ctx.lineWidth=1;
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.arc(ccx,ccy,R,0,Math.PI*2); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // 已卷弧（从切点逆时针走约 270°）
+  ctx.strokeStyle='#e94560'; ctx.lineWidth=3;
+  ctx.beginPath();
+  ctx.arc(ccx, ccy, R, Math.PI/2, Math.PI*2);
+  ctx.stroke();
+
+  // 圆心
+  ctx.fillStyle='#304060';
+  ctx.beginPath(); ctx.arc(ccx,ccy,3,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#607090'; ctx.font='10px Consolas';
+  ctx.fillText('圆心(f, R)',ccx+6,ccy+4);
+
+  // 切点（前沿）
+  ctx.fillStyle='#f0a040';
+  ctx.beginPath(); ctx.arc(fx,fy,6,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#f0a040'; ctx.font='bold 11px Consolas';
+  ctx.fillText('切点',fx-30,fy+6);
+
+  // 标注一个已卷的点 P
+  const thP=Math.PI*0.7;
+  const px=ccx-R*Math.sin(thP), py=ccy+R*Math.cos(thP);
+  // 注意：从切点(底部)逆时针走，角度从 π/2 开始
+  // 用我们的公式：px = f - R*sin(θ), pz = R - R*cos(θ)
+  const th2=2.0;
+  const ppx=fx-R*Math.sin(th2), ppz=R-R*Math.cos(th2);
+  const ppy=fy-ppz;
+
+  ctx.fillStyle='#e94560';
+  ctx.beginPath(); ctx.arc(ppx,ppy,5,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#fff'; ctx.font='bold 11px Consolas';
+  ctx.fillText('P',ppx-14,ppy-6);
+
+  // 半径线到 P
+  ctx.strokeStyle='#e9456080'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(ccx,ccy); ctx.lineTo(ppx,ppy); ctx.stroke();
+
+  // 标注 R
+  ctx.fillStyle='#e94560'; ctx.font='bold 11px Consolas';
+  ctx.fillText('R',(ccx+ppx)/2+6,(ccy+ppy)/2);
+
+  // 标注角度 θ
+  ctx.strokeStyle='#f0a040'; ctx.lineWidth=1.5;
+  ctx.beginPath();
+  ctx.arc(ccx,ccy,20, Math.PI/2, Math.PI/2+th2);
+  ctx.stroke();
+  ctx.fillStyle='#f0a040'; ctx.font='11px Consolas';
+  ctx.fillText('θ',ccx-30,ccy+26);
+
+  // 弧长标注
+  ctx.fillStyle='#7ec8e3'; ctx.font='10px Consolas';
+  ctx.fillText('弧长 = f - x',60,40);
+  ctx.fillText('θ = 弧长 / R',60,56);
+  ctx.fillText('P.x = f - R·sin(θ)',60,76);
+  ctx.fillText('P.z = R - R·cos(θ)',60,92);
+
+  // 原始位置标注
+  const origX = fx - th2*R; // 原始 x 位置
+  ctx.strokeStyle='#7ec8e380'; ctx.lineWidth=1;
+  ctx.setLineDash([3,3]);
+  ctx.beginPath(); ctx.moveTo(origX,fy); ctx.lineTo(origX,fy+20); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#7ec8e3'; ctx.font='9px Consolas';
+  ctx.fillText('原始x',origX-12,fy+30);
+
+  // 弧长双箭头
+  ctx.strokeStyle='#7ec8e3'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(origX,fy+14); ctx.lineTo(fx,fy+14); ctx.stroke();
+  ctx.fillText('arcLen = f - x',origX+20,fy+12);
+})();
+
+
+// ============================================================
+//  WebGL 3D 交互演示
+// ============================================================
+const canvas=document.getElementById('canvas-3d');
+const gl=canvas.getContext('webgl',{antialias:true,alpha:false});
+
+const sliderT=document.getElementById('slider-t');
+const sliderSeg=document.getElementById('slider-seg');
+const chkTex=document.getElementById('chk-tex');
+const chkWire=document.getElementById('chk-wire');
+const selMode=document.getElementById('sel-mode');
+const valT=document.getElementById('val-t');
+const valSeg=document.getElementById('val-seg');
+const modeDescEl=document.getElementById('mode-desc');
+
+const mDescs={
+  x:'沿 X 轴从左边缘开始卷：前沿从 x=-256 推进到 x=+256，左侧已卷贴合圆弧，右侧未卷保持平面。',
+  y:'沿 Y 轴从底边缘开始卷：前沿从 y=-256 推进到 y=+256，下方已卷贴合圆弧，上方未卷保持平面。',
+  center:'从外边缘向中心卷：前沿从 r=rMax 向 r=0 收缩，外圈已卷向上翻起，内圈未卷保持平面。'
+};
+
+let curveT=0, segments=40, showTex=true, showWire=true, curMode='x';
+sliderT.oninput=()=>{curveT=sliderT.value/100; valT.textContent=sliderT.value+'%';};
+sliderSeg.oninput=()=>{segments=+sliderSeg.value; valSeg.textContent=segments; rebuildMesh();};
+chkTex.onchange=()=>{showTex=chkTex.checked;};
+chkWire.onchange=()=>{showWire=chkWire.checked;};
+selMode.onchange=()=>{curMode=selMode.value; modeDescEl.textContent=mDescs[curMode];};
+
+const vsrc=`
+attribute vec3 aPos; attribute vec2 aUV; attribute vec3 aNorm;
+uniform mat4 uMVP;
+varying vec2 vUV; varying vec3 vNorm;
+void main(){ vUV=aUV; vNorm=aNorm; gl_Position=uMVP*vec4(aPos,1.0); }`;
+const fsrc=`
+precision mediump float;
+varying vec2 vUV; varying vec3 vNorm;
+uniform bool uShowTex; uniform vec3 uLightDir;
+void main(){
+  vec3 n=normalize(vNorm);
+  float d=max(dot(n,normalize(uLightDir)),0.0)*0.65+0.35;
+  vec3 col;
+  if(uShowTex){
+    float cx=floor(vUV.x*8.0), cy=floor(vUV.y*8.0);
+    col=mix(vec3(0.18,0.32,0.52),vec3(0.82,0.90,0.96),mod(cx+cy,2.0));
+  } else col=vec3(0.3,0.5,0.7);
+  gl_FragColor=vec4(col*d,1.0);
+}`;
+const wvs=`attribute vec3 aPos; uniform mat4 uMVP;
+void main(){ gl_Position=uMVP*vec4(aPos,1.0); }`;
+const wfs=`precision mediump float;
+void main(){ gl_FragColor=vec4(0.9,0.3,0.4,0.55); }`;
+
+function mkS(s,t){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o;}
+function mkP(v,f){const p=gl.createProgram();gl.attachShader(p,mkS(v,gl.VERTEX_SHADER));gl.attachShader(p,mkS(f,gl.FRAGMENT_SHADER));gl.linkProgram(p);return p;}
+const prog=mkP(vsrc,fsrc), wprog=mkP(wvs,wfs);
+
+let bp=[],uvs=[],ix=[],wx=[];
+let pB,uB,iB,wB,nB;
+let dp=[],nm=[];
+
+function rebuildMesh(){
+  const W=512,H=512,sx=segments,sy=segments;
+  bp=[];uvs=[];ix=[];wx=[];
+  for(let iy=0;iy<=sy;iy++) for(let ixx=0;ixx<=sx;ixx++){
+    const u=ixx/sx,v=iy/sy;
+    bp.push(u*W-W/2, v*H-H/2, 0);
+    uvs.push(u,v);
+  }
+  for(let iy=0;iy<sy;iy++) for(let ixx=0;ixx<sx;ixx++){
+    const a=iy*(sx+1)+ixx,b=a+1,c=a+(sx+1),d=c+1;
+    ix.push(a,b,c, b,d,c);
+    wx.push(a,b, b,d, d,c, c,a);
+  }
+  dp=new Float32Array(bp.length);
+  nm=new Float32Array(bp.length);
+  [pB,uB,iB,wB,nB].forEach(b=>{if(b)gl.deleteBuffer(b);});
+  pB=gl.createBuffer(); nB=gl.createBuffer();
+  uB=gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER,uB);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(uvs),gl.STATIC_DRAW);
+  iB=gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,iB);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(ix),gl.STATIC_DRAW);
+  wB=gl.createBuffer();
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,wB);
+  gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(wx),gl.STATIC_DRAW);
+}
+
+function deform(t,mode){
+  const W=512,H=512,n=bp.length/3;
+  const PI=Math.PI,PI2=PI*2;
+
+  for(let i=0;i<n;i++){
+    const ox=bp[i*3], oy=bp[i*3+1];
+
+    if(mode==='x'){
+      const R=W/PI2;
+      const f=-W/2+t*W; // 前沿从左到右
+      if(ox<=f){
+        const arc=f-ox;
+        const th=arc/R;
+        dp[i*3]  =f-R*Math.sin(th);
+        dp[i*3+1]=oy;
+        dp[i*3+2]=R-R*Math.cos(th);
+      } else {
+        dp[i*3]=ox; dp[i*3+1]=oy; dp[i*3+2]=0;
+      }
+    }
+    else if(mode==='y'){
+      const R=H/PI2;
+      const f=-H/2+t*H;
+      if(oy<=f){
+        const arc=f-oy;
+        const th=arc/R;
+        dp[i*3]  =ox;
+        dp[i*3+1]=f-R*Math.sin(th);
+        dp[i*3+2]=R-R*Math.cos(th);
+      } else {
+        dp[i*3]=ox; dp[i*3+1]=oy; dp[i*3+2]=0;
+      }
+    }
+    else{ // center
+      const rMax=Math.sqrt(W*W/4+H*H/4);
+      const Rc=rMax/PI;
+      const f=rMax*(1-t); // 前沿从外向内
+      const r=Math.sqrt(ox*ox+oy*oy);
+      const phi=Math.atan2(oy,ox);
+      if(r>=f && f<rMax-0.01){
+        const arc=r-f;
+        const th=arc/Rc;
+        const hr=f-Rc*Math.sin(th);
+        dp[i*3]  =hr*Math.cos(phi);
+        dp[i*3+1]=hr*Math.sin(phi);
+        dp[i*3+2]=Rc-Rc*Math.cos(th);
+      } else if(t>=0.999){
+        // 完全卷完
+        const arc=r;
+        const th=arc/Rc;
+        const hr=-Rc*Math.sin(th);
+        dp[i*3]  =hr*Math.cos(phi);
+        dp[i*3+1]=hr*Math.sin(phi);
+        dp[i*3+2]=Rc-Rc*Math.cos(th);
+      } else {
+        dp[i*3]=ox; dp[i*3+1]=oy; dp[i*3+2]=0;
+      }
+    }
+  }
+
+  // 法线
+  nm.fill(0);
+  for(let i=0;i<ix.length;i+=3){
+    const ia=ix[i],ib=ix[i+1],ic=ix[i+2];
+    const ax=dp[ia*3],ay=dp[ia*3+1],az=dp[ia*3+2];
+    const bx=dp[ib*3],by=dp[ib*3+1],bz=dp[ib*3+2];
+    const cx=dp[ic*3],cy=dp[ic*3+1],cz=dp[ic*3+2];
+    const e1x=bx-ax,e1y=by-ay,e1z=bz-az;
+    const e2x=cx-ax,e2y=cy-ay,e2z=cz-az;
+    const nx=e1y*e2z-e1z*e2y,ny=e1z*e2x-e1x*e2z,nz=e1x*e2y-e1y*e2x;
+    for(const v of[ia,ib,ic]){nm[v*3]+=nx;nm[v*3+1]+=ny;nm[v*3+2]+=nz;}
+  }
+  for(let i=0;i<n;i++){
+    const x=nm[i*3],y=nm[i*3+1],z=nm[i*3+2];
+    const l=Math.sqrt(x*x+y*y+z*z)||1;
+    nm[i*3]/=l;nm[i*3+1]/=l;nm[i*3+2]/=l;
+  }
+  gl.bindBuffer(gl.ARRAY_BUFFER,pB);
+  gl.bufferData(gl.ARRAY_BUFFER,dp,gl.DYNAMIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,nB);
+  gl.bufferData(gl.ARRAY_BUFFER,nm,gl.DYNAMIC_DRAW);
+}
+
+function m4P(fov,a,n,f){const t=1/Math.tan(fov/2),nf=1/(n-f);return new Float32Array([t/a,0,0,0,0,t,0,0,0,0,(f+n)*nf,-1,0,0,2*f*n*nf,0]);}
+function m4L(e,c,u){
+  let zx=e[0]-c[0],zy=e[1]-c[1],zz=e[2]-c[2],l=Math.sqrt(zx*zx+zy*zy+zz*zz)||1;
+  zx/=l;zy/=l;zz/=l;
+  let sx=u[1]*zz-u[2]*zy,sy=u[2]*zx-u[0]*zz,sz=u[0]*zy-u[1]*zx;
+  l=Math.sqrt(sx*sx+sy*sy+sz*sz)||1;sx/=l;sy/=l;sz/=l;
+  const ux=zy*sz-zz*sy,uy=zz*sx-zx*sz,uz=zx*sy-zy*sx;
+  return new Float32Array([sx,ux,zx,0,sy,uy,zy,0,sz,uz,zz,0,
+    -(sx*e[0]+sy*e[1]+sz*e[2]),-(ux*e[0]+uy*e[1]+uz*e[2]),-(zx*e[0]+zy*e[1]+zz*e[2]),1]);
+}
+function m4M(a,b){const o=new Float32Array(16);for(let i=0;i<4;i++)for(let j=0;j<4;j++)o[j*4+i]=a[i]*b[j*4]+a[4+i]*b[j*4+1]+a[8+i]*b[j*4+2]+a[12+i]*b[j*4+3];return o;}
+
+let cT=0.4,cP=0.5,cD=550,dr=false,lx,ly;
+canvas.onmousedown=e=>{dr=true;lx=e.clientX;ly=e.clientY;};
+canvas.onmousemove=e=>{if(!dr)return;cT-=(e.clientX-lx)*.005;cP=Math.max(-1.5,Math.min(1.5,cP+(e.clientY-ly)*.005));lx=e.clientX;ly=e.clientY;};
+canvas.onmouseup=()=>dr=false;
+canvas.onmouseleave=()=>dr=false;
+canvas.onwheel=e=>{cD=Math.max(80,Math.min(2000,cD+e.deltaY*.5));e.preventDefault();};
+canvas.ontouchstart=e=>{if(e.touches.length===1){dr=true;lx=e.touches[0].clientX;ly=e.touches[0].clientY;}};
+canvas.ontouchmove=e=>{if(!dr||e.touches.length!==1)return;cT-=(e.touches[0].clientX-lx)*.005;cP=Math.max(-1.5,Math.min(1.5,cP+(e.touches[0].clientY-ly)*.005));lx=e.touches[0].clientX;ly=e.touches[0].clientY;e.preventDefault();};
+canvas.ontouchend=()=>dr=false;
+
+function resize(){const r=canvas.getBoundingClientRect(),d=window.devicePixelRatio||1;canvas.width=r.width*d;canvas.height=r.height*d;gl.viewport(0,0,canvas.width,canvas.height);}
+
+function render(){
+  resize(); deform(curveT,curMode);
+  gl.clearColor(0.04,0.06,0.12,1);
+  gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+  gl.enable(gl.DEPTH_TEST);
+  const a=canvas.width/canvas.height;
+  const proj=m4P(Math.PI/4,a,1,5000);
+  const ex=cD*Math.cos(cP)*Math.sin(cT),ey=cD*Math.sin(cP),ez=cD*Math.cos(cP)*Math.cos(cT);
+  const vw=m4L([ex,ey,ez],[0,0,0],[0,1,0]);
+  const mvp=m4M(proj,vw);
+
+  if(showTex||!showWire){
+    gl.useProgram(prog);
+    gl.uniformMatrix4fv(gl.getUniformLocation(prog,'uMVP'),false,mvp);
+    gl.uniform1i(gl.getUniformLocation(prog,'uShowTex'),showTex?1:0);
+    gl.uniform3f(gl.getUniformLocation(prog,'uLightDir'),0.4,0.7,0.5);
+    const aP=gl.getAttribLocation(prog,'aPos');
+    gl.enableVertexAttribArray(aP);gl.bindBuffer(gl.ARRAY_BUFFER,pB);gl.vertexAttribPointer(aP,3,gl.FLOAT,false,0,0);
+    const aN=gl.getAttribLocation(prog,'aNorm');
+    gl.enableVertexAttribArray(aN);gl.bindBuffer(gl.ARRAY_BUFFER,nB);gl.vertexAttribPointer(aN,3,gl.FLOAT,false,0,0);
+    const aU=gl.getAttribLocation(prog,'aUV');
+    gl.enableVertexAttribArray(aU);gl.bindBuffer(gl.ARRAY_BUFFER,uB);gl.vertexAttribPointer(aU,2,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,iB);
+    gl.drawElements(gl.TRIANGLES,ix.length,gl.UNSIGNED_SHORT,0);
+  }
+  if(showWire){
+    gl.useProgram(wprog);
+    gl.uniformMatrix4fv(gl.getUniformLocation(wprog,'uMVP'),false,mvp);
+    const a2=gl.getAttribLocation(wprog,'aPos');
+    gl.enableVertexAttribArray(a2);gl.bindBuffer(gl.ARRAY_BUFFER,pB);gl.vertexAttribPointer(a2,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,wB);
+    gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
+    gl.depthFunc(gl.LEQUAL);
+    gl.drawElements(gl.LINES,wx.length,gl.UNSIGNED_SHORT,0);
+    gl.depthFunc(gl.LESS);gl.disable(gl.BLEND);
+  }
+  requestAnimationFrame(render);
+}
+rebuildMesh(); render();
+</script>
+</body>
+</html>

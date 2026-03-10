@@ -7,7 +7,10 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "Bash(git remote set-url origin git@github.com:KeynesZZZ/GameKnowledge.git)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(python UnityKnowledge/check_links.py)",
+      "Bash(py -3 UnityKnowledge/check_links.py)",
+      "Bash(git add:*)"
     ]
   }
 }
