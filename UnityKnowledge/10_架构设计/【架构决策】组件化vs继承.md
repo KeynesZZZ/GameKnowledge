@@ -1,11 +1,14 @@
 ---
 title: 【架构决策】组件化 vs 继承
-tags: [C#, Unity, 架构, 架构决策, 组合模式, 继承, 组件化, ECS]
+tags: ["C#", "Unity", "架构", "架构决策", "组合模式", "继承", "组件化", "ECS"]
 category: 架构设计/架构决策
-created: 2024-01-24 09:00
-updated: 2026-03-04 22:05
+created: "2024-01-24 09:00"
+updated: "2026-05-29 00:00"
 description: 深入理解"组合优于继承"在Unity中的体现，对比两种代码复用方式的优缺点和适用场景
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【架构决策】组件化 vs 继承
@@ -507,4 +510,4 @@ private void Update()
 ## 相关链接
 
 - [[【设计原理】为什么要用设计模式]]
-- 
+-

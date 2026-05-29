@@ -10,7 +10,12 @@
       "Bash(git add -A)",
       "Bash(python UnityKnowledge/check_links.py)",
       "Bash(py -3 UnityKnowledge/check_links.py)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(mkdir -p /Users/keynes/git/Doc/docs/superpowers/specs)"
+    ],
+    "additionalDirectories": [
+      "/Users/keynes/git/Doc/docs/superpowers"
     ]
   }
 }

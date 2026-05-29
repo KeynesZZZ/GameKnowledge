@@ -1,0 +1,15 @@
+{
+  "rules_source": "../rules/unity-rules.json",
+  "check_patterns": ["*.cs"],
+  "exclude_patterns": [
+    "*/Generated/*",
+    "*/Temp/*",
+    "*/Library/*",
+    "*.g.cs",
+    "*.designer.cs"
+  ],
+  "block_on": ["CRITICAL"],
+  "warn_on": ["HIGH"],
+  "include_review_rules": true,
+  "max_files": 50
+}

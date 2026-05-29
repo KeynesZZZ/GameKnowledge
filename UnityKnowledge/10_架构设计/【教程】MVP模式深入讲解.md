@@ -1,11 +1,14 @@
 ---
 title: 【教程】MVP模式深入讲解
-tags: [C#, Unity, 架构, 教程, MVP, UI架构, 设计模式]
+tags: ["C#", "Unity", "架构", "教程", "MVP", "UI架构", "设计模式"]
 category: 架构设计/教程
-created: 2024-01-10 09:00
-updated: 2026-03-04 23:00
+created: "2024-01-10 09:00"
+updated: "2026-05-29 00:00"
 description: MVP模式在Unity UI开发中的深入讲解，包含Model-View-Presenter的职责划分和实现示例
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # MVP模式深入讲解

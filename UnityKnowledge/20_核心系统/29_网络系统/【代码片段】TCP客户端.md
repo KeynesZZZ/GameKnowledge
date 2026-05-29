@@ -1,12 +1,16 @@
 ---
 title: 【代码片段】TCP客户端
-tags: [Unity, 网络, 网络系统, TCP, 代码片段]
+tags: ["Unity", "网络", "网络系统", "TCP", "代码片段"]
 category: 核心系统/网络系统
-created: 2026-03-05 08:32
-updated: 2026-03-05 08:32
+created: "2026-03-05 08:32"
+updated: "2026-05-29 00:00"
 description: TCP客户端连接代码实现
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # 代码片段 - TCP客户端
 
 > Unity中基于Socket的TCP客户端实现 `#网络编程` `#TCP` `#Socket`

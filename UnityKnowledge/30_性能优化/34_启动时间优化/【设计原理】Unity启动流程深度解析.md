@@ -1,11 +1,14 @@
 ---
 title: 【设计原理】Unity启动流程深度解析
-tags: [Unity, 性能优化, 启动时间, 设计原理, 初始化, 加载流程]
+tags: ["Unity", "性能优化", "启动时间", "设计原理", "初始化", "加载流程"]
 category: 性能优化/启动时间优化
-created: 2026-03-05 16:30
-updated: 2026-03-05 16:30
+created: "2026-03-05 16:30"
+updated: "2026-05-29 00:00"
 description: Unity应用启动的完整流程解析，包括初始化、加载、首场景渲染各阶段
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
 
 # 【设计原理】Unity启动流程深度解析

@@ -1,12 +1,16 @@
 ---
 title: 【踩坑记录】iOS常见问题清单
-tags: [Unity, 平台适配, iOS, 踩坑记录]
+tags: ["Unity", "平台适配", "iOS", "踩坑记录"]
 category: 平台适配
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: Unity iOS平台常见问题
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # iOS 常见问题清单
 
 > iOS平台开发常见问题与解决方案 `#iOS` `#平台适配` `#踩坑记录`

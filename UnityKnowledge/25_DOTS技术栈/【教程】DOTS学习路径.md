@@ -1,12 +1,16 @@
 ---
 title: 【教程】DOTS学习路径
-tags: [Unity, DOTS, DOTS技术栈, 学习路径, 教程]
+tags: ["Unity", "DOTS", "DOTS技术栈", "学习路径", "教程"]
 category: DOTS技术栈
-created: 2026-03-05 09:21
-updated: 2026-03-05 09:21
+created: "2026-03-05 09:21"
+updated: "2026-05-29 00:00"
 description: Unity DOTS技术栈学习路径
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # DOTS 技术栈学习路径
 
 > 目标：掌握 Unity 的数据导向技术栈，实现高性能游戏逻辑
@@ -131,3 +135,8 @@ struct MyJob : IJob
 - Unity DOTS 官方文档
 - Unity DOTS 示例项目
 - Catlike Coding - DOTS 教程
+
+## 相关链接
+
+- [[../00_元数据与模板/文档结构规范]]
+

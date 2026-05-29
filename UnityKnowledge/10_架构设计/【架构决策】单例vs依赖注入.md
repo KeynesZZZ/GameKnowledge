@@ -1,11 +1,14 @@
 ---
 title: 【架构决策】单例 vs 依赖注入
-tags: [C#, 架构, Unity, 架构决策, 单例模式, 依赖注入, VContainer, Zenject]
+tags: ["C#", "架构", "Unity", "架构决策", "单例模式", "依赖注入", "VContainer", "Zenject"]
 category: 架构设计/架构决策
-created: 2024-01-10 11:00
-updated: 2026-03-04 21:36
+created: "2024-01-10 11:00"
+updated: "2026-05-29 00:00"
 description: 深度对比单例模式与依赖注入两种管理依赖的方式，分析各自的优缺点、适用场景和选择指南
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【架构决策】单例 vs 依赖注入

@@ -1,12 +1,16 @@
 ---
 title: 【代码片段】Shader基础模板
-tags: [Unity, 渲染, 渲染系统, Shader, 代码片段]
+tags: ["Unity", "渲染", "渲染系统", "Shader", "代码片段"]
 category: 核心系统/渲染系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: URP Shader常用模板集合
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # Shader 基础模板
 
 > URP Shader常用模板集合 `#渲染` `#Shader` `#代码片段`

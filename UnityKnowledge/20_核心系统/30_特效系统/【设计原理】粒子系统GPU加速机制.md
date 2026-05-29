@@ -1,12 +1,16 @@
 ---
 title: 【设计原理】粒子系统GPU加速机制
-tags: [Unity, 渲染, 特效系统, 粒子系统, GPU, 设计原理]
+tags: ["Unity", "渲染", "特效系统", "粒子系统", "GPU", "设计原理"]
 category: 核心系统/特效系统
-created: 2026-03-05 08:32
-updated: 2026-03-05 08:32
+created: "2026-03-05 08:32"
+updated: "2026-05-29 00:00"
 description: 粒子系统GPU加速机制原理
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # 设计原理 - 粒子系统GPU加速机制
 
 > Unity粒子系统GPU加速、VFX Graph架构、CPU vs GPU粒子性能对比 `#深度解析` `#特效` `#GPU`

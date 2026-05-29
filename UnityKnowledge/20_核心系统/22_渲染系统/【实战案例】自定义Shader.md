@@ -1,12 +1,16 @@
 ---
 title: 【实战案例】自定义Shader
-tags: [Unity, 渲染, 渲染系统, Shader, 实战案例]
+tags: ["Unity", "渲染", "渲染系统", "Shader", "实战案例"]
 category: 核心系统/渲染系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: 自定义Shader开发实战案例
 unity_version: 2021.3+
+status: 待验证
+validation: 项目实战
+related: []
 ---
+
 # 自定义 Shader 实战
 
 > Unity 自定义 Shader 基础语法和实战案例 `#渲染与Shader` `#自定义Shader` `#Shader编程`
@@ -361,3 +365,8 @@ SubShader
 
 **适用版本**: Unity 2019.4+
 **最后更新**: 2026-03-04
+
+## 文档定位
+
+本文档用于沉淀 `【实战案例】自定义Shader` 相关知识，说明其适用场景、核心内容和实践注意事项。
+

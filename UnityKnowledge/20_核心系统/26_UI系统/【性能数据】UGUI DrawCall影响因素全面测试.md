@@ -1,12 +1,16 @@
 ---
 title: 【性能数据】UGUI DrawCall影响因素全面测试
-tags: [Unity, UI, UI系统, UGUI, 性能测试, 性能数据]
+tags: ["Unity", "UI", "UI系统", "UGUI", "性能测试", "性能数据"]
 category: 核心系统/UI系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: UGUI DrawCall影响因素全面测试数据
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # 性能数据 - UGUI DrawCall影响因素全面测试
 
 > UGUI DrawCall影响因素的全方位基准测试与数据分析 `#性能数据` `#渲染优化` `#UGUI`

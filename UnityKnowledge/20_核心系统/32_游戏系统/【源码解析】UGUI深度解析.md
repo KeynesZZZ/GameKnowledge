@@ -1,12 +1,16 @@
 ---
 title: 【设计原理】源码解析-UGUI深度解析
-tags: [Unity, 游戏系统, UGUI, 源码解析]
+tags: ["Unity", "游戏系统", "UGUI", "源码解析", "设计原理", "UI"]
 category: 核心系统/游戏系统
-created: 2026-03-05 08:32
-updated: 2026-03-05 08:32
+created: "2026-03-05 08:32"
+updated: "2026-05-29 00:00"
 description: UGUI系统源码深度解析
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # UGUI深度解析
 
 > 专题课程 | UI系统进阶 | 源码分析版

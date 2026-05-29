@@ -1,12 +1,16 @@
 ---
 title: 【教程】CPU优化技术
-tags: [Unity, 性能优化, CPU, 教程]
+tags: ["Unity", "性能优化", "CPU", "教程"]
 category: 性能优化
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: Unity CPU优化技术详解
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # CPU优化技术
 
 > 第2课 | 性能优化与发布模块

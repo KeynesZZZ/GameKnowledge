@@ -1,12 +1,15 @@
 ---
 title: 【教程】ECS 入门与迁移指南
-tags: [C#, Unity, 架构, 教程, ECS, DOTS, Entities, 数据导向]
+tags: ["C#", "Unity", "架构", "教程", "ECS", "DOTS", "Entities", "数据导向"]
 category: 架构设计/教程
-created: 2024-01-05 09:00
-updated: 2026-03-04 22:00
+created: "2024-01-05 09:00"
+updated: "2026-05-29 00:00"
 description: Unity DOTS 技术栈中 ECS 架构的入门指南，包含从 OOP 到 ECS 的迁移策略和最佳实践
 unity_version: 2021.3+
-dependencies: [Unity.Entities, Unity.Burst, Unity.Jobs]
+status: 待验证
+validation: Demo验证
+dependencies: ["Unity.Entities", "Unity.Burst", "Unity.Jobs"]
+related: []
 ---
 
 # 【教程】ECS 入门与迁移指南

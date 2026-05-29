@@ -1,12 +1,16 @@
 ---
 title: 【教程】Roguelike元素集成
-tags: [Unity, 游戏系统, Roguelike, 教程]
+tags: ["Unity", "游戏系统", "Roguelike", "教程"]
 category: 核心系统/游戏系统
-created: 2026-03-05 08:32
-updated: 2026-03-05 08:32
+created: "2026-03-05 08:32"
+updated: "2026-05-29 00:00"
 description: Roguelike元素集成教程
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # Roguelike元素集成
 
 > 第5课 | 游戏系统开发模块

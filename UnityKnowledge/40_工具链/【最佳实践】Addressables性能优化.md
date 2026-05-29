@@ -1,11 +1,14 @@
 ---
 title: 【最佳实践】Addressables性能优化
-tags: [Unity, 性能优化, 资源管理, Addressables, 最佳实践]
+tags: ["Unity", "性能优化", "资源管理", "Addressables", "最佳实践", "工具链"]
 category: 工具链/资源管线
-created: 2026-03-07 10:00
-updated: 2026-03-07 10:00
+created: "2026-03-07 10:00"
+updated: "2026-05-29 00:00"
 description: Unity Addressables 资源系统性能优化指南，涵盖异步加载策略、内存管理、资源卸载和性能监控
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 最佳实践 - Addressables 性能优化

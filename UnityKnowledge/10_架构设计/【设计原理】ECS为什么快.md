@@ -1,11 +1,14 @@
 ---
 title: 【设计原理】ECS为什么快
-tags: [C#, Unity, 架构, 设计原理, ECS, DOTS, 性能优化, 数据导向设计]
+tags: ["C#", "Unity", "架构", "设计原理", "ECS", "DOTS", "性能优化", "数据导向设计"]
 category: 架构设计/设计原理
-created: 2024-01-16 15:00
-updated: 2026-03-04 21:55
+created: "2024-01-16 15:00"
+updated: "2026-05-29 00:00"
 description: 理解数据导向设计的性能原理，深入分析ECS架构的性能优势来源：内存布局、缓存命中、SIMD优化
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
 
 # 【设计原理】ECS为什么快

@@ -1,12 +1,16 @@
 ---
 title: 【性能数据】对象池vs实例化
-tags: [Unity, 性能优化, 内存管理, 性能数据]
+tags: ["Unity", "性能优化", "内存管理", "性能数据"]
 category: 性能优化
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: 对象池vs实例化性能对比测试
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # 性能数据 - 对象池 vs 实例化
 
 > 对象池与直接实例化的性能对比测试 `#性能优化` `#性能数据` `#对象池`

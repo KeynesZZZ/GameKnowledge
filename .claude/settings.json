@@ -1,17 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls -d 学习/*/)",
-      "Read(//Users/keynes/git/Doc/**)",
-      "Bash(done)",
-      "Read(//Users/keynes/git/Doc/UnityKnowledge/10_架构设计/**)",
+      "Read(/Users/keynes/git/Doc/**)",
       "Bash(ls -la *.md)",
-      "Bash(xargs -n1)"
+      "Bash(find .claude -maxdepth 3 -type f)",
+      "Bash(python3 .claude/hooks/pre-commit.py *)"
     ],
     "additionalDirectories": [
-      "/[[设计原理-为什么要用设计模式]]",
-      "/[[最佳实践-单例模式]]",
-      "/[[架构演进-从Demo到量产]]",
+      "/Users/keynes/git/Doc/UnityKnowledge",
+      "/Users/keynes/git/Doc/AIWorkflowKnowledge",
+      "/Users/keynes/git/Doc/.claude",
       "/Users/keynes/git/Doc/UnityKnowledge/20_核心系统"
     ]
   }

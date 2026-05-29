@@ -4,15 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is a **Unity game development learning documentation repository** in Chinese. It is not a code repository - it stores learning notes, code examples, design documents, and project retrospectives. The repository contains **182+ markdown documents** organized by technical domain.
+This is a **personal technical knowledge base** in Chinese. It is not primarily a code repository - it stores learning notes, code examples, design documents, AI coding workflows, automation practices, and project retrospectives.
+
+The repository has two major knowledge areas:
+- `UnityKnowledge/` - Unity game development, technical architecture, performance, tooling, and project practice
+- `AIWorkflowKnowledge/` - AI coding workflows, prompt patterns, automation, and personal knowledge management
 
 **Repository**: https://github.com/KeynesZZZ/Doc
 
 ## Content Structure
 
-### `UnityKnowledge/` - Primary Knowledge Base
+### `UnityKnowledge/` - Unity Technical Architecture Knowledge Base
 
-The main documentation area, organized by technical domain with numbered prefixes:
+The Unity documentation area, organized by technical domain with numbered prefixes:
 
 ```
 UnityKnowledge/
@@ -54,6 +58,32 @@ UnityKnowledge/
 - `90-100` - Real-world experience
 
 See [UnityKnowledge/README.md](UnityKnowledge/README.md) for detailed index.
+
+### `AIWorkflowKnowledge/` - AI Coding & Workflow Knowledge Base
+
+The AI workflow documentation area, organized around repeatable personal development systems:
+
+```
+AIWorkflowKnowledge/
+├── 00_元数据与模板/    # Metadata standards, templates, tag rules
+├── 10_AI编码方法论/    # AI-assisted development workflow, prompt and context management
+├── 20_工程自动化/      # Automation scripts, personal development pipeline, checks
+├── 30_知识库运营/      # Knowledge base maintenance, review, RAG/search practices
+├── 40_工具与插件/      # IDEs, agents, MCP, plugins, model tools
+├── 90_案例复盘/        # Real task retrospectives and failure analysis
+└── 100_工作流实战/     # Full workflow playbooks and project-level practices
+```
+
+**Numbering System**:
+- `00` - Metadata & templates
+- `10` - AI coding methodology
+- `20` - Engineering automation
+- `30` - Knowledge base operations
+- `40` - Tools & plugins
+- `90` - Case retrospectives
+- `100` - Workflow practice
+
+See [AIWorkflowKnowledge/README.md](AIWorkflowKnowledge/README.md) for detailed index.
 
 ## Tools
 

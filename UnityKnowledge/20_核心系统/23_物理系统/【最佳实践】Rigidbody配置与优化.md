@@ -1,12 +1,16 @@
 ---
 title: 【最佳实践】Rigidbody配置与优化
-tags: [Unity, 物理, 物理系统, Rigidbody, 最佳实践]
+tags: ["Unity", "物理", "物理系统", "Rigidbody", "最佳实践"]
 category: 核心系统/物理系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: Rigidbody组件配置优化指南
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # Rigidbody 配置与优化
 
 > Unity 物理系统核心组件配置与性能优化指南 `#物理系统` `#Rigidbody` `#性能优化`

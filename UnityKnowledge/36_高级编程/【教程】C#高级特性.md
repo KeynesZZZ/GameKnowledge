@@ -1,12 +1,16 @@
 ---
-title: 【教程】C#高级特性
-tags: [C#, Unity, 高级编程, C#特性, 教程]
+title: "【教程】C#高级特性"
+tags: ["C#", "Unity", "高级编程", "C#特性", "教程"]
 category: 高级编程
-created: 2026-03-05 08:41
-updated: 2026-03-05 08:41
-description: C#语言高级特性详解
+created: "2026-03-05 08:41"
+updated: "2026-05-29 00:00"
+description: "C#语言高级特性详解"
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # C# 高级特性
 
 > 第1课 | 高级编程模块

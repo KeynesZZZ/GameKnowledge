@@ -1,11 +1,14 @@
 ---
 title: 【最佳实践】LOD系统实战指南
-tags: [Unity, 性能优化, 渲染, LOD, 最佳实践]
+tags: ["Unity", "性能优化", "渲染", "LOD", "最佳实践"]
 category: 性能优化/渲染优化
-created: 2026-03-07 10:00
-updated: 2026-03-07 10:00
+created: "2026-03-07 10:00"
+updated: "2026-05-29 00:00"
 description: Unity LOD(Level of Detail)系统完整实战指南，包含配置方法、过渡优化和性能收益分析
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 最佳实践 - LOD系统实战指南

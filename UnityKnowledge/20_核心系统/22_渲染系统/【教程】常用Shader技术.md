@@ -1,12 +1,16 @@
 ---
 title: 【教程】常用Shader技术
-tags: [Unity, 渲染, 渲染系统, Shader, 教程]
+tags: ["Unity", "渲染", "渲染系统", "Shader", "教程"]
 category: 核心系统/渲染系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: Shader编程常用技术汇总
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # 常用Shader技术
 
 > 第3课 | 渲染与图形模块

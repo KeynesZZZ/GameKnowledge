@@ -1,11 +1,14 @@
 ---
 title: 【设计原理】为什么foreach比for慢
-tags: [Unity, 性能优化, 代码优化, 设计原理, foreach, for, 枚举器, 性能]
+tags: ["Unity", "性能优化", "代码优化", "设计原理", "foreach", "for", "枚举器", "性能"]
 category: 性能优化/代码优化
-created: 2026-03-05 18:45
-updated: 2026-03-05 18:45
+created: "2026-03-05 18:45"
+updated: "2026-05-29 00:00"
 description: 深入解析foreach和for的性能差异本质，包含枚举器实现、GC分配、性能测试
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
 
 # 【设计原理】为什么foreach比for慢

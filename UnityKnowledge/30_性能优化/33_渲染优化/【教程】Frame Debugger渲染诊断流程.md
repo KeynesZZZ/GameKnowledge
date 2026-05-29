@@ -1,11 +1,14 @@
 ---
 title: 【教程】Frame Debugger渲染诊断流程
-tags: [Unity, 性能优化, 渲染, Frame Debugger, 工具使用, 教程]
+tags: ["Unity", "性能优化", "渲染", "Frame Debugger", "工具使用", "教程"]
 category: 性能优化/渲染优化
-created: 2026-03-07 10:00
-updated: 2026-03-07 10:00
+created: "2026-03-07 10:00"
+updated: "2026-05-29 00:00"
 description: Unity Frame Debugger 系统化渲染诊断流程，从发现问题到定位瓶颈的完整指南
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 教程 - Frame Debugger 渲染诊断流程

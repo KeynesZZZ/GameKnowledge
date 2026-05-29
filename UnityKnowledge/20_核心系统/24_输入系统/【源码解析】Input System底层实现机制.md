@@ -1,12 +1,16 @@
 ---
 title: 【设计原理】源码解析-Input System底层实现机制
-tags: [Unity, 输入系统, 源码解析]
+tags: ["Unity", "输入系统", "源码解析", "设计原理"]
 category: 核心系统/输入系统
-created: 2026-03-05 08:31
-updated: 2026-03-05 08:31
+created: "2026-03-05 08:31"
+updated: "2026-05-29 00:00"
 description: 新输入系统底层实现机制分析
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # 源码解析 - Input System底层实现机制
 
 > Unity Input System InputDevice抽象、Event Queue处理、Binding匹配算法源码分析 `#源码解析` `#输入系统` `#底层`

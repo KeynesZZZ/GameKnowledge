@@ -1,11 +1,14 @@
 ---
 title: 【设计原理】GC工作原理深度解析
-tags: [Unity, 性能优化, 内存管理, 设计原理, GC, 垃圾回收, IL2CPP]
+tags: ["Unity", "性能优化", "内存管理", "设计原理", "GC", "垃圾回收", "IL2CPP"]
 category: 性能优化/内存管理
-created: 2026-03-05 18:00
-updated: 2026-03-05 18:00
+created: "2026-03-05 18:00"
+updated: "2026-05-29 00:00"
 description: Unity GC的完整工作原理，包含代际机制、触发条件、优化策略
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
 
 # 【设计原理】GC工作原理深度解析

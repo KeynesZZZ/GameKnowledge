@@ -1,12 +1,16 @@
 ---
 title: 【性能数据】UGUI DrawCall影响因素
-tags: [Unity, 性能优化, 渲染优化, 性能数据]
+tags: ["Unity", "性能优化", "渲染优化", "性能数据", "UI", "渲染"]
 category: 性能优化
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: UGUI DrawCall影响因素全面测试
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # 性能数据 - UGUI DrawCall影响因素
 
 > UGUI DrawCall优化效果量化分析 `#性能优化` `#渲染` `#UI` `#性能数据`

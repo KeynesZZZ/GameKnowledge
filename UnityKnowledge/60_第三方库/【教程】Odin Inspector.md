@@ -1,12 +1,16 @@
 ---
 title: 【教程】Odin Inspector
-tags: [Unity, 第三方库, Odin, 教程]
+tags: ["Unity", "第三方库", "Odin", "教程"]
 category: 第三方库
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: Odin Inspector编辑器扩展教程
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # Odin Inspector
 
 > Odin Inspector编辑器增强指南

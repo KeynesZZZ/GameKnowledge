@@ -1,12 +1,16 @@
 ---
 title: 【代码片段】DOTween常用动画
-tags: [Unity, 第三方库, DOTween, 代码片段]
+tags: ["Unity", "第三方库", "DOTween", "代码片段", "动画"]
 category: 第三方库
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: DOTween常用动画代码片段
 unity_version: 2021.3+
+status: 待验证
+validation: 未经测试
+related: []
 ---
+
 # 代码片段 - DOTween常用动画
 
 > 可复用的DOTween动画效果库 `#第三方库` `#动画` `#代码片段`

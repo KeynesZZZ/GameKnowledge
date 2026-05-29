@@ -1,11 +1,14 @@
 ---
 title: 【最佳实践】Update优化清单
-tags: [Unity, 性能优化, 代码优化, 最佳实践, Update, GC, 性能陷阱]
+tags: ["Unity", "性能优化", "代码优化", "最佳实践", "Update", "GC", "性能陷阱"]
 category: 性能优化/代码优化
-created: 2026-03-05 17:15
-updated: 2026-03-05 17:15
+created: "2026-03-05 17:15"
+updated: "2026-05-29 00:00"
 description: Unity Update性能优化完整清单，涵盖避免GC分配、缓存优化、协程替代等
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【最佳实践】Update优化清单

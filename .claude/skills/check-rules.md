@@ -14,7 +14,7 @@
 ## 工作流程
 
 1. **读取规则清单**
-   - 从 `UnityKnowledge/00_元数据与模板/开发规则清单.md` 读取所有规则
+   - 从 `.claude/rules/unity-rules.json` 读取所有规则
    - 解析规则ID、严重性、检测模式、修复建议
 
 2. **分析代码文件**
@@ -57,6 +57,8 @@
 可选严重性：CRITICAL, HIGH, MEDIUM, LOW
 
 ## 规则检查清单
+
+> 规则的唯一机器可读来源是 `.claude/rules/unity-rules.json`。本节只作为人工阅读摘要；新增、删除、调整严重性时必须修改 JSON 规则源。
 
 ### GC优化规则（RULE-GC-xxx）
 
@@ -174,7 +176,7 @@
         EventBus.Unsubscribe<PlayerEvent>(OnPlayerEvent);
     }
 
-    📚 参考: 开发规则清单 > RULE-MEM-001
+    📚 参考: .claude/rules/unity-rules.json > RULE-MEM-001
 
 🟠 HIGH (2):
   [RULE-GC-004] Update中调用GetComponent
@@ -187,7 +189,7 @@
     private Rigidbody rb;
     private void Awake() => rb = GetComponent<Rigidbody>();
 
-    📚 参考: 开发规则清单 > RULE-GC-004
+    📚 参考: .claude/rules/unity-rules.json > RULE-GC-004
 
   [RULE-ARCH-006] 使用public字段暴露给Inspector
     位置: Line 12
@@ -199,7 +201,7 @@
     [SerializeField] private float maxHealth = 100f;
     public float MaxHealth => maxHealth;
 
-    📚 参考: 开发规则清单 > RULE-ARCH-006
+    📚 参考: .claude/rules/unity-rules.json > RULE-ARCH-006
 
 📊 检查摘要:
   - 检查文件: 1个
@@ -220,7 +222,8 @@
 ### 架构相关规则
 
 架构规则（如单例使用、组件化等）需要上下文理解，AI检查时应该：
-- 询问用户设计意图
+- 先标记为 `review` 类问题
+- 结合调用关系、生命周期和项目约定判断
 - 提供替代方案
 - 不要过于死板
 
@@ -228,10 +231,12 @@
 
 某些规则有明确的例外情况，检查时应该：
 - 识别例外场景
-- 询问用户是否符合例外
+- 在报告中说明为什么可能是例外
 - 灵活判断
 
 ## 相关文件
 
-- `UnityKnowledge/00_元数据与模板/开发规则清单.md` - 规则来源
-- `UnityKnowledge/40_工具链/自动化规则检查工具.md` - 使用文档
+- `.claude/rules/unity-rules.json` - 唯一机器可读规则来源
+- `.claude/hooks/config.json` - Hook配置
+- `.claude/hooks/pre-commit.py` - 本地轻量检查脚本
+- `UnityKnowledge/40_工具链/【教程】自动化规则检查工具.md` - 使用文档

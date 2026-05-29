@@ -1,11 +1,14 @@
 ---
 title: 【架构决策】UI 架构 - MVP vs MVVM
-tags: [C#, Unity, 架构, UI, MVP, MVVM, 架构决策, 界面架构]
+tags: ["C#", "Unity", "架构", "UI", "MVP", "MVVM", "架构决策", "界面架构"]
 category: 架构设计/架构决策
-created: 2024-01-22 10:00
-updated: 2026-03-04 22:01
+created: "2024-01-22 10:00"
+updated: "2026-05-29 00:00"
 description: Unity UI开发中两种主流架构模式的对比与选择，包含实现示例和最佳实践
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【架构决策】UI 架构 - MVP vs MVVM

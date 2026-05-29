@@ -1,0 +1,180 @@
+{
+  "version": "2026-05-29",
+  "description": "Unity C# development rules used by Claude skills and local hooks.",
+  "severities": {
+    "block_on": ["CRITICAL"],
+    "warn_on": ["HIGH"]
+  },
+  "rules": [
+    {
+      "id": "RULE-GC-001",
+      "category": "GC",
+      "severity": "HIGH",
+      "title": "Update中字符串拼接",
+      "detection": "automatic",
+      "pattern": "string_concat_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中存在字符串拼接，可能造成频繁分配。",
+      "suggestion": "缓存字符串、降低刷新频率，或改用 StringBuilder/格式化缓存。"
+    },
+    {
+      "id": "RULE-GC-003",
+      "category": "GC",
+      "severity": "CRITICAL",
+      "title": "Update中new集合",
+      "detection": "automatic",
+      "pattern": "new_collection_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中创建 List/Dictionary/HashSet，容易造成每帧 GC。",
+      "suggestion": "把集合提升为字段并 Clear 复用，或使用对象池。"
+    },
+    {
+      "id": "RULE-GC-004",
+      "category": "GC",
+      "severity": "HIGH",
+      "title": "Update中GetComponent",
+      "detection": "automatic",
+      "pattern": "get_component_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中调用 GetComponent，存在重复查找开销。",
+      "suggestion": "在 Awake/Start 中缓存组件引用。"
+    },
+    {
+      "id": "RULE-GC-005",
+      "category": "GC",
+      "severity": "CRITICAL",
+      "title": "Update中使用LINQ",
+      "detection": "automatic",
+      "pattern": "linq_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中使用 LINQ，可能产生 GC 和额外迭代开销。",
+      "suggestion": "改为显式 for 循环，或把查询结果缓存到低频更新逻辑。"
+    },
+    {
+      "id": "RULE-GC-006",
+      "category": "GC",
+      "severity": "HIGH",
+      "title": "Update中foreach遍历List",
+      "detection": "review",
+      "pattern": "foreach_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中使用 foreach，需要确认目标集合和 Unity/C# 版本是否会分配。",
+      "suggestion": "高频路径优先使用 for 循环；若确认无分配，可在报告中标记例外。"
+    },
+    {
+      "id": "RULE-MEM-001",
+      "category": "MEMORY",
+      "severity": "CRITICAL",
+      "title": "事件订阅未配对取消",
+      "detection": "review",
+      "pattern": "event_subscription_without_unsubscribe",
+      "message": "发现事件订阅，但未发现明显的取消订阅逻辑。",
+      "suggestion": "在 OnDisable/OnDestroy 中配对 Unsubscribe 或 -=。"
+    },
+    {
+      "id": "RULE-MEM-002",
+      "category": "MEMORY",
+      "severity": "HIGH",
+      "title": "协程未正确停止",
+      "detection": "review",
+      "pattern": "start_coroutine_without_stop",
+      "message": "发现 StartCoroutine，但未发现明显的 StopCoroutine/StopAllCoroutines。",
+      "suggestion": "保存 Coroutine 引用，并在 OnDisable/OnDestroy 中停止。"
+    },
+    {
+      "id": "RULE-MEM-003",
+      "category": "MEMORY",
+      "severity": "HIGH",
+      "title": "静态集合无清理机制",
+      "detection": "review",
+      "pattern": "static_collection_without_clear",
+      "message": "发现静态集合，但未发现明显的 Clear/Remove 清理机制。",
+      "suggestion": "提供生命周期清理方法，并在场景切换或退出时调用。"
+    },
+    {
+      "id": "RULE-MEM-004",
+      "category": "MEMORY",
+      "severity": "HIGH",
+      "title": "DOTween动画未Kill",
+      "detection": "review",
+      "pattern": "dotween_without_kill",
+      "message": "发现 DOTween 调用，但未发现明显的 Kill 清理。",
+      "suggestion": "保存 Tween 引用，并在 OnDisable/OnDestroy 中 Kill。"
+    },
+    {
+      "id": "RULE-POOL-001",
+      "category": "POOL",
+      "severity": "CRITICAL",
+      "title": "高频对象未池化",
+      "detection": "review",
+      "pattern": "instantiate_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中调用 Instantiate，疑似高频创建对象。",
+      "suggestion": "对频繁创建销毁的对象使用对象池。"
+    },
+    {
+      "id": "RULE-ARCH-001",
+      "category": "ARCH",
+      "severity": "HIGH",
+      "title": "滥用单例模式",
+      "detection": "review",
+      "pattern": "singleton_instance",
+      "message": "发现单例模式，需要确认是否是真正的全局服务。",
+      "suggestion": "对游戏实体、可替换服务优先考虑依赖注入或显式引用。"
+    },
+    {
+      "id": "RULE-ARCH-004",
+      "category": "ARCH",
+      "severity": "HIGH",
+      "title": "Update中查找对象",
+      "detection": "automatic",
+      "pattern": "find_object_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中调用 GameObject.Find/FindObjectOfType。",
+      "suggestion": "在初始化阶段缓存引用，或通过依赖注入/序列化字段传入。"
+    },
+    {
+      "id": "RULE-ARCH-006",
+      "category": "ARCH",
+      "severity": "MEDIUM",
+      "title": "使用public字段暴露给Inspector",
+      "detection": "automatic",
+      "pattern": "public_field",
+      "message": "发现 public 字段，可能破坏封装。",
+      "suggestion": "使用 [SerializeField] private 字段，并按需提供只读属性。"
+    },
+    {
+      "id": "RULE-RES-001",
+      "category": "RES",
+      "severity": "HIGH",
+      "title": "使用Resources加载",
+      "detection": "automatic",
+      "pattern": "resources_load",
+      "message": "发现 Resources.Load，可能增加包体和运行时管理成本。",
+      "suggestion": "优先使用 Addressables 或项目统一资源加载层。"
+    },
+    {
+      "id": "RULE-RES-003",
+      "category": "RES",
+      "severity": "CRITICAL",
+      "title": "Addressables Handle未Release",
+      "detection": "review",
+      "pattern": "addressables_without_release",
+      "message": "发现 Addressables 加载调用，但未发现明显 Release。",
+      "suggestion": "保存 AsyncOperationHandle，并在生命周期结束时 Release。"
+    },
+    {
+      "id": "RULE-SAFE-001",
+      "category": "SAFE",
+      "severity": "HIGH",
+      "title": "公共方法缺少参数校验",
+      "detection": "review",
+      "pattern": "public_method_without_null_guard",
+      "message": "公共方法可能直接使用引用参数，需要确认是否有调用约束或 null 检查。",
+      "suggestion": "对外部输入增加显式校验，或在文档/契约中说明不可为 null。"
+    },
+    {
+      "id": "RULE-SAFE-003",
+      "category": "SAFE",
+      "severity": "CRITICAL",
+      "title": "Update中可能抛异常",
+      "detection": "review",
+      "pattern": "unsafe_index_in_update",
+      "message": "Update/FixedUpdate/LateUpdate 中存在索引访问，需要确认边界和 null 安全。",
+      "suggestion": "增加边界检查、TryGetValue 或提前缓存有效引用。"
+    }
+  ]
+}

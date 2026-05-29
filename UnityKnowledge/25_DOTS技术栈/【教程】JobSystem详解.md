@@ -1,12 +1,16 @@
 ---
 title: 【教程】JobSystem详解
-tags: [Unity, DOTS, DOTS技术栈, JobSystem, 教程]
+tags: ["Unity", "DOTS", "DOTS技术栈", "JobSystem", "教程"]
 category: DOTS技术栈
-created: 2026-03-05 09:21
-updated: 2026-03-05 09:21
+created: "2026-03-05 09:21"
+updated: "2026-05-29 00:00"
 description: Unity JobSystem详解教程
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # Job System 详解
 
 > 第1课 | DOTS 技术栈模块

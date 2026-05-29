@@ -1,11 +1,14 @@
 ---
 title: 【性能数据】LINQ性能测试
-tags: [Unity, 性能优化, 代码优化, 性能数据, LINQ, 性能测试, GC]
+tags: ["Unity", "性能优化", "代码优化", "性能数据", "LINQ", "性能测试", "GC"]
 category: 性能优化/代码优化
-created: 2026-03-05 19:45
-updated: 2026-03-05 19:45
+created: "2026-03-05 19:45"
+updated: "2026-05-29 00:00"
 description: LINQ vs 手写循环的性能测试数据，包含常见LINQ操作的性能对比和GC分配
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【性能数据】LINQ性能测试

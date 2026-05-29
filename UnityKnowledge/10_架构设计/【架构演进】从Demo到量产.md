@@ -1,11 +1,14 @@
 ---
 title: 【最佳实践】架构演进-从Demo到量产
-tags: [C#, Unity, 架构, 最佳实践, 架构演进, 重构]
+tags: ["C#", "Unity", "架构", "最佳实践", "架构演进", "重构"]
 category: 架构设计/架构演进
-created: 2024-01-26 10:00
-updated: 2026-03-04 22:06
+created: "2024-01-26 10:00"
+updated: "2026-05-29 00:00"
 description: 游戏项目架构的阶段性演进与重构策略，从原型到量产的架构升级路径
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【最佳实践】架构演进-从Demo到量产

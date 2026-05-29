@@ -1,10 +1,13 @@
 ---
 title: 【教程】DOTS技术栈专题索引
-tags: [Unity, DOTS, ECS, Job System, Burst, 高性能, 多线程]
+tags: ["Unity", "DOTS", "ECS", "Job System", "Burst", "高性能", "多线程", "教程"]
 category: DOTS技术栈/专题索引
-created: 2026-03-05 20:05
-updated: 2026-03-05 20:05
+created: "2026-03-05 20:05"
+updated: "2026-05-29 00:00"
 description: Unity DOTS技术栈的完整知识体系，包含ECS、Job System、Burst Compiler的使用指南
+status: 待验证
+validation: Demo验证
+related: []
 ---
 
 # 【教程】DOTS技术栈专题索引
@@ -248,3 +251,8 @@ DOTS学习难度：
 
 *创建日期: 2026-03-05*
 *相关标签: #DOTS #ECS #JobSystem #Burst #高性能*
+
+## 相关链接
+
+- [[../00_元数据与模板/文档结构规范]]
+

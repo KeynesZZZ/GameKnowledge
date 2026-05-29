@@ -1,12 +1,16 @@
 ---
 title: 【最佳实践】Android专项
-tags: [Unity, 平台适配, Android, 最佳实践]
+tags: ["Unity", "平台适配", "Android", "最佳实践"]
 category: 平台适配
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: Unity Android平台专项优化
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # Android 专项
 
 > Android平台专项优化与注意事项

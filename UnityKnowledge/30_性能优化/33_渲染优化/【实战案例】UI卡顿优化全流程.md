@@ -1,11 +1,14 @@
 ---
 title: 【实战案例】UI卡顿优化全流程
-tags: [Unity, 性能优化, UI, 渲染, 实战案例]
+tags: ["Unity", "性能优化", "UI", "渲染", "实战案例"]
 category: 性能优化/渲染优化
-created: 2026-03-07 10:00
-updated: 2026-03-07 10:00
+created: "2026-03-07 10:00"
+updated: "2026-05-29 00:00"
 description: 完整的UI卡顿优化案例，展示"发现问题→定位瓶颈→解决方案→量化结果"全流程，帧率从30fps提升到60fps
 unity_version: 2021.3+
+status: 待验证
+validation: 项目实战
+related: []
 ---
 
 # 实战案例 - UI卡顿优化全流程

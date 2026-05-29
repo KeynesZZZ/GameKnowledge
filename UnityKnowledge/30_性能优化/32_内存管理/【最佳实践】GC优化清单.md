@@ -1,12 +1,16 @@
 ---
 title: 【最佳实践】GC优化清单
-tags: [Unity, 性能优化, 内存管理, 最佳实践]
+tags: ["Unity", "性能优化", "内存管理", "最佳实践"]
 category: 性能优化
-created: 2026-03-05 08:44
-updated: 2026-03-05 08:44
+created: "2026-03-05 08:44"
+updated: "2026-05-29 00:00"
 description: Unity GC优化最佳实践清单
 unity_version: 2021.3+
+status: 待验证
+validation: Demo验证
+related: []
 ---
+
 # 最佳实践 - GC优化清单
 
 > 减少GC触发，提升游戏流畅度 `#性能优化` `#内存管理` `#最佳实践`
