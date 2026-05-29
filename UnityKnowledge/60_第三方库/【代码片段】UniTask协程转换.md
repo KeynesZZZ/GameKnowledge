@@ -8,7 +8,7 @@ description: 协程转UniTask代码片段
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【教程】UniTask异步编程]]", "[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]"]
 ---
 
 # 代码片段 - UniTask协程转换
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**实践角度**提供UniTask协程转换的可复制代码。
-
-**相关文档**：[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]、[[【代码片段】UniTask协程转换]]、[[【教程】UniTask异步编程]]
+提供Coroutine到UniTask的完整迁移对照表，涵盖延迟等待、帧等待、异步操作、超时取消、资源加载等常见场景的代码片段，便于快速查阅和复制。
 
 ---
 

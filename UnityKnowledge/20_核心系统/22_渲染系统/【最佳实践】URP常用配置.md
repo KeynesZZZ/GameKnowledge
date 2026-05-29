@@ -8,22 +8,30 @@ description: URP渲染管线常用配置优化
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】渲染管线基础", "【教程】后处理", "【教程】URP Lit Shader"]
 ---
 
-# URP 常用配置
+# 【最佳实践】URP常用配置
 
 > Universal Render Pipeline 配置指南 `#渲染` `#URP` `#配置`
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结URP常用配置的推荐做法。
+总结URP渲染管线的最佳配置实践，涵盖URP Asset设置、质量参数调优、光照与阴影配置、移动端性能优化等关键配置项的推荐值与调优策略。
 
-**相关文档**：
+**相关文档**：[[【教程】渲染管线基础]]、[[【教程】后处理]]、[[【教程】URP Lit Shader]]
 
 ---
 
 ## 相关链接
+
+- [[【教程】渲染管线基础]]
+- [[【教程】后处理]]
+- [[【教程】URP Lit Shader]]
+
+---
+
+## 配置参考
 
 ```
 URP Asset 结构：
@@ -411,6 +419,6 @@ public class DynamicResolution : MonoBehaviour
 
 ## 相关链接
 
-- 深入学习: [渲染管线基础](../../20_核心系统/22_渲染系统/【教程】渲染管线基础.md)
-- Shader: [Shader基础模板](【代码片段】Shader基础模板.md)
-- 后处理: [后处理(Post Processing)](../../20_核心系统/22_渲染系统/【教程】后处理.md)
+- [[【教程】渲染管线基础]]
+- [[【代码片段】Shader基础模板]]
+- [[【教程】后处理]]

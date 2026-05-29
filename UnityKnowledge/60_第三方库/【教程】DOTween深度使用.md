@@ -8,7 +8,7 @@ description: DOTween动画库深度使用教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【代码片段】DOTween常用动画]]", "[[【教程】UniTask异步编程]]"]
 ---
 
 # DOTween 深度使用
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解DOTween深度使用。
-
-**相关文档**：[[【代码片段】DOTween常用动画]]、[[【教程】DOTween深度使用]]
+DOTween是Unity最流行的动画补间库，本文档详解其核心API使用方法，包括基础/链式动画、缓动函数选择、动画控制（暂停/倒放/完成回调）、Sequence序列编排以及性能优化和内存管理最佳实践。
 
 ---
 

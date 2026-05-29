@@ -8,7 +8,7 @@ description: DOTween常用动画代码片段
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【教程】DOTween深度使用]]", "[[【代码片段】UniTask协程转换]]"]
 ---
 
 # 代码片段 - DOTween常用动画
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**实践角度**提供DOTween常用动画的可复制代码。
-
-**相关文档**：[[【代码片段】DOTween常用动画]]、[[【教程】DOTween深度使用]]
+提供DOTween常用动画效果的可复用代码片段集合，涵盖缩放弹出、淡入淡出、滑动、弹跳、摇晃、打字机效果等常见UI动画，便于直接复制到项目中使用。
 
 ---
 

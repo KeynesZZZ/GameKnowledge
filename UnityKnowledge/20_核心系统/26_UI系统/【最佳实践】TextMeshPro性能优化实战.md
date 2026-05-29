@@ -8,18 +8,18 @@ description: TextMeshPro性能优化实战指南
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【设计原理】UGUI合批机制深度解析", "【性能数据】UGUI DrawCall影响因素全面测试", "【踩坑记录】UGUI常见性能陷阱与根因分析"]
 ---
 
-# 最佳实践 - TextMeshPro性能优化实战
+# 【最佳实践】TextMeshPro性能优化实战
 
 > TextMeshPro内部机制、字体图集管理、Mesh生成优化、动态文本GC优化完整方案 `#最佳实践` `#性能优化` `#TextMeshPro`
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结TextMeshPro性能优化实战的推荐做法。
+总结TextMeshPro的性能优化实战经验，涵盖字体图集管理策略、Mesh生成优化、动态文本GC零分配方案、文字缓存池等关键技术。
 
-**相关文档**：
+**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【性能数据】UGUI DrawCall影响因素全面测试]]、[[【踩坑记录】UGUI常见性能陷阱与根因分析]]
 
 ---
 

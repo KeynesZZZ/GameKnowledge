@@ -8,18 +8,16 @@ description: Unity Overdraw(过度绘制)优化实战指南，包含检测方法
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】UI性能优化]]", "[[【最佳实践】3D渲染优化指南]]", "[[../../【教程】渲染性能优化]]"]
 ---
 
-# 最佳实践 - Overdraw优化实战
+# 【最佳实践】Overdraw优化实战
 
 > 减少 GPU 过度绘制，提升渲染性能 `#性能优化` `#渲染` `#UI` `#最佳实践`
 
 ## 文档定位
 
-本文档从**实战角度**讲解 Overdraw 优化方法。
-
-**相关文档**：[[【最佳实践】UI性能优化]]、[[【教程】渲染性能优化]]
+Unity Overdraw（过度绘制）优化的实战指南，涵盖Scene视图Overdraw检测、UI层级优化（禁用不必要Raycast Target、合并透明层）、粒子系统Overdraw优化（限制粒子数量、使用加法混合、LOD系统），以及3D场景中的深度排序和遮挡剔除策略。
 
 ---
 

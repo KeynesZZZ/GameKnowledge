@@ -8,7 +8,7 @@ description: Provider接口设计模式
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[01-需求分析与架构]]", "[[05-海外平台实现]]", "[[10-统一管理器实现]]"]
 ---
 
 # 04-Provider接口设计
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解Provider接口设计。
-
-**相关文档**：
+设计云存档系统的Provider接口层次（ISaveProvider/ISyncProvider/IConflictResolver），实现工厂模式根据平台自动创建Provider实例，以及依赖注入和异步操作链的完整接口定义。
 
 ---
 

@@ -8,12 +8,18 @@ description: 自定义Shader开发实战案例
 unity_version: 2021.3+
 status: 待验证
 validation: 项目实战
-related: []
+related: ["【教程】常用Shader技术", "【代码片段】Shader基础模板", "【实战案例】三消游戏视觉效果"]
 ---
 
-# 自定义 Shader 实战
+# 【实战案例】自定义Shader
 
 > Unity 自定义 Shader 基础语法和实战案例 `#渲染与Shader` `#自定义Shader` `#Shader编程`
+
+## 文档定位
+
+通过Surface Shader和Vertex/Fragment Shader两种方式的实战案例，演示自定义Shader开发流程，涵盖透明、扭曲、 dissolve等常见效果的完整实现。
+
+**相关文档**：[[【教程】常用Shader技术]]、[[【代码片段】Shader基础模板]]、[[【实战案例】三消游戏视觉效果]]
 
 ## 概述
 
@@ -358,15 +364,11 @@ SubShader
 
 ## 相关链接
 
-- [Shader基础语法](./【教程】HLSL与Shader基础.md)
-- [URP管线配置](./【最佳实践】URP常用配置.md)
+- [[【教程】HLSL与Shader基础]]
+- [[【最佳实践】URP常用配置]]
+- [[【实战案例】三消游戏视觉效果]]
 
 ---
 
 **适用版本**: Unity 2019.4+
 **最后更新**: 2026-03-04
-
-## 文档定位
-
-本文档用于沉淀 `【实战案例】自定义Shader` 相关知识，说明其适用场景、核心内容和实践注意事项。
-

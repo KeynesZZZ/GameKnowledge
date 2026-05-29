@@ -8,7 +8,7 @@ description: Unity Burst编译器优化教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】JobSystem详解]]", "[[【教程】ECS架构入门]]", "[[DOTS专题索引]]"]
 ---
 
 # Burst Compiler 详解
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解Burst编译器。
-
-**相关文档**：[[【教程】Burst编译器]]
+Burst是Unity的高性能编译器，将C#代码编译为高度优化的原生机器码，结合SIMD自动向量化可实现10-100倍性能提升。本文档详解Burst的使用方法，包括属性配置、类型支持、SIMD优化、SharedStatic与函数指针等核心功能。
 
 ---
 

@@ -8,18 +8,16 @@ description: 协程vs UniTask性能对比测试
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】异步编程最佳实践]]", "[[【最佳实践】Update优化清单]]", "[[../../30_性能优化/32_内存管理/【最佳实践】GC优化清单]]"]
 ---
 
-# 性能数据 - 协程 vs UniTask
+# 【性能数据】协程vs UniTask
 
 > Unity中异步编程方案的性能对比 `#性能优化` `#性能数据` `#异步编程`
 
 ## 文档定位
 
-本文档从**性能测试角度**提供协程vs UniTask的客观数据和测试结果。
-
-**相关文档**：[[【性能数据】协程vs UniTask]]
+Unity协程与UniTask在异步操作中的全面性能对比测试，涵盖启动开销、等待帧、延时操作、返回值处理、取消操作、异常处理六个维度。核心结论：UniTask启动快5.6倍、零GC分配、支持try/catch异常和CancellationToken取消，是性能关键场景的首选方案。
 
 ---
 

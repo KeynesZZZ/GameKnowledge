@@ -8,18 +8,16 @@ description: Unity UI性能优化最佳实践
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【性能数据】UGUI DrawCall影响因素]]", "[[【实战案例】UI卡顿优化全流程]]", "[[../../32_内存管理/【最佳实践】GC优化清单]]"]
 ---
 
-# 最佳实践 - UI性能优化
+# 【最佳实践】UI性能优化
 
 > UGUI性能优化完整指南 `#性能优化` `#渲染` `#UI` `#最佳实践`
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结UI性能优化的推荐做法。
-
-**相关文档**：
+UGUI性能优化的完整最佳实践指南，涵盖DrawCall优化（图集合并、Canvas拆分、材质统一）、Layout优化（避免ContentSizeFitter、使用固定布局）、ScrollRect优化（虚拟化列表）、GC优化（StringBuilder、缓存组件）、Raycast Target优化等核心策略。
 
 ---
 

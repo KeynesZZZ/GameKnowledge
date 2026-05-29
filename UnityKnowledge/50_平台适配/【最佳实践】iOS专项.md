@@ -8,7 +8,7 @@ description: Unity iOS平台专项优化
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【踩坑记录】iOS常见问题清单]]", "[[【最佳实践】Android专项]]", "[[【教程】WebGL限制与方案]]"]
 ---
 
 # iOS 专项
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结iOS专项的推荐做法。
-
-**相关文档**：[[【最佳实践】iOS专项]]
+从最佳实践角度总结Unity iOS平台的专项优化要点，涵盖内存限制与优化、触屏手势识别、后台音频播放、HTTPS/ATS配置、文件存储路径、iCloud备份标记、常见崩溃代码解读以及App Store审核注意事项。
 
 ---
 

@@ -8,18 +8,18 @@ description: ComputeShader基础入门教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】HLSL与Shader基础", "【教程】渲染管线基础", "【实战案例】自定义Shader"]
 ---
 
-# Compute Shader 入门
+# 【教程】ComputeShader入门
 
 > Unity Compute Shader 基础语法和实战应用 `#渲染与Shader` `#ComputeShader` `#GPU计算`
 
 ## 文档定位
 
-本文档从**使用角度**讲解ComputeShader入门。
+讲解Compute Shader的基础语法和GPU并行计算原理，涵盖ComputeBuffer、Kernel、Thread Group等核心概念，适用于粒子系统、物理模拟、图像处理等GPU加速场景。
 
-**相关文档**：
+**相关文档**：[[【教程】HLSL与Shader基础]]、[[【教程】渲染管线基础]]、[[【实战案例】自定义Shader]]
 
 ---
 
@@ -274,8 +274,9 @@ void Kernel (uint3 id : SV_DispatchThreadID)
 
 ## 相关链接
 
-- [Shader基础语法](./【教程】HLSL与Shader基础.md)
-- [性能优化指南](../../30_性能优化/README.md)
+- [[【教程】HLSL与Shader基础]]
+- [[【教程】渲染管线基础]]
+- [[【实战案例】自定义Shader]]
 
 ---
 

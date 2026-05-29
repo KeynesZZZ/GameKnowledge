@@ -8,7 +8,7 @@ description: 深入解析foreach和for的性能差异本质，包含枚举器实
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【性能数据】foreach vs for]]", "[[【最佳实践】Update优化清单]]", "[[【踩坑记录】常见性能陷阱]]"]
 ---
 
 # 【设计原理】为什么foreach比for慢
@@ -17,15 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档深入讲解foreach比for慢的**底层原理**，重点在于：
-- foreach的枚举器机制
-- GC分配的根本原因
-- 不同集合类型的性能差异
-- 何时可以使用foreach
-
-**性能数据**：参见 [[【性能数据】foreach vs for]]
-
-**Update优化清单**：参见 [[【最佳实践】Update优化清单]]
+从编译器和运行时层面深入解析foreach比for慢的根本原因，包括foreach的枚举器模式编译转换、List枚举器对象的24B GC分配、for循环的直接索引访问优势。同时分析数组foreach无GC的特殊编译器优化，以及不同集合类型的性能差异排名。
 
 ---
 

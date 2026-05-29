@@ -8,7 +8,7 @@ description: UniTask异步编程教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【代码片段】UniTask协程转换]]", "[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]", "[[../36_高级编程/【教程】C#高级特性]]"]
 ---
 
 # UniTask 异步编程
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解UniTask异步编程。
-
-**相关文档**：[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]、[[【代码片段】UniTask协程转换]]、[[【教程】UniTask异步编程]]
+UniTask是Unity专用的零GC异步方案，基于ValueTask实现，完全替代协程。本文档详解async/await在Unity中的使用、PlayerLoop集成、超时取消机制、与协程的对比以及性能优化最佳实践。
 
 ---
 

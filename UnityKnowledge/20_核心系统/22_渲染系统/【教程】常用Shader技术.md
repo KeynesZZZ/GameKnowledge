@@ -8,18 +8,18 @@ description: Shader编程常用技术汇总
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】HLSL与Shader基础", "【教程】URP Lit Shader", "【实战案例】自定义Shader"]
 ---
 
-# 常用Shader技术
+# 【教程】常用Shader技术
 
 > 第3课 | 渲染与图形模块
 
 ## 文档定位
 
-本文档从**使用角度**讲解常用Shader技术。
+汇总Shader编程中常用的视觉技术，包括UV动画（流动、旋转）、遮罩与溶解效果、边缘光与菲涅尔效果、纹理混合等，每种技术配有完整HLSL代码。
 
-**相关文档**：
+**相关文档**：[[【教程】HLSL与Shader基础]]、[[【教程】URP Lit Shader]]、[[【实战案例】自定义Shader]]
 
 ---
 
@@ -378,3 +378,5 @@ half pulse2 = sin(_Time.y * speed * 6.28);
 - [Unity Shader Lab](https://docs.unity3d.com/Manual/SL-Reference.html)
 - [Shader Graph Examples](https://unity.com/features/shader-graph)
 - [Book of Shaders](https://thebookofshaders.com/)
+- [[【教程】HLSL与Shader基础]]
+- [[【实战案例】自定义Shader]]

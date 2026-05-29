@@ -8,7 +8,7 @@ description: Unity ECS架构入门教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[DOTS专题索引]]"]
 ---
 
 # ECS 架构入门
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解ECS架构入门。
-
-**相关文档**：[[【教程】ECS架构入门]]
+ECS（Entity-Component-System）是Unity DOTS技术栈的核心架构模式，通过数据与逻辑分离实现Cache友好的连续内存布局。本文档详解Entity、Component、System三要素的使用，涵盖Archetype内存布局、EntityCommandBuffer、SystemGroup及完整的Authoring工作流。
 
 ---
 

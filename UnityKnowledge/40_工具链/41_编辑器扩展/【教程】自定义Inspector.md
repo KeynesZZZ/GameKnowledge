@@ -8,7 +8,7 @@ description: Unity自定义Inspector教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】EditorWindow开发]]", "[[【教程】编辑器扩展学习路径]]", "[[../../40_工具链/【教程】Editor扩展开发]]"]
 ---
 
 # 自定义 Inspector
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解自定义Inspector。
-
-**相关文档**：
+详解Unity自定义Inspector的完整开发方法，包括CustomEditor基础用法、PropertyDrawer自定义属性绘制、DecoratorDrawer装饰器、条件显示/只读模式/预览区域等高级技巧，以及多对象编辑支持。
 
 ---
 

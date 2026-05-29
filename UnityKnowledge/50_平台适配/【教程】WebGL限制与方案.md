@@ -8,7 +8,7 @@ description: Unity WebGL平台限制与解决方案
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】Android专项]]", "[[【最佳实践】iOS专项]]"]
 ---
 
 # WebGL 限制与方案
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解WebGL限制与方案。
-
-**相关文档**：[[【教程】WebGL限制与方案]]
+梳理Unity WebGL平台的主要技术限制（线程、内存、文件IO、网络等）及其应对方案，帮助开发者在浏览器环境中规避常见陷阱并实现功能适配。
 
 ---
 

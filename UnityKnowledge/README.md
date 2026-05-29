@@ -65,6 +65,8 @@ UnityKnowledge/
 └── scripts/                  # ⭐ 自动化工具
     ├── validate_metadata.py    # 元数据校验
     ├── generate_index.py       # 索引生成
+    ├── generate_topic_indexes.py # 专题索引生成
+    ├── check_doc_quality.py    # 文档质量体检
     └── check_links.py          # 链接检查
 ```
 
@@ -168,8 +170,14 @@ python scripts/validate_metadata.py --strict
 # 检查内部链接有效性
 python scripts/check_links.py
 
+# 进行文档质量体检
+python scripts/check_doc_quality.py
+
 # 生成文档索引和知识图谱
 python scripts/generate_index.py
+
+# 生成专题索引
+python scripts/generate_topic_indexes.py
 ```
 
 ## 如何为现有文档添加 v2.0 元数据
@@ -178,7 +186,7 @@ python scripts/generate_index.py
 2. 添加 `status` 字段（参考状态流转：提议→讨论中→已采纳→已实施→已验证→已过时）
 3. 添加 `validation` 字段（未经测试/Demo验证/项目实战/多项目验证）
 4. 添加关系型字段（`prerequisite`/`depends_on`/`related`），至少填写 `related`
-5. 运行 `python scripts/validate_metadata.py` 确认通过
+5. 运行 `python scripts/validate_metadata.py` 和 `python scripts/check_doc_quality.py` 确认通过
 
 ---
 

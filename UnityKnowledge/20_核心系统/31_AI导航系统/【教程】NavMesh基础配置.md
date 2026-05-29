@@ -8,18 +8,18 @@ description: NavMesh导航系统基础配置教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】AI行为树实现"]
 ---
 
-# NavMesh 基础配置
+# 【教程】NavMesh基础配置
 
 > Unity NavMesh 导航系统完整配置指南 `#AI与导航系统` `#NavMesh` `#寻路`
 
 ## 文档定位
 
-本文档从**使用角度**讲解NavMesh基础配置。
+讲解Unity NavMesh导航系统的基础配置方法，涵盖NavMesh烘焙设置、NavMesh Agent参数调优、OffMeshLink跳跃连接、NavMesh Obstacle动态障碍物等核心功能。
 
-**相关文档**：
+**相关文档**：[[【教程】AI行为树实现]]
 
 ---
 

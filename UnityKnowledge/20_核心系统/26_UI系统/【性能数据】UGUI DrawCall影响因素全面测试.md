@@ -8,18 +8,18 @@ description: UGUI DrawCall影响因素全面测试数据
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【设计原理】UGUI合批机制深度解析", "【踩坑记录】UGUI常见性能陷阱与根因分析", "【最佳实践】TextMeshPro性能优化实战"]
 ---
 
-# 性能数据 - UGUI DrawCall影响因素全面测试
+# 【性能数据】UGUI DrawCall影响因素全面测试
 
 > UGUI DrawCall影响因素的全方位基准测试与数据分析 `#性能数据` `#渲染优化` `#UGUI`
 
 ## 文档定位
 
-本文档从**性能测试角度**提供UGUI DrawCall影响因素全面测试的客观数据和测试结果。
+提供UGUI DrawCall在各因素影响下的全面基准测试数据，包括材质数量、纹理切换、Canvas层级、UI深度等变量对DrawCall数量的量化影响。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【踩坑记录】UGUI常见性能陷阱与根因分析]]、[[【最佳实践】TextMeshPro性能优化实战]]、
 
 ---
 

@@ -8,7 +8,7 @@ description: Odin Inspector编辑器扩展教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[../40_工具链/【教程】Editor扩展开发]]", "[[../40_工具链/41_编辑器扩展/【教程】自定义Inspector]]"]
 ---
 
 # Odin Inspector
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解Odin Inspector。
-
-**相关文档**：[[【教程】Odin Inspector]]
+Odin Inspector是Unity最强大的编辑器增强插件，大幅简化Inspector自定义开发。本文档介绍常用特性标注（折叠组、条件显示、资源限制等）和自定义绘制方法。
 
 ---
 
@@ -76,4 +74,5 @@ public string description;
 
 ## 相关链接
 
-- [编辑器扩展](../40_工具链/【教程】Editor扩展开发.md)
+- [[../40_工具链/【教程】Editor扩展开发]]
+- [[../40_工具链/41_编辑器扩展/【教程】自定义Inspector]]

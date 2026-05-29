@@ -8,22 +8,30 @@ description: Animator控制器架构深度分析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【设计原理】Animator状态机", "【最佳实践】Animator状态机最佳实践", "【设计原理】混合树与动画混合"]
 ---
 
-# 设计原理 - Animator深度解析
+# 【设计原理】Animator深度解析
 
 > Unity Animator Controller内部机制、动画状态机工作原理、混合树实现深度剖析 `#设计原理` `#动画系统` `#状态机`
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解Animator深度解析的本质原理。
+从架构层面深度剖析Animator Controller的内部组件设计，包括层系统（Layer System）、状态机（State Machine）、参数系统（Parameter System）和过渡系统的工作原理与协作关系。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】Animator状态机]]、[[【最佳实践】Animator状态机最佳实践]]、[[【设计原理】混合树与动画混合]]
 
 ---
 
 ## 相关链接
+
+- [[【设计原理】Animator状态机]]
+- [[【最佳实践】Animator状态机最佳实践]]
+- [[【教程】动画系统入门]]
+
+---
+
+## 代码示例
 
 ```csharp
 // Animator Controller深度使用
@@ -920,10 +928,10 @@ public class ParameterController : MonoBehaviour
 
 ## 相关链接
 
-- 源码解析: 【源码解析】状态机实现机制
-- 最佳实践: 【最佳实践】Animator状态机最佳实践
-- 实战案例: 【实战案例】复杂动画状态机
-- 教程: 【教程】动画系统入门
+- [[【设计原理】Animator状态机]]
+- [[【最佳实践】Animator状态机最佳实践]]
+- [[【教程】动画系统入门]]
+- [[【设计原理】混合树与动画混合]]
 
 ---
 

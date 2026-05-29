@@ -8,18 +8,16 @@ description: Dictionary性能基准测试数据
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【性能数据】foreach vs for]]", "[[【设计原理】为什么foreach比for慢]]", "[[【最佳实践】Update优化清单]]"]
 ---
 
-# 性能数据 - Dictionary性能
+# 【性能数据】Dictionary性能
 
 > C# Dictionary各种操作的性能分析 `#性能优化` `#性能数据` `#数据结构`
 
 ## 文档定位
 
-本文档从**性能测试角度**提供Dictionary性能的客观数据和测试结果。
-
-**相关文档**：[[【性能数据】Dictionary性能]]
+C# Dictionary各种操作的基准测试数据，涵盖初始化容量、查找性能（TryGetValue vs ContainsKey+索引器）、键类型影响（int/string/struct）、值类型vs引用类型、哈希冲突影响、删除操作六个维度的完整测试。数据可直接用于指导实际项目中Dictionary的正确使用。
 
 ---
 
@@ -570,6 +568,7 @@ foreach (var kvp in new Dictionary<int, string>(dict))
 
 ## 相关链接
 
-- 最佳实践: [GC优化清单](../../30_性能优化/32_内存管理/【最佳实践】GC优化清单.md)
-- 性能数据: [foreach vs for](【性能数据】foreach vs for.md)
+- [[【性能数据】foreach vs for]] — 循环遍历性能对比
+- [[【设计原理】为什么foreach比for慢]] — foreach性能差异的底层原理
+- [[../../30_性能优化/32_内存管理/【最佳实践】GC优化清单]] — GC优化指南
 - 深入学习: [C#高级编程](../../36_高级编程/【教程】C#高级特性.md)

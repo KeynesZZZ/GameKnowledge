@@ -8,7 +8,7 @@ description: Unity iOS平台常见问题
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【最佳实践】iOS专项]]", "[[【踩坑记录】Android常见问题清单]]"]
 ---
 
 # iOS 常见问题清单
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**问题解决角度**记录iOS常见问题清单的常见问题和解决方案。
-
-**相关文档**：[[【踩坑记录】iOS常见问题清单]]
+记录iOS平台开发中的常见问题与解决方案，涵盖内存管理限制、触屏输入适配、后台音频配置、网络ATS策略、文件存储路径以及App Store审核被拒的典型原因。
 
 ---
 
@@ -446,6 +444,6 @@ private void OnLogMessage(string condition, string stackTrace, LogType type)
 
 ## 相关链接
 
-- [Android 专项](【最佳实践】Android专项.md)
-- [性能优化](../30_性能优化/)
+- [[【最佳实践】iOS专项]]
+- [[【踩坑记录】Android常见问题清单]]
 - [官方文档](https://docs.unity3d.com/Manual/ios.html)

@@ -8,7 +8,7 @@ description: Zenject依赖注入框架教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】UniTask异步编程]]", "[[../10_架构设计/【教程】依赖注入与服务定位器]]"]
 ---
 
 # Zenject 依赖注入
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解Zenject依赖注入。
-
-**相关文档**：[[【教程】Zenject依赖注入]]
+Zenject（现Extenject）是Unity中最流行的依赖注入框架。本文档介绍其核心概念（容器、绑定、Installer）、注入方式（构造函数/属性/方法注入）、生命周期管理以及避免循环依赖的最佳实践。
 
 ---
 
@@ -72,4 +70,5 @@ public class PlayerController : MonoBehaviour, IPlayerController
 
 ## 相关链接
 
-- [依赖注入与服务定位器模式](../10_架构设计/【教程】依赖注入与服务定位器.md)
+- [[../10_架构设计/【教程】依赖注入与服务定位器]]
+- [[../10_架构设计/【最佳实践】依赖注入使用指南]]

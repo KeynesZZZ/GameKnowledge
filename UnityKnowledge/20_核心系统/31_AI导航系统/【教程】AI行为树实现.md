@@ -8,18 +8,18 @@ description: AI行为树系统实现教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】NavMesh基础配置"]
 ---
 
-# AI 行为树实现
+# 【教程】AI行为树实现
 
 > Unity 行为树（Behavior Tree）系统完整实现指南 `#AI与导航系统` `#行为树` `#AI`
 
 ## 文档定位
 
-本文档从**使用角度**讲解AI行为树实现。
+讲解行为树（Behavior Tree）的完整实现，包括选择节点、序列节点、装饰器、条件节点等核心节点的代码实现，以及行为树与NavMesh寻路的整合方法。
 
-**相关文档**：
+**相关文档**：[[【教程】NavMesh基础配置]]
 
 ---
 

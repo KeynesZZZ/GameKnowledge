@@ -8,7 +8,7 @@ description: Unity Editor扩展开发教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[41_编辑器扩展/【教程】EditorWindow开发]]", "[[41_编辑器扩展/【教程】编辑器扩展学习路径]]"]
 ---
 
 # Editor扩展开发
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解Editor扩展开发。
-
-**相关文档**：[[【教程】Editor扩展开发]]、
+概述Unity编辑器扩展的主要方式，涵盖EditorWindow、自定义Inspector、PropertyDrawer、ScriptableObject和Gizmos/Handles等扩展手段，帮助开发者快速了解可用的扩展入口。
 
 ---
 
@@ -126,4 +124,6 @@ public class MyGizmos : MonoBehaviour
 
 ## 相关链接
 
-- [编辑器扩展学习路径](./41_编辑器扩展/【教程】编辑器扩展学习路径.md)
+- [[41_编辑器扩展/【教程】编辑器扩展学习路径]]
+- [[41_编辑器扩展/【教程】EditorWindow开发]]
+- [[41_编辑器扩展/【教程】自定义Inspector]]

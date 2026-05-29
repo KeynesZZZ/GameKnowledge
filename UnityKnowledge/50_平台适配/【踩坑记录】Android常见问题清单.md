@@ -8,7 +8,7 @@ description: Unity Android平台常见问题
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【最佳实践】Android专项]]", "[[【踩坑记录】iOS常见问题清单]]"]
 ---
 
 # Android 常见问题清单
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**问题解决角度**记录Android常见问题清单的常见问题和解决方案。
-
-**相关文档**：[[【最佳实践】Android专项]]、[[【踩坑记录】Android常见问题清单]]
+记录Android平台开发中的常见问题与解决方案，涵盖设备兼容性、分辨率适配、运行时权限、返回键处理、触屏输入、存储路径、网络状态检测以及黑屏/启动慢/发热等高频问题的排查方法。
 
 ---
 
@@ -550,6 +548,6 @@ OnDemandRendering.renderFrameInterval = 2;
 
 ## 相关链接
 
-- [iOS 专项](【最佳实践】iOS专项.md)
-- [性能优化](../30_性能优化/)
+- [[【最佳实践】Android专项]]
+- [[【踩坑记录】iOS常见问题清单]]
 - [官方文档](https://docs.unity3d.com/Manual/android.html)

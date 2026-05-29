@@ -8,7 +8,7 @@ description: Unity EditorWindow开发教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】自定义Inspector]]", "[[【教程】编辑器扩展学习路径]]", "[[../../40_工具链/【教程】Editor扩展开发]]"]
 ---
 
 # EditorWindow 开发
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解EditorWindow开发。
-
-**相关文档**：[[../../40_工具链/【教程】Editor扩展开发]]、
+详解Unity EditorWindow的完整开发流程，涵盖窗口创建与生命周期、GUI布局系统、EditorPrefs数据持久化、ScriptableObject配置集成，以及批量重命名工具、快速创建工具、自动刷新窗口等实用示例。
 
 ---
 

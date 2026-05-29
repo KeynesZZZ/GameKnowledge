@@ -1,5 +1,5 @@
 ---
-title: 【设计原理】源码解析-UGUI深度解析
+title: 【源码解析】UGUI深度解析
 tags: ["Unity", "游戏系统", "UGUI", "源码解析", "设计原理", "UI"]
 category: 核心系统/游戏系统
 created: "2026-03-05 08:32"
@@ -8,18 +8,18 @@ description: UGUI系统源码深度解析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【教程】UI系统架构", "【实战案例】游戏系统实战整合", "【教程】三消核心算法"]
 ---
 
-# UGUI深度解析
+# 【源码解析】UGUI深度解析
 
 > 专题课程 | UI系统进阶 | 源码分析版
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解源码解析-UGUI深度解析的本质原理。
+基于UnityCsReference源码深度分析UGUI系统内部实现，包括Canvas重构流程、Layout System布局计算、Graphic渲染管线、ClipRect裁剪机制和EventSystem事件传递链。
 
-**相关文档**：、、
+**相关文档**：[[【教程】UI系统架构]]、[[【实战案例】游戏系统实战整合]]、[[【教程】三消核心算法]]、
 
 ---
 

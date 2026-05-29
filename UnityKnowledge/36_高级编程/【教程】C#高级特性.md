@@ -8,7 +8,7 @@ description: "C#语言高级特性详解"
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】并发编程]]", "[[【最佳实践】高性能编程]]", "[[【教程】高级编程学习路径]]"]
 ---
 
 # C# 高级特性
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解C#高级特性。
-
-**相关文档**：
+详解C#语言的高级特性，包括async/await状态机原理、Task与ValueTask的选择、CancellationToken取消机制、反射与元数据操作、Expression表达式树的高性能属性访问和对象映射器实现，以及Span/Memory/ArrayPool零分配编程技术。
 
 ---
 

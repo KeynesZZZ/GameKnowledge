@@ -8,18 +8,16 @@ description: foreach vs for性能对比测试
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【设计原理】为什么foreach比for慢]]", "[[【性能数据】Dictionary性能]]", "[[【最佳实践】Update优化清单]]"]
 ---
 
-# 性能数据 - foreach vs for
+# 【性能数据】foreach vs for
 
 > C#中不同循环方式的性能对比 `#性能优化` `#性能数据` `#代码优化`
 
 ## 文档定位
 
-本文档从**性能测试角度**提供foreach vs for的客观数据和测试结果。
-
-**相关文档**：[[【性能数据】foreach vs for]]、[[【设计原理】为什么foreach比for慢]]
+C#中不同循环方式（for、foreach、LINQ）在数组、List、Dictionary等数据结构上的性能和GC分配对比测试。包含5组完整基准测试，核心结论：数组foreach和for性能接近，List遍历for比foreach快20%且零GC，LINQ Where比for慢10倍且有大量GC分配。
 
 ---
 

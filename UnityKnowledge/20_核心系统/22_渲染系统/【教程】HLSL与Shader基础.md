@@ -8,18 +8,18 @@ description: HLSL语言与Shader编程基础
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】渲染管线基础", "【教程】URP Lit Shader", "【代码片段】Shader基础模板"]
 ---
 
-# HLSL与Shader基础
+# 【教程】HLSL与Shader基础
 
 > 第2课 | 渲染与图形模块
 
 ## 文档定位
 
-本文档从**使用角度**讲解HLSL与Shader基础。
+从零讲解HLSL语法基础、URP Shader结构、顶点与片元着色器编写方法，配合三消游戏棋盘格子Shader实战案例，帮助开发者掌握Shader编程的核心技能。
 
-**相关文档**：
+**相关文档**：[[【教程】渲染管线基础]]、[[【教程】URP Lit Shader]]、[[【代码片段】Shader基础模板]]
 
 ---
 
@@ -577,3 +577,5 @@ Shader "Match3/GemShader"
 - [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-Reference.html)
 - [URP Shader Templates](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/manual/shaders-in-universal.html)
 - [HLSL Documentation](https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl)
+- [[【教程】渲染管线基础]]
+- [[【教程】URP Lit Shader]]

@@ -8,7 +8,7 @@ description: Unity Addressables资源系统教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】Addressables性能优化]]", "[[【设计原理】热更新方案对比]]", "[[../35_高级主题/【教程】打包与热更新]]"]
 ---
 
 # 资源管线 - Addressables
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解资源管线-Addressables。
-
-**相关文档**：[[【教程】资源管线-Addressables]]
+Unity Addressables资源系统的完整使用指南，涵盖资源加载与缓存管理、实例生命周期、内存清理策略、热更新检测与下载进度、错误处理与重试机制、预加载与批量加载等实战代码。
 
 ---
 

@@ -8,7 +8,7 @@ description: Unity Android平台专项优化
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【踩坑记录】Android常见问题清单]]", "[[【最佳实践】iOS专项]]", "[[【教程】WebGL限制与方案]]"]
 ---
 
 # Android 专项
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结Android专项的推荐做法。
-
-**相关文档**：[[【最佳实践】Android专项]]、[[【踩坑记录】Android常见问题清单]]
+从最佳实践角度总结Unity Android平台的专项优化要点，涵盖分辨率适配、ABI架构选择、运行时权限管理、返回键处理、触屏输入适配、存储路径方案、网络状态检测以及发热/启动慢等常见问题的解决方案。
 
 ---
 

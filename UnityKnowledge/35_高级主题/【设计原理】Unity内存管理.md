@@ -8,7 +8,7 @@ description: Unity内存管理机制深度分析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["[[【实战案例】内存泄漏排查实战]]", "[[【教程】打包与热更新]]", "[[../30_性能优化/32_内存管理/【设计原理】GC工作原理深度解析]]"]
 ---
 
 # Unity内存管理
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解Unity内存管理的本质原理。
-
-**相关文档**：[[../10_架构设计/【教程】Unity脚本生命周期]]、、
+深入剖析Unity的Native/Managed/Graphics三层内存架构，详解GC回收机制与增量式GC、纹理内存优化策略、资源生命周期管理以及内存泄漏检测方法。适合需要理解和优化Unity内存使用的开发者阅读。
 
 ---
 
@@ -1364,6 +1362,7 @@ public static class MemoryOptimizationChecklist
 
 ## 相关链接
 
+- [[【实战案例】内存泄漏排查实战]]
 - [Unity Memory Management](https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity7.html)
 - [Memory Profiler](https://docs.unity3d.com/Packages/com.unity.memoryprofiler@latest)
 - [Garbage Collection](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/)

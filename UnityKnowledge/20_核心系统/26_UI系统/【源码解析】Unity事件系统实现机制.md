@@ -1,5 +1,5 @@
 ---
-title: 【设计原理】源码解析-Unity事件系统实现机制
+title: 【源码解析】Unity事件系统实现机制
 tags: ["Unity", "UI", "UI系统", "事件系统", "源码解析", "设计原理"]
 category: 核心系统/UI系统
 created: "2026-03-05 08:31"
@@ -8,18 +8,18 @@ description: Unity事件系统底层实现机制
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【设计原理】UGUI合批机制深度解析", "【踩坑记录】UGUI常见性能陷阱与根因分析", "【最佳实践】TextMeshPro性能优化实战"]
 ---
 
-# 源码解析 - Unity事件系统实现机制
+# 【源码解析】Unity事件系统实现机制
 
 > Unity EventSystem底层实现、PointerEventData流转、射线检测算法源码分析 `#源码解析` `#UI` `#事件系统`
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解源码解析-Unity事件系统实现机制的本质原理。
+基于UnityCsReference源码分析EventSystem的完整事件处理流程，包括InputModule输入采集、PointerEventData数据流转、GraphicRaycaster射线检测算法等核心实现。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【踩坑记录】UGUI常见性能陷阱与根因分析]]、[[【最佳实践】TextMeshPro性能优化实战]]、
 
 ---
 

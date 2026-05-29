@@ -8,7 +8,7 @@ description: Unity JobSystem详解教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】Burst编译器]]", "[[【教程】ECS架构入门]]", "[[DOTS专题索引]]"]
 ---
 
 # Job System 详解
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解JobSystem详解。
-
-**相关文档**：[[【教程】JobSystem详解]]
+Job System是Unity的多线程任务系统，提供安全的多线程编程模型，自动管理依赖关系并避免GC分配。本文档详解IJob、IJobParallelFor等任务类型，NativeContainer容器家族，以及Job依赖链调度、安全性检查和性能最佳实践。
 
 ---
 

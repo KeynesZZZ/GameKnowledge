@@ -8,22 +8,30 @@ description: Animator状态机设计与优化最佳实践
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【设计原理】Animator状态机", "【设计原理】Animator深度解析", "【源码解析】动画事件与回调"]
 ---
 
-# Animator 状态机最佳实践
+# 【最佳实践】Animator状态机最佳实践
 
 > Unity动画控制器的优化与最佳实践 `#动画系统` `#最佳实践` `#性能优化`
 
 ## 文档定位
 
-本文档从**最佳实践角度**总结Animator状态机最佳实践的推荐做法。
+总结Animator状态机在参数优化（Hash缓存）、状态检测、层级管理、GPU Skinning等方面的最佳实践和常见模式，帮助开发者写出高效且可维护的动画控制代码。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】Animator状态机]]、[[【设计原理】Animator深度解析]]、[[【源码解析】动画事件与回调]]
 
 ---
 
 ## 相关链接
+
+- [[【设计原理】Animator状态机]]
+- [[【设计原理】Animator深度解析]]
+- [[【源码解析】动画事件与回调]]
+
+---
+
+## 代码示例
 
 ```csharp
 // 使用Hash避免字符串查找

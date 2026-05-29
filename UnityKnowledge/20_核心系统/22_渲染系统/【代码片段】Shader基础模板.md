@@ -8,22 +8,30 @@ description: URP Shader常用模板集合
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【教程】HLSL与Shader基础", "【实战案例】自定义Shader", "【教程】常用Shader技术"]
 ---
 
-# Shader 基础模板
+# 【代码片段】Shader基础模板
 
 > URP Shader常用模板集合 `#渲染` `#Shader` `#代码片段`
 
 ## 文档定位
 
-本文档从**实践角度**提供Shader基础模板的可复制代码。
+提供可直接复用的URP Shader代码模板集合，包括不透明、透明、UV动画、溶解等常用模板，方便开发者快速起步Shader编写。
 
-**相关文档**：、、
+**相关文档**：[[【教程】HLSL与Shader基础]]、[[【实战案例】自定义Shader]]、[[【教程】常用Shader技术]]
 
 ---
 
 ## 相关链接
+
+- [[【教程】HLSL与Shader基础]]
+- [[【实战案例】自定义Shader]]
+- [[【教程】常用Shader技术]]
+
+---
+
+## 代码模板
 
 ```hlsl
 // 基础结构
@@ -652,6 +660,6 @@ Shader "Custom/UI/Mask"
 
 ## 相关链接
 
-- 深入学习: [HLSL与Shader基础](../../20_核心系统/22_渲染系统/【教程】HLSL与Shader基础.md)
-- URP: [URP_Lit_Shader](../../20_核心系统/22_渲染系统/【教程】URP Lit Shader.md)
-- 渲染管线: [渲染管线基础](../../20_核心系统/22_渲染系统/【教程】渲染管线基础.md)
+- [[【教程】HLSL与Shader基础]]
+- [[【教程】URP Lit Shader]]
+- [[【教程】渲染管线基础]]

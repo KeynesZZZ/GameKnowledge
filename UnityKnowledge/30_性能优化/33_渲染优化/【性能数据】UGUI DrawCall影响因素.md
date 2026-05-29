@@ -8,18 +8,16 @@ description: UGUI DrawCall影响因素全面测试
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】UI性能优化]]", "[[【实战案例】UI卡顿优化全流程]]", "[[【教程】Frame Debugger渲染诊断流程]]"]
 ---
 
-# 性能数据 - UGUI DrawCall影响因素
+# 【性能数据】UGUI DrawCall影响因素
 
 > UGUI DrawCall优化效果量化分析 `#性能优化` `#渲染` `#UI` `#性能数据`
 
 ## 文档定位
 
-本文档从**性能测试角度**提供UGUI DrawCall影响因素的客观数据和测试结果。
-
-**相关文档**：、、
+UGUI DrawCall影响因素的全面测试数据，涵盖图集使用、Mask组件、层级穿插、材质差异、Raycast Target设置等因素对DrawCall数量的影响。以背包界面为例，通过图集合并、统一字体、RectMask2D替代Mask、Canvas分离等优化手段将DrawCall从52降至6。
 
 ---
 

@@ -8,18 +8,16 @@ description: Unity Addressables 资源管理系统性能优化指南，涵盖异
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【最佳实践】资源预加载策略]]", "[[【实战案例】加载时间优化实战]]", "[[../../32_内存管理/【最佳实践】资源卸载指南]]"]
 ---
 
-# 最佳实践 - Addressables 性能优化
+# 【最佳实践】Addressables性能优化
 
 > Addressables 资源管理系统的性能优化实战 `#性能优化` `#加载优化` `#Addressables` `#最佳实践`
 
 ## 文档定位
 
-本文档从**性能优化角度**讲解 Addressables 的最佳使用方式。
-
-**相关文档**：[[【教程】资源管线-Addressables]]、[[【最佳实践】资源卸载指南]]、[[【实战案例】加载时间优化实战]]
+Unity Addressables资源管理系统的性能优化指南，涵盖异步加载优化（避免同步加载阻塞）、内存管理（正确Release资源、引用计数）、AssetBundle优化（分组策略、压缩格式选择、缓存策略），以及加载性能监控和常见性能陷阱排查。
 
 ---
 

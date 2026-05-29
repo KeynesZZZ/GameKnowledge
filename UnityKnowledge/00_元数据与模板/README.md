@@ -72,6 +72,8 @@
 |------|------|----------|
 | `validate_metadata.py` | 校验元数据完整性 | CI流水线、提交前检查 |
 | `generate_index.py` | 生成文档索引和知识图谱 | 定期更新、构建站点 |
+| `generate_topic_indexes.py` | 生成专题索引页 | 定期整理对象池、状态机、DOTS 等主题导航 |
+| `check_doc_quality.py` | 检查结构、占位符、过期文档、Inbox积压 | 每周维护、迁移收尾、提交前体检 |
 | `check_links.py` | 检查内部链接有效性 | 发现断链、维护链接健康 |
 
 ### 快速使用
@@ -86,8 +88,14 @@ python scripts/validate_metadata.py --strict
 # 检查链接
 python scripts/check_links.py
 
+# 文档质量体检
+python scripts/check_doc_quality.py
+
 # 生成索引
 python scripts/generate_index.py
+
+# 生成专题索引
+python scripts/generate_topic_indexes.py
 ```
 
 ---

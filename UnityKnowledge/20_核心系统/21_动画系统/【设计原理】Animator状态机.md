@@ -8,18 +8,18 @@ description: 状态机模型在动画系统中的应用
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【设计原理】Animator深度解析", "【最佳实践】Animator状态机最佳实践", "【源码解析】动画事件与回调"]
 ---
 
-# Animator 状态机
+# 【设计原理】Animator状态机
 
 > 第1课 | 动画系统模块
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解Animator状态机的本质原理。
+系统讲解Animator组件的状态机模型，包括参数类型与控制、状态切换与CrossFade、动画层操作、StateMachineBehaviour自定义行为、根运动处理和动画覆盖控制器等核心机制。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】Animator深度解析]]、[[【最佳实践】Animator状态机最佳实践]]、[[【源码解析】动画事件与回调]]、
 
 ---
 
@@ -440,3 +440,5 @@ public class AvatarSwitcher : MonoBehaviour
 
 - [Animator 官方文档](https://docs.unity3d.com/ScriptReference/Animator.html)
 - [Animation System Overview](https://docs.unity3d.com/Manual/AnimationOverview.html)
+- [[【设计原理】Animator深度解析]]
+- [[【最佳实践】Animator状态机最佳实践]]

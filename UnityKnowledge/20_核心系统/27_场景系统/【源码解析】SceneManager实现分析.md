@@ -1,5 +1,5 @@
 ---
-title: 【设计原理】源码解析-SceneManager实现分析
+title: 【源码解析】SceneManager实现分析
 tags: ["Unity", "场景系统", "SceneManager", "源码解析", "设计原理"]
 category: 核心系统/场景系统
 created: "2026-03-05 08:32"
@@ -8,18 +8,18 @@ description: SceneManager底层实现机制分析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【设计原理】场景加载底层机制", "【实战案例】大型游戏场景流式加载架构", "【性能数据】场景加载优化方案全面测试"]
 ---
 
-# 源码解析 - SceneManager实现分析
+# 【源码解析】SceneManager实现分析
 
 > Unity SceneManager源码级别分析、场景加载流程、场景管理系统内部机制 `#源码解析` `#场景管理` `#底层`
 
 ## 文档定位
 
-本文档从**底层机制角度**深入讲解源码解析-SceneManager实现分析的本质原理。
+基于UnityCsReference源码分析SceneManager的内部实现，包括场景加载流程、AsyncOperation状态机、Additive场景合并机制、场景卸载策略等核心机制。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】场景加载底层机制]]、[[【实战案例】大型游戏场景流式加载架构]]、[[【性能数据】场景加载优化方案全面测试]]、
 
 ---
 

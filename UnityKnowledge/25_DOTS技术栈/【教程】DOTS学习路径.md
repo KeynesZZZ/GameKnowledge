@@ -8,7 +8,7 @@ description: Unity DOTS技术栈学习路径
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】JobSystem详解]]", "[[【教程】ECS架构入门]]", "[[DOTS专题索引]]"]
 ---
 
 # DOTS 技术栈学习路径
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解DOTS学习路径。
-
-**相关文档**：[[DOTS专题索引]]、[[【教程】DOTS学习路径]]
+DOTS（Data-Oriented Technology Stack）是Unity的高性能技术栈，由ECS + Job System + Burst Compiler三部分组成。本文档规划了从Job System到Burst再到ECS的10周学习路线，包含核心概念总结、性能对比和推荐资源。
 
 ---
 
@@ -138,5 +136,7 @@ struct MyJob : IJob
 
 ## 相关链接
 
+- [[【教程】JobSystem详解]]
+- [[【教程】Burst编译器]]
+- [[【教程】ECS架构入门]]
 - [[../00_元数据与模板/文档结构规范]]
-

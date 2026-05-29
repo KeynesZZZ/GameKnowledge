@@ -8,18 +8,18 @@ description: URP Lit Shader光照模型详解
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["【教程】HLSL与Shader基础", "【教程】常用Shader技术", "【最佳实践】URP常用配置"]
 ---
 
-# URP Lit Shader
+# 【教程】URP Lit Shader
 
 > 第4课 | 渲染与图形模块
 
 ## 文档定位
 
-本文档从**使用角度**讲解URP Lit Shader。
+深入讲解URP光照系统，从Lambert漫反射、Blinn-Phong高光到PBR光照模型，详解GetMainLight、UniversalFragmentPBR等核心API用法，配合三消游戏简化光照Shader实战。
 
-**相关文档**：
+**相关文档**：[[【教程】HLSL与Shader基础]]、[[【教程】常用Shader技术]]、[[【最佳实践】URP常用配置]]
 
 ---
 
@@ -356,3 +356,5 @@ Shader "Match3/GemSimpleLit"
 - [URP Lighting](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/manual/lighting.html)
 - [Unity PBR](https://docs.unity3d.com/Manual/StandardShaderPhysicallyBasedRendering.html)
 - [Blinn-Phong Model](https://en.wikipedia.org/wiki/Blinn–Phong_reflection_model)
+- [[【教程】HLSL与Shader基础]]
+- [[【教程】常用Shader技术]]

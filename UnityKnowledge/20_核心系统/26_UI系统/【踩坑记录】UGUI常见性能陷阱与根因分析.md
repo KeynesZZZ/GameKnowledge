@@ -8,18 +8,18 @@ description: UGUI常见性能陷阱及根因分析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: []
+related: ["【设计原理】UGUI合批机制深度解析", "【性能数据】UGUI DrawCall影响因素全面测试", "【最佳实践】TextMeshPro性能优化实战"]
 ---
 
-# 踩坑记录 - UGUI常见性能陷阱与根因分析
+# 【踩坑记录】UGUI常见性能陷阱与根因分析
 
 > UGUI RecalculateLayout、Rebuild、Canvas层级导致的性能问题深度分析与解决方案 `#踩坑记录` `#性能优化` `#UI`
 
 ## 文档定位
 
-本文档从**问题解决角度**记录UGUI常见性能陷阱与根因分析的常见问题和解决方案。
+记录UGUI开发中常见的性能陷阱，包括Layout Recalculate过度触发、Canvas Rebuild风暴、Raycast Target滥用、SetDirty脏标记等问题，分析根因并给出解决方案。
 
-**相关文档**：、、
+**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【性能数据】UGUI DrawCall影响因素全面测试]]、[[【最佳实践】TextMeshPro性能优化实战]]、
 
 ---
 

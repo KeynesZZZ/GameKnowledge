@@ -9,7 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 dependencies: ["Unity.Entities", "Unity.Burst", "Unity.Jobs"]
-related: []
+related: ["[[【设计原理】ECS为什么快]]", "[[【架构决策】组件化vs继承]]", "[[【设计原理】为什么要用设计模式]]"]
 ---
 
 # 【教程】ECS 入门与迁移指南
@@ -18,9 +18,9 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解ECS 入门与迁移指南。
+本文档从**使用角度**讲解Unity DOTS技术栈中ECS架构的入门与迁移策略，包含Entity、Component、System的核心概念、从OOP到ECS的思维转换和分步迁移方案。
 
-**相关文档**：[[【教程】ECS入门与迁移指南]]
+**相关文档**：[[【设计原理】ECS为什么快]]、[[【架构决策】组件化vs继承]]
 
 ---
 

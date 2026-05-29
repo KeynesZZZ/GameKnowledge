@@ -8,7 +8,7 @@ description: Unity CPU优化技术详解
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: []
+related: ["[[【教程】性能分析工具]]", "[[31_代码优化/【最佳实践】Update优化清单]]", "[[32_内存管理/【最佳实践】GC优化清单]]"]
 ---
 
 # CPU优化技术
@@ -17,9 +17,7 @@ related: []
 
 ## 文档定位
 
-本文档从**使用角度**讲解CPU优化技术。
-
-**相关文档**：[[【教程】CPU优化技术]]
+系统讲解Unity中CPU端性能优化技术，涵盖GC垃圾回收优化、Job System并行计算、Burst编译器加速、批处理与GPU Instancing、协程优化五大方向。每个方向提供完整的代码示例和优化检查清单，适合开发者在定位CPU瓶颈后按图索骥进行针对性优化。
 
 ---
 
@@ -1154,7 +1152,9 @@ public class Gem : MonoBehaviour
 
 ## 相关链接
 
+- [[【教程】性能分析工具]] — 使用Profiler等工具定位CPU瓶颈
+- [[31_代码优化/【最佳实践】Update优化清单]] — Update函数的逐项优化清单
+- [[32_内存管理/【最佳实践】GC优化清单]] — GC优化最佳实践清单
 - [Unity Job System](https://docs.unity3d.com/Manual/JobSystem.html)
 - [Burst Compiler](https://docs.unity3d.com/Packages/com.unity.burst@latest)
 - [GPU Instancing](https://docs.unity3d.com/Manual/GPUInstancing.html)
-- [Unity Performance Best Practices](https://docs.unity3d.com/Manual/BestPracticeUnderstandingPerformanceInUnity.html)
