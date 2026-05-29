@@ -3,7 +3,7 @@ title: 【踩坑记录】UGUI常见性能陷阱与根因分析
 tags: ["Unity", "UI", "UI系统", "UGUI", "性能", "踩坑记录"]
 category: 核心系统/UI系统
 created: "2026-03-05 08:31"
-updated: "2026-05-29 00:00"
+updated: "2026-05-29 20:27"
 description: UGUI常见性能陷阱及根因分析
 unity_version: 2021.3+
 status: 待验证
@@ -40,7 +40,7 @@ related: ["【设计原理】UGUI合批机制深度解析", "【性能数据】U
   - 2021.3+: 所有问题已修复
   - 所有陷阱和解决方案在2021.3+测试验证
 
-## 相关链接
+## 快速示例
 
 ```csharp
 // 陷阱检测工具
@@ -1417,10 +1417,11 @@ public class UIPerformanceMonitor : MonoBehaviour
 
 ## 相关链接
 
-- 设计原理: [UGUI合批机制深度解析](【设计原理】UGUI合批机制深度解析.md)
-- 性能测试: [UGUI DrawCall影响因素全面测试](【性能数据】UGUI DrawCall影响因素全面测试.md)
-- 源码解析: [Unity事件系统实现机制](【源码解析】Unity事件系统实现机制.md)
-- 最佳实践: [TextMeshPro性能优化实战](【最佳实践】TextMeshPro性能优化实战.md)
+- [[【设计原理】UGUI合批机制深度解析]]
+- [[【性能数据】UGUI DrawCall影响因素全面测试]]
+- [[【源码解析】Unity事件系统实现机制]]
+- [[【最佳实践】TextMeshPro性能优化实战]]
+- [[UI系统专题索引]]
 
 ---
 

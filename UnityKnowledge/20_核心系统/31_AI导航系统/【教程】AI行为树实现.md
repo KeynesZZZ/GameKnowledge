@@ -3,12 +3,12 @@ title: 【教程】AI行为树实现
 tags: ["Unity", "AI", "AI导航系统", "行为树", "教程"]
 category: 核心系统/AI导航系统
 created: "2026-03-05 08:32"
-updated: "2026-05-29 00:00"
+updated: "2026-05-29 19:40"
 description: AI行为树系统实现教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: ["【教程】NavMesh基础配置"]
+related: ["【教程】NavMesh基础配置", "【设计原理】状态机AI设计", "【性能数据】寻路算法对比", "AI导航系统专题索引"]
 ---
 
 # 【教程】AI行为树实现
@@ -372,9 +372,10 @@ public class CachedCondition : Condition
 
 ## 相关链接
 
-- 状态机 AI 设计（待整理）
+- [[【设计原理】状态机AI设计]]
 - [NavMesh 基础配置](./【教程】NavMesh基础配置.md)
-- 寻路算法对比（待整理）
+- [[【性能数据】寻路算法对比]]
+- [[AI导航系统专题索引]]
 
 ---
 
