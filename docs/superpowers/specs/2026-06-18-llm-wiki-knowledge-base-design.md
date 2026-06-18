@@ -78,14 +78,15 @@ tags: [AI, 综述]
 created: 2026-06-18
 author: human | llm        # 现状多数 llm；人写（复盘/决策/捕获）是少数高信任锚点
 sources: [外部文章A, 笔记B]  # 综合页必填；空 = 无据可查（lint 标黄）
-status: draft | verified | stale   # draft=刚写未验 / verified=有源或人工背书 / stale=过期
-relates_to:                # 可选，类型化边
-  - page: "【笔记】对象池"
-    rel: extends
+# status / 关系字段：复用现有规范，不另造（见下方"实现层对齐"）
+status: 待验证              # 复用现有中文生命周期 Inbox/草稿/待验证/已验证/已过时/已归档
+supersedes: [旧文档]        # 复用现有关系字段 prerequisite/depends_on/is_example_for/refutes/supersedes/related
 ---
 ```
 
-**状态机**：`draft` →（外部源背书 或 人工确认 或 苏格拉底挑战通过）→ `verified` →（新源推翻）→ `stale`。
+> **实现层对齐（P1 计划确定）**：原设计稿写的 `status: draft|verified|stale` 和 `relates_to` 与仓库现有规范冲突，P1 改为复用——`status` 用现有中文生命周期（`待验证`≈draft、`已验证`≈verified、`已过时`≈stale），类型化边用现有 `supersedes/refutes/...` 字段。"声明无据" lint = `status` 为 `已验证` 但 `sources` 空。类型化边的 lint 支持与矛盾检测归入 P2。
+
+**状态机**（按现有中文生命周期）：`草稿` →（外部源背书 / 人工确认 / 苏格拉底挑战通过）→ `已验证` →（新源推翻）→ `已过时`。
 
 **幻觉防御（三层闸门）**：
 1. **Provenance 强制**：综述/综合页 `sources:` 必填、指回 raw 或已 `verified` 笔记；无源 → lint 标黄（P2 升 block）。
