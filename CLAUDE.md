@@ -8,9 +8,29 @@ This is a **personal technical knowledge base** in Chinese. It is not primarily 
 
 The repository has two major knowledge areas:
 - `UnityKnowledge/` - Unity game development, technical architecture, performance, tooling, and project practice
-- `AIWorkflowKnowledge/` - AI coding workflows, prompt patterns, automation, and personal knowledge management
+- `AIKnowledge/` - AI/LLM principles, Karpathy-style learning, AI coding workflows, prompt patterns, automation, experiments, and retrospectives
 
 **Repository**: https://github.com/KeynesZZZ/Doc
+
+## LLM-Wiki 维护模式（核心）
+
+本仓库按 Karpathy LLM-Wiki 模式运作：LLM 持续编译并维护一个会复利的 Markdown wiki，人负责 sourcing / 提问 / 验证。
+
+### 三层模型
+- **原始层 (raw)**：外部文章/论文，落 `_sources/`，不可变。捕获进 `01_Inbox/` 后提升。
+- **笔记层 (wiki)**：现有笔记 + LLM 生成的 `【综述】` 页。`author: llm` 的综合页必须带 `sources:`。
+- **schema 层**：本文件（CLAUDE.md）。
+
+### 三个操作
+- **ingest**：读源 → 讨论 → 写综述/更新页（碰到的真相层页加 `updated`）→ 更新 `index.md` → 追加 `log.md`。
+- **query**：先读 `index.md` 下钻 → 读相关页 → 带引用作答 → 好答案回填为新页（`author: llm` + `sources:`）。
+- **lint**：`python3 scripts/lint.py`。ERROR（断链 / 综述缺 sources）阻断；WARN（孤儿页 / 声明无据 / stale）报告。推翻既有结论进 review，不静默改。
+
+### 关键字段
+- `author: human|llm`：`human` 是真相源，不可被 LLM 静默改写。
+- `sources: [...]`：综述页必填，引用即契约。
+- `status`：复用现有 `草稿/待验证/已验证/已过时/已归档`。
+- 详细 lint 规则与设计见 `docs/superpowers/specs/2026-06-18-llm-wiki-knowledge-base-design.md`。
 
 ## Content Structure
 
@@ -59,161 +79,84 @@ UnityKnowledge/
 
 See [UnityKnowledge/README.md](UnityKnowledge/README.md) for detailed index.
 
-### `AIWorkflowKnowledge/` - AI Coding & Workflow Knowledge Base
+### `AIKnowledge/` - AI Learning & Workflow Knowledge Base
 
-The AI workflow documentation area, organized around repeatable personal development systems:
+The AI documentation area, organized around lightweight learning, experiments, and repeatable personal development systems:
 
 ```
-AIWorkflowKnowledge/
-├── 00_元数据与模板/    # Metadata standards, templates, tag rules
-├── 10_AI编码方法论/    # AI-assisted development workflow, prompt and context management
-├── 20_工程自动化/      # Automation scripts, personal development pipeline, checks
-├── 30_知识库运营/      # Knowledge base maintenance, review, RAG/search practices
-├── 40_工具与插件/      # IDEs, agents, MCP, plugins, model tools
-├── 90_案例复盘/        # Real task retrospectives and failure analysis
-└── 100_工作流实战/     # Full workflow playbooks and project-level practices
+AIKnowledge/
+├── 00_元数据与模板/    # Metadata standards and lightweight templates
+├── 01_Inbox/           # Daily capture; classify later
+├── 10_Karpathy路线/    # Karpathy-style learning route and reproduction notes
+├── 20_LLM基础/         # Tokenizer, Bigram, Transformer, GPT, Agent/RAG
+├── 30_工作流/          # Prompt, AI coding workflow, automation, knowledge operations
+├── 40_实验复现/        # Local experiments, training logs, failed attempts
+└── 90_复盘案例/        # Learning retrospectives, task reviews, project cases
 ```
 
 **Numbering System**:
 - `00` - Metadata & templates
-- `10` - AI coding methodology
-- `20` - Engineering automation
-- `30` - Knowledge base operations
-- `40` - Tools & plugins
-- `90` - Case retrospectives
-- `100` - Workflow practice
+- `01` - Inbox
+- `10` - Karpathy-style learning
+- `20` - LLM foundations and Agent/RAG concepts
+- `30` - AI workflows and automation
+- `40` - Experiments and reproduction
+- `90` - Retrospectives and cases
 
-See [AIWorkflowKnowledge/README.md](AIWorkflowKnowledge/README.md) for detailed index.
+See [AIKnowledge/README.md](AIKnowledge/README.md) for detailed index.
 
 ## Tools
 
-### 1. `tools/knowledge_base/` - Semantic Search & RAG
+### 1. `scripts/` - LLM-Wiki 操作脚本
 
-ChromaDB + Claude powered knowledge management system.
+- `lint.py` - 统一 lint：断链 / 综述缺 sources（ERROR 阻断）、孤儿页 / 声明无据 / stale（WARN）。
+- `generate_llm_index.py` - 生成各知识库的 `index.md`。
+- `migrate_add_author.py` - 批量回填 `author: human` 字段。
+- `_frontmatter.py` - 前置元数据解析共享模块。
 
-**Features**:
-- Intelligent document chunking by Markdown structure
-- Vector-based semantic search
-- RAG (Retrieval-Augmented Generation) Q&A with Claude
-- Knowledge relationship discovery
+### 2. `UnityKnowledge/scripts/check_links.py` - Link Validation Tool
 
-**Prerequisites**:
-```bash
-pip install chromadb anthropic
-```
+Python 脚本校验 Obsidian 风格的 `[[WikiLinks]]`。
 
-**Common Commands**:
-```bash
-cd tools/knowledge_base
-
-# Import documents
-python knowledge_base.py import ../../UnityKnowledge
-
-# Semantic search
-python knowledge_base.py search "如何优化UGUI的DrawCall?"
-
-# AI Q&A with RAG
-python knowledge_base.py ask "UGUI中如何减少GC分配?"
-
-# Find related topics
-python knowledge_base.py related "内存管理"
-
-# Check status
-python knowledge_base.py status
-```
-
-**Configuration**: Edit `config.json` to set Claude API key and adjust parameters.
-
-### 2. `unity-rules-checker/` - Unity Code Quality Checker
-
-A standalone tool for checking Unity C# code against 60 development rules. Integrates with Claude Code via SKILL and Git hooks.
-
-**Features**:
-- 60 rules covering GC, memory, UI, architecture, physics, etc.
-- AI-powered checking using Claude Code
-- Git hook integration for pre-commit checks
-- Cross-platform support (Windows, macOS, Linux)
-
-**Installation**:
-```bash
-cd unity-rules-checker
-./install.sh          # Linux/Mac
-# or
-powershell -File install.ps1    # Windows
-```
-
-**Usage in Claude Code**:
-```bash
-# Check single file
-/check-rules Assets/Scripts/PlayerController.cs
-
-# Check directory
-/check-rules Assets/Scripts
-
-# Check specific rule categories
-/check-rules Assets/Scripts --rules=GC,MEMORY
-
-# Check specific severity
-/check-rules Assets/Scripts --severity=CRITICAL
-```
-
-**Rule Categories**: GC, MEMORY, POOL, ARCH, ASYNC, REFACTOR, UI, PHYSICS, RES, PERF, SAFE
-
-See [unity-rules-checker/README.md](unity-rules-checker/README.md) for complete documentation.
-
-### 3. `UnityKnowledge/check_links.py` - Link Validation Tool
-
-Python script to validate Obsidian-style `[[WikiLinks]]` across the documentation.
-
-**Usage**:
 ```bash
 # From repository root
-python UnityKnowledge/check_links.py
-
-# The script checks all .md files in UnityKnowledge/
-# Reports broken internal links that reference non-existent files
+python UnityKnowledge/scripts/check_links.py
 ```
 
-**Purpose**: Ensures internal documentation links remain valid after reorganization or deletions.
+确保重组或删除后内部链接仍有效。
 
-### 4. `.claude/` - Claude Code Configuration
+### 3. `.claude/` - Claude Code 配置
 
-- **hooks/** - Git hook specifications (e.g., pre-commit.md)
-- **skills/** - Reusable skills (e.g., check-rules.md for Unity code validation)
-- **settings.json** - Permission and directory configurations
+- **skills/** - 可复用 skill：`check-rules.md`（Unity 代码校验）、`create-doc.md`（新建文档）。
+- **settings.json** - 权限与目录配置。
 
 ## Document Conventions
 
 ### Document Types (Filename Prefix)
 
-- `代码片段-*` - Reusable code snippets
-- `最佳实践-*` - Recommended practices
-- `踩坑记录-*` - Common pitfalls and solutions
-- `性能数据-*` - Performance benchmarks
-- `设计原理-*` - Design rationale ("why" not just "how")
-- `架构决策-*` - Architecture decision records
-- `系统架构-*` - System architecture overviews
-- `实战案例-*` - Real-world case studies
-- `教程-*` - Tutorial content
-- `反模式-*` - Common anti-patterns
+For new documents, prefer the lightweight V2 type set:
+
+- `【笔记】` - Learning, concepts, explanations
+- `【踩坑】` - Problems, causes, fixes
+- `【复盘】` - Project, stage, or experiment retrospectives
+- `【片段】` - Reusable prompts, commands, code, checklists
+
+Older Unity documents may still use legacy types such as `【教程】`, `【最佳实践】`, `【设计原理】`, `【架构决策】`, `【系统架构】`, `【实战案例】`, and `【代码片段】`. Do not rename old files just for consistency.
 
 ### YAML Frontmatter (Required for New Docs)
 
-All documents should include YAML frontmatter:
+New documents should include minimal YAML frontmatter:
 
 ```yaml
 ---
-title: 【代码片段】对象池通用实现
-tags: [C#, Unity, 架构, 性能优化, 代码片段]
-category: 架构设计/代码片段
-created: 2024-01-15 10:30
-updated: 2024-03-04 15:20
-description: C#泛型对象池的基础实现，减少GC分配
-unity_version: 2021.3+
+title: 【笔记】Self-Attention本质
+tags: [AI, LLM, 笔记]
+created: 2026-06-17
+description: 用最小例子解释 Self-Attention 解决的问题
 ---
 ```
 
-See [元数据规范.md](UnityKnowledge/00_元数据与模板/元数据规范.md) for complete standards.
+Optional fields such as `updated`, `category`, `status`, `tools`, or `unity_version` can be added only when useful. See [AIKnowledge/00_元数据与模板/元数据规范.md](AIKnowledge/00_元数据与模板/元数据规范.md) and [UnityKnowledge/00_元数据与模板/元数据规范.md](UnityKnowledge/00_元数据与模板/元数据规范.md) for domain-specific details.
 
 ### Tag System
 
@@ -245,27 +188,23 @@ All code examples follow Unity conventions:
 
 ## When Creating New Documents
 
-1. **Choose directory** based on technical domain (use numbering system)
-2. **Use template** from `UnityKnowledge/00_元数据与模板/模板-*.md`
-3. **Add YAML frontmatter** with title, tags, category, dates
-4. **Include code examples** following Unity conventions
-5. **Add minimum 2 tags** from tag system
-6. **Use internal links** with `[[文档名]]` format for related docs
-7. **Update README** in parent directory if needed
+1. **Capture first** in the nearest `01_Inbox/` when the category is unclear.
+2. **Choose directory** based on use case, not taxonomy purity.
+3. **Use the minimal template** from `AIKnowledge/00_元数据与模板/【模板】最小知识笔记.md` for AI docs, or existing Unity templates for Unity docs.
+4. **Add minimal YAML frontmatter** with `title`, `tags`, `created`, and `description`.
+5. **Use internal links** with `[[文档名]]` format for related docs.
+6. **Update README** only for high-value, stable entry points.
 
 ## Quick Reference
 
 | Task | Command/Location |
 |------|------------------|
 | **Create new document** | `/create-doc "主题"` (in Claude Code) |
-| **Search knowledge base** | `cd tools/knowledge_base && python knowledge_base.py search "<query>"` |
-| **Ask AI question** | `cd tools/knowledge_base && python knowledge_base.py ask "<question>"` |
-| **Import new docs** | `cd tools/knowledge_base && python knowledge_base.py import <path>` |
-| **Check knowledge status** | `cd tools/knowledge_base && python knowledge_base.py status` |
 | **Check Unity code** | `/check-rules <path>` (in Claude Code) |
-| **Validate doc links** | `python UnityKnowledge/check_links.py` |
-| **Check doc compliance** | `python tools/check_docs_compliance.py` |
-| **Setup rules checker** | `cd unity-rules-checker && ./install.sh` |
+| **统一 lint** | `python3 scripts/lint.py` |
+| **生成目录** | `python3 scripts/generate_llm_index.py` |
+| **回填 author** | `python3 scripts/migrate_add_author.py` |
+| **Validate doc links** | `python UnityKnowledge/scripts/check_links.py` |
 | **Find document template** | `UnityKnowledge/00_元数据与模板/模板-*.md` |
 | **Read tag system** | `UnityKnowledge/00_元数据与模板/标签体系.md` |
 | **View main index** | `UnityKnowledge/README.md` |
@@ -288,28 +227,22 @@ UnityKnowledge/
     │   ├── 元数据规范.md → YAML frontmatter standards
     │   ├── 标签体系.md → Tag taxonomy
     │   └── 模板-*.md → Document templates
-    ├── check_links.py → Validate Obsidian [[WikiLinks]]
+    ├── scripts/check_links.py → Validate Obsidian [[WikiLinks]]
     └── [技术领域]/
         └── README.md → Domain-specific navigation
 
-tools/knowledge_base/
-    ├── knowledge_base.py → Semantic search & RAG implementation
-    ├── README.md → Tool documentation
-    └── config.json → Configuration
-
-unity-rules-checker/
-    ├── README.md → Tool documentation
-    ├── docs/开发规则清单.md → Complete 60 rules reference
-    └── .claude/skills/check-rules.md → Claude Code integration
+scripts/
+    ├── lint.py → 统一 lint（断链 / sources / 孤儿页）
+    ├── generate_llm_index.py → 生成 index.md
+    ├── migrate_add_author.py → 批量回填 author 字段
+    └── _frontmatter.py → 前置元数据解析共享模块
 
 .claude/
-    ├── hooks/pre-commit.md → Git hook specification
-    └── skills/ → Reusable Claude Code skills
+    └── skills/ → Reusable Claude Code skills (check-rules, create-doc)
 ```
 
 ## Statistics
 
 - **Total documents**: 182+ Markdown files
 - **Primary domains**: 12 technical areas
-- **Tools**: 2 (knowledge base, rules checker)
 - **Languages**: Chinese (content), English (code/tooling)
