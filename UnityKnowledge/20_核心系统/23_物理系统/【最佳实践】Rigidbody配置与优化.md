@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["【最佳实践】物理系统性能优化", "【源码解析】碰撞检测模式对比", "【实战案例】2D物理系统专项"]
+author: llm
 ---
 
 # 【最佳实践】Rigidbody配置与优化

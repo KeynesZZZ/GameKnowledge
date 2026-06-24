@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【最佳实践】组件化重构案例]]", "[[【设计原理】ECS为什么快]]", "[[【设计原理】为什么要用设计模式]]"]
+author: llm
 ---
 
 # 【架构决策】组件化 vs 继承

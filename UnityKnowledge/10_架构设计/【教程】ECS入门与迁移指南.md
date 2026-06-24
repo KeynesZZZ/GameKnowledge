@@ -10,6 +10,7 @@ status: 待验证
 validation: Demo验证
 dependencies: ["Unity.Entities", "Unity.Burst", "Unity.Jobs"]
 related: ["[[【设计原理】ECS为什么快]]", "[[【架构决策】组件化vs继承]]", "[[【设计原理】为什么要用设计模式]]"]
+author: llm
 ---
 
 # 【教程】ECS 入门与迁移指南

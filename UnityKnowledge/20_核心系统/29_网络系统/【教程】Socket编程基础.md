@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["【教程】网络同步模型", "【代码片段】TCP客户端", "【最佳实践】网络同步模型"]
+author: llm
 ---
 
 # 【教程】Socket编程基础

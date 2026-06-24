@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[DOTS专题索引]]"]
+author: llm
 ---
 
 # ECS 架构入门

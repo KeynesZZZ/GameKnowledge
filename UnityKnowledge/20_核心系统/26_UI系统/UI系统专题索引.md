@@ -1,15 +1,17 @@
 ---
-title: "【教程】UI系统专题索引"
+title: 【教程】UI系统专题索引
 tags: ["Unity", "UI系统", "专题索引", "教程", "UGUI", "TextMeshPro"]
-category: "核心系统/专题索引"
+category: 核心系统/专题索引
 created: "2026-05-29 20:24"
 updated: "2026-05-29 20:24"
-description: "UI系统专题的自动生成索引，汇总 UGUI 合批、事件系统、TMP 性能与常见问题文档。"
+description: UI系统专题的自动生成索引，汇总 UGUI 合批、事件系统、TMP 性能与常见问题文档。
 status: 待验证
 validation: Demo验证
 related: ["[[【设计原理】UGUI合批机制深度解析]]", "[[【源码解析】Unity事件系统实现机制]]", "[[../00_元数据与模板/学习路径导航]]"]
+author: llm
 ---
 
+数学学习中
 # 【教程】UI系统专题索引
 
 > UI系统专题的自动生成索引，汇总 UGUI 合批、事件系统、TMP 性能与常见问题文档。

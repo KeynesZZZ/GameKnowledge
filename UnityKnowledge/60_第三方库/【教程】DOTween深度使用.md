@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【代码片段】DOTween常用动画]]", "[[【教程】UniTask异步编程]]"]
+author: llm
 ---
 
 # DOTween 深度使用

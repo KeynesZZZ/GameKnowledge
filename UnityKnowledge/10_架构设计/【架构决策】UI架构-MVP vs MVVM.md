@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】MVP模式深入讲解]]", "[[【教程】项目架构设计]]", "[[【教程】依赖注入与服务定位器]]"]
+author: llm
 ---
 
 # 【架构决策】UI 架构 - MVP vs MVVM

@@ -8,6 +8,7 @@ description: 记录一个可扩展敌人 AI 架构的模块拆分方式，以及
 status: 草稿
 validation: 未经测试
 related: ["【设计原理】状态机AI设计", "【架构决策】行为树 vs 状态机 vs GOAP", "【教程】NavMesh基础配置"]
+author: llm
 ---
 
 # 【实战案例】敌人AI架构设计

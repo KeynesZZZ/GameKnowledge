@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【教程】ECS入门与迁移指南]]", "[[【设计原理】为什么要用设计模式]]", "[[【架构决策】组件化vs继承]]"]
+author: llm
 ---
 
 # 【设计原理】ECS为什么快

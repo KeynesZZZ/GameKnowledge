@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["【设计原理】UGUI合批机制深度解析", "【踩坑记录】UGUI常见性能陷阱与根因分析", "【最佳实践】TextMeshPro性能优化实战"]
+author: llm
 ---
 
 # 【性能数据】UGUI DrawCall影响因素全面测试

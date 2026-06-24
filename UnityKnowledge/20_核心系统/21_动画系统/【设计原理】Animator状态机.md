@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【设计原理】Animator深度解析", "【最佳实践】Animator状态机最佳实践", "【源码解析】动画事件与回调"]
+author: llm
 ---
 
 # 【设计原理】Animator状态机

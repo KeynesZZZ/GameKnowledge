@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 项目实战
 related: ["【教程】常用Shader技术", "【代码片段】Shader基础模板", "【实战案例】三消游戏视觉效果"]
+author: llm
 ---
 
 # 【实战案例】自定义Shader

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【教程】HLSL与Shader基础", "【实战案例】自定义Shader", "【教程】常用Shader技术"]
+author: llm
 ---
 
 # 【代码片段】Shader基础模板

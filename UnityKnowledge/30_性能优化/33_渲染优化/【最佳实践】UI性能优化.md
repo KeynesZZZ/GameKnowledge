@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【性能数据】UGUI DrawCall影响因素]]", "[[【实战案例】UI卡顿优化全流程]]", "[[../../32_内存管理/【最佳实践】GC优化清单]]"]
+author: llm
 ---
 
 # 【最佳实践】UI性能优化

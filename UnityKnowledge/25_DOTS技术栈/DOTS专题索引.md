@@ -1,13 +1,14 @@
 ---
-title: "【教程】DOTS专题索引"
+title: 【教程】DOTS专题索引
 tags: ["Unity", "DOTS", "ECS", "JobSystem", "Burst", "专题索引", "教程"]
-category: "DOTS技术栈/专题索引"
+category: DOTS技术栈/专题索引
 created: "2026-03-05 20:05"
 updated: "2026-05-29 19:05"
-description: "DOTS 专题的自动生成索引，汇总 ECS、Job System、Burst 和迁移实践。"
+description: DOTS 专题的自动生成索引，汇总 ECS、Job System、Burst 和迁移实践。
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】DOTS学习路径]]", "[[../00_元数据与模板/学习路径导航]]", "[[../00_元数据与模板/文档结构规范]]"]
+author: llm
 ---
 
 # DOTS专题索引

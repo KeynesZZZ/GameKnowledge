@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【最佳实践】Android专项]]", "[[【踩坑记录】iOS常见问题清单]]"]
+author: llm
 ---
 
 # Android 常见问题清单

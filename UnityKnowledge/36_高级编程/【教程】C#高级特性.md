@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】并发编程]]", "[[【最佳实践】高性能编程]]", "[[【教程】高级编程学习路径]]"]
+author: llm
 ---
 
 # C# 高级特性

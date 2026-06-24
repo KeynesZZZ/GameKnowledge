@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】性能分析工具]]", "[[31_代码优化/【最佳实践】Update优化清单]]", "[[32_内存管理/【最佳实践】GC优化清单]]"]
+author: llm
 ---
 
 # CPU优化技术

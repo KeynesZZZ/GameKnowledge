@@ -8,6 +8,7 @@ description: 解释状态机在游戏 AI 中的核心价值、状态边界划分
 status: 草稿
 validation: 未经测试
 related: ["【教程】AI行为树实现", "【架构决策】行为树 vs 状态机 vs GOAP", "【实战案例】敌人AI架构设计"]
+author: llm
 ---
 
 # 【设计原理】状态机AI设计

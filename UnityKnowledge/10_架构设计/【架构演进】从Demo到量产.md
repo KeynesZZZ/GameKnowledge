@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】项目架构设计]]", "[[【最佳实践】组件化重构案例]]", "[[【实战案例】三消游戏架构]]"]
+author: llm
 ---
 
 # 【架构演进】从Demo到量产

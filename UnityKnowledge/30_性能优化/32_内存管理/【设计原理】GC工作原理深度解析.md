@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【最佳实践】GC优化清单]]", "[[【踩坑记录】内存泄漏模式]]", "[[../../31_代码优化/【最佳实践】Update优化清单]]"]
+author: llm
 ---
 
 # 【设计原理】GC工作原理深度解析

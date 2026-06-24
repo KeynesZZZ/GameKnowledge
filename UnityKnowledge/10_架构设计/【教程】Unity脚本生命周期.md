@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】单例模式实现]]", "[[【系统架构】场景管理]]", "[[【教程】项目架构设计]]"]
+author: llm
 ---
 
 # 【教程】Unity脚本生命周期

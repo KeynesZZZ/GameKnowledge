@@ -8,6 +8,7 @@ description: 对比行为树、状态机和 GOAP 三种 AI 决策模型，帮助
 status: 草稿
 validation: 未经测试
 related: ["【设计原理】状态机AI设计", "【教程】AI行为树实现", "【实战案例】敌人AI架构设计"]
+author: llm
 ---
 
 # 【架构决策】行为树 vs 状态机 vs GOAP

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【教程】UI系统架构", "【实战案例】游戏系统实战整合", "【教程】三消核心算法"]
+author: llm
 ---
 
 # 【源码解析】UGUI深度解析

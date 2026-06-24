@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【代码片段】UniTask协程转换]]", "[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]", "[[../36_高级编程/【教程】C#高级特性]]"]
+author: llm
 ---
 
 # UniTask 异步编程

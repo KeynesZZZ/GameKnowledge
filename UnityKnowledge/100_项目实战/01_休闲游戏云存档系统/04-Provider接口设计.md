@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[01-需求分析与架构]]", "[[05-海外平台实现]]", "[[10-统一管理器实现]]"]
+author: llm
 ---
 
 # 04-Provider接口设计

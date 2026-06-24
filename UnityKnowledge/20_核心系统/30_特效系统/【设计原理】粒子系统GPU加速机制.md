@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【实战案例】战斗特效系统架构设计", "【性能数据】特效性能基准测试与优化"]
+author: llm
 ---
 
 # 【设计原理】粒子系统GPU加速机制

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【最佳实践】UI性能优化]]", "[[【最佳实践】3D渲染优化指南]]", "[[../../【教程】渲染性能优化]]"]
+author: llm
 ---
 
 # 【最佳实践】Overdraw优化实战

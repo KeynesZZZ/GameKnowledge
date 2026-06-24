@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["【教程】HLSL与Shader基础", "【教程】渲染管线基础", "【实战案例】自定义Shader"]
+author: llm
 ---
 
 # 【教程】ComputeShader入门

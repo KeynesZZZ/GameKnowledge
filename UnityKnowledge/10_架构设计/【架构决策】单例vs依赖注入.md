@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【最佳实践】单例模式]]", "[[【最佳实践】依赖注入使用指南]]", "[[【教程】单例模式实现]]"]
+author: llm
 ---
 
 # 【架构决策】单例 vs 依赖注入

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【最佳实践】资源预加载策略]]", "[[【实战案例】加载时间优化实战]]", "[[../../32_内存管理/【最佳实践】资源卸载指南]]"]
+author: llm
 ---
 
 # 【最佳实践】Addressables性能优化

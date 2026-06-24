@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【踩坑记录】常见性能陷阱]]", "[[【性能数据】foreach vs for]]", "[[../../30_性能优化/32_内存管理/【最佳实践】GC优化清单]]"]
+author: llm
 ---
 
 # 【最佳实践】Update优化清单

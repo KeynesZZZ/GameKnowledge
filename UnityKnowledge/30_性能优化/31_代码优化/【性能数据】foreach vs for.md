@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【设计原理】为什么foreach比for慢]]", "[[【性能数据】Dictionary性能]]", "[[【最佳实践】Update优化清单]]"]
+author: llm
 ---
 
 # 【性能数据】foreach vs for

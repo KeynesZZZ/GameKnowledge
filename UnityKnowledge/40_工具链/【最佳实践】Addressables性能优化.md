@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】资源管线-Addressables]]", "[[【设计原理】热更新方案对比]]"]
+author: llm
 ---
 
 # 最佳实践 - Addressables 性能优化

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[../40_工具链/【教程】Editor扩展开发]]", "[[../40_工具链/41_编辑器扩展/【教程】自定义Inspector]]"]
+author: llm
 ---
 
 # Odin Inspector

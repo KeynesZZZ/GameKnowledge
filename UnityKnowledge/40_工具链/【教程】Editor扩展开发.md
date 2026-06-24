@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[41_编辑器扩展/【教程】EditorWindow开发]]", "[[41_编辑器扩展/【教程】编辑器扩展学习路径]]"]
+author: llm
 ---
 
 # Editor扩展开发

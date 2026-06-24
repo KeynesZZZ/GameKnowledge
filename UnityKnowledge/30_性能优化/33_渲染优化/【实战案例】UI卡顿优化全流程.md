@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 项目实战
 related: ["[[【最佳实践】UI性能优化]]", "[[【性能数据】UGUI DrawCall影响因素]]", "[[../../【教程】性能分析工具]]"]
+author: llm
 ---
 
 # 【实战案例】UI卡顿优化全流程

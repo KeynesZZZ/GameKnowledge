@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【教程】动画混合与过渡", "【源码解析】动画事件与回调", "【设计原理】Animator深度解析"]
+author: llm
 ---
 
 # 【源码解析】IK系统实现

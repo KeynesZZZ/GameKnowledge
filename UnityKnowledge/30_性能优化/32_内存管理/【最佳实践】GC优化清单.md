@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【设计原理】GC工作原理深度解析]]", "[[【性能数据】字符串拼接方式对比]]", "[[../../31_代码优化/【最佳实践】Update优化清单]]"]
+author: llm
 ---
 
 # 【最佳实践】GC优化清单

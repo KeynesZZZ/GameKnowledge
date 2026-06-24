@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【性能数据】foreach vs for]]", "[[【最佳实践】Update优化清单]]", "[[【踩坑记录】常见性能陷阱]]"]
+author: llm
 ---
 
 # 【设计原理】为什么foreach比for慢

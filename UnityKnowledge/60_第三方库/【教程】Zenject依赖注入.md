@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】UniTask异步编程]]", "[[../10_架构设计/【教程】依赖注入与服务定位器]]"]
+author: llm
 ---
 
 # Zenject 依赖注入

@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【教程】DOTween深度使用]]", "[[【代码片段】UniTask协程转换]]"]
+author: llm
 ---
 
 # 代码片段 - DOTween常用动画

@@ -1,13 +1,14 @@
 ---
-title: "【教程】AI导航系统专题索引"
+title: 【教程】AI导航系统专题索引
 tags: ["Unity", "AI", "AI导航系统", "专题索引", "教程"]
-category: "核心系统/专题索引"
+category: 核心系统/专题索引
 created: "2026-05-29 19:34"
 updated: "2026-05-29 19:34"
-description: "AI导航系统专题的自动生成索引，汇总行为树、状态机、寻路与敌人 AI 架构文档。"
+description: AI导航系统专题的自动生成索引，汇总行为树、状态机、寻路与敌人 AI 架构文档。
 status: 待验证
 validation: Demo验证
 related: ["[[【教程】NavMesh基础配置]]", "[[【教程】AI行为树实现]]", "[[../00_元数据与模板/学习路径导航]]"]
+author: llm
 ---
 
 # 【教程】AI导航系统专题索引

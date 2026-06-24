@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["[[【教程】UniTask异步编程]]", "[[../30_性能优化/31_代码优化/【性能数据】协程vs UniTask]]"]
+author: llm
 ---
 
 # 代码片段 - UniTask协程转换

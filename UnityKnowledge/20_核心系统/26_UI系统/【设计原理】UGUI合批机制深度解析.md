@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
 related: ["【性能数据】UGUI DrawCall影响因素全面测试", "【踩坑记录】UGUI常见性能陷阱与根因分析", "【源码解析】Unity事件系统实现机制"]
+author: llm
 ---
 
 # 【设计原理】UGUI合批机制深度解析

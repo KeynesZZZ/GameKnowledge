@@ -9,6 +9,7 @@ unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
 related: ["[[【踩坑记录】Android常见问题清单]]", "[[【最佳实践】iOS专项]]", "[[【教程】WebGL限制与方案]]"]
+author: llm
 ---
 
 # Android 专项
