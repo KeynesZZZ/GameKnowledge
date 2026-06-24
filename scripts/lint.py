@@ -94,8 +94,10 @@ def check_sources_rules(files: List[Path], kb_root: Path) -> List[Tuple[str, str
     """综述页缺 sources（ERROR）；已验证但 sources 空（WARN，声明无据）。"""
     out = []
     for f in files:
-        meta = get_meta(f)
         rel = str(f.relative_to(kb_root))
+        if rel.startswith(("00_元数据与模板", "01_Inbox")):
+            continue
+        meta = get_meta(f)
         title = str(meta.get("title", ""))
         status = str(meta.get("status", "")).strip()
         if title.startswith(SYNTHESIS_PREFIX) and not has_sources(meta):

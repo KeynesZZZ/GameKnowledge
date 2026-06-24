@@ -24,7 +24,7 @@ The repository has two major knowledge areas:
 ### 三个操作
 - **ingest**：读源 → 讨论 → 写综述/更新页（碰到的真相层页加 `updated`）→ 更新 `index.md` → 追加 `log.md`。
 - **query**：先读 `index.md` 下钻 → 读相关页 → 带引用作答 → 好答案回填为新页（`author: llm` + `sources:`）。
-- **lint**：`python3 scripts/lint.py`。ERROR（断链 / 综述缺 sources）阻断；WARN（孤儿页 / 声明无据 / stale）报告。推翻既有结论进 review，不静默改。
+- **lint**：`python3 scripts/lint.py`。ERROR（断链 / 综述缺 sources）阻断；WARN（孤儿页 / 声明无据）报告（stale 由 `UnityKnowledge/scripts/check_doc_quality.py` 覆盖）。推翻既有结论进 review，不静默改。
 
 ### 关键字段
 - `author: human|llm`：`human` 是真相源，不可被 LLM 静默改写。
@@ -109,9 +109,9 @@ See [AIKnowledge/README.md](AIKnowledge/README.md) for detailed index.
 
 ### 1. `scripts/` - LLM-Wiki 操作脚本
 
-- `lint.py` - 统一 lint：断链 / 综述缺 sources（ERROR 阻断）、孤儿页 / 声明无据 / stale（WARN）。
+- `lint.py` - 统一 lint：断链 / 综述缺 sources（ERROR 阻断）、孤儿页 / 声明无据（WARN）。（stale 由 `UnityKnowledge/scripts/check_doc_quality.py` 覆盖。）
 - `generate_llm_index.py` - 生成各知识库的 `index.md`。
-- `migrate_add_author.py` - 批量回填 `author: human` 字段。
+- `migrate_add_author.py` - 回填 `author` 字段（默认 `llm`，【复盘】默认 `human`）。
 - `_frontmatter.py` - 前置元数据解析共享模块。
 
 ### 2. `UnityKnowledge/scripts/check_links.py` - Link Validation Tool
