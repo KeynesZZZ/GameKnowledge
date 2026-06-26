@@ -6,9 +6,9 @@
 
 ```
 UnityKnowledge/
-├── 00_元数据与模板/          # 规范、模板、导航、流程（v2.0）
-│   ├── 元数据规范.md           # YAML Frontmatter 完整规范
-│   ├── 文档定位指南.md         # 13种文档类型说明
+├── 00_元数据与模板/          # 规范、模板、导航、流程（v2.1）
+│   ├── 元数据规范.md           # YAML Frontmatter 轻量规范
+│   ├── 文档定位指南.md         # 4种轻量类型与旧类型参考
 │   ├── 文档结构规范.md         # 单篇文档结构规范
 │   ├── 文档生命周期.md         # Inbox/草稿/验证/归档状态流
 │   ├── 文档健康检查清单.md     # 元数据、结构、链接、过期检查
@@ -73,7 +73,7 @@ UnityKnowledge/
 ## 📚 导航与索引
 
 - **[[00_元数据与模板/学习路径导航]]** ← 系统化学习Unity的完整路径
-- **[[00_元数据与模板/文档定位指南]]** ← 理解13种文档类型和用途
+- **[[00_元数据与模板/文档定位指南]]** ← 理解4种轻量类型和旧类型参考
 - **[[00_元数据与模板/文档结构规范]]** ← 理解单篇文档应该怎么组织
 - **[[00_元数据与模板/文档健康检查清单]]** ← 检查文档是否可检索、可验证、可复用
 - **[[00_元数据与模板/【教程】知识库贡献指南]]** ← 贡献流程与PR规范
@@ -101,34 +101,31 @@ UnityKnowledge/
 
 ### 文档规范
 
-#### YAML Frontmatter（v2.0）
+#### YAML Frontmatter
 
-所有新文档应使用 YAML frontmatter，v2.0 新增关系型字段、状态生命周期、适用场景：
+新文档默认使用最小 YAML frontmatter。Unity 专属字段、状态、验证和关系型字段只在确实有用时填写：
 
 ```yaml
 ---
-title: 【代码片段】对象池通用实现
-tags: [C#, Unity, 架构, 性能优化, 代码片段]
-category: 架构设计/代码片段
-created: 2026-03-06 10:00
-updated: 2026-03-06 10:00
-description: C#泛型对象池的基础实现，减少GC分配
-unity_version: 2022.3+
-status: 已验证
-validation: 多项目验证
-prerequisite:
-  - "【设计原理】对象池本质"
-depends_on:
-  - "【系统架构】对象管理"
-related:
-  - "【性能数据】对象池vs实例化"
-applicability:
-  project_scale: ["小型原型", "中型团队", "大型量产"]
-  performance_critical: true
+title: 【笔记】对象池为什么能减少GC
+tags: [Unity, 性能优化, 笔记]
+created: 2026-06-17
+description: 用最小例子解释对象池减少实例化和GC分配的原因
 ---
 ```
 
-#### 文档类型标识（13种）
+#### 文档类型标识
+
+新文档优先使用 4 种轻量类型：
+
+| 前缀 | 说明 |
+|------|------|
+| `【笔记】` | 学习、理解、概念沉淀 |
+| `【踩坑】` | 问题、原因、解决方案 |
+| `【复盘】` | 项目、阶段、实验总结 |
+| `【片段】` | Prompt、代码、命令、检查清单 |
+
+旧文档保留现有类型，不为了统一而批量重命名。复杂 Unity 文档仍可按需使用这些旧类型：
 
 | 前缀 | 说明 | 核心问题 |
 |------|------|----------|
@@ -180,14 +177,14 @@ python scripts/generate_index.py
 python scripts/generate_topic_indexes.py
 ```
 
-## 如何为现有文档添加 v2.0 元数据
+## 如何新增或维护文档
 
-1. 打开文档，找到 YAML Frontmatter 部分
-2. 添加 `status` 字段（参考状态流转：提议→讨论中→已采纳→已实施→已验证→已过时）
-3. 添加 `validation` 字段（未经测试/Demo验证/项目实战/多项目验证）
-4. 添加关系型字段（`prerequisite`/`depends_on`/`related`），至少填写 `related`
-5. 运行 `python scripts/validate_metadata.py` 和 `python scripts/check_doc_quality.py` 确认通过
+1. 不确定分类时先放 `01_Inbox/`
+2. 新文档默认使用 `【笔记】`、`【踩坑】`、`【复盘】`、`【片段】`
+3. 只强制填写 `title/tags/created/description`
+4. `category/updated/status/validation/unity_version/related` 按需填写
+5. 重要文档再运行 `python scripts/validate_metadata.py` 和 `python scripts/check_doc_quality.py`
 
 ---
 
-*知识库版本: v2.0 | 最后更新: 2026-03-06*
+*知识库版本: v2.1 | 最后更新: 2026-06-17*

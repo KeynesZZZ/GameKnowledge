@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782476385990-01atad55d",
+  "providerId": "claude",
+  "title": "Explain Unity Playables usage",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782476385990,
+  "updatedAt": 1782485642448,
+  "lastResponseAt": 1782476978088,
+  "sessionId": "3b628c9e-939b-46df-92bf-3aceb91c7782",
+  "providerState": {
+    "providerSessionId": "3b628c9e-939b-46df-92bf-3aceb91c7782"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1653,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 78208,
+    "contextWindow": 200000,
+    "contextTokens": 79861,
+    "percentage": 40,
+    "contextWindowIsAuthoritative": true
+  }
+}

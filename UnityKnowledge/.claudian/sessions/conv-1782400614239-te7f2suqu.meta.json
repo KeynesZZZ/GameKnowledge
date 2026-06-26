@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782400614239-te7f2suqu",
+  "providerId": "claude",
+  "title": "Explain UGUI implementation",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782400614239,
+  "updatedAt": 1782476372445,
+  "lastResponseAt": 1782401120128,
+  "sessionId": "36d4fa79-586e-4076-80ef-7eb7174caf80",
+  "providerState": {
+    "providerSessionId": "36d4fa79-586e-4076-80ef-7eb7174caf80"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 278,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 92224,
+    "contextWindow": 200000,
+    "contextTokens": 92502,
+    "percentage": 46,
+    "contextWindowIsAuthoritative": true
+  }
+}

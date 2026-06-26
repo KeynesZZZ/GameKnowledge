@@ -25,9 +25,10 @@ from typing import Dict, List, Tuple, Optional
 # 配置
 # ============================================================
 
-REQUIRED_FIELDS = ["title", "tags", "category", "created", "updated", "description"]
+REQUIRED_FIELDS = ["title", "tags", "created", "description"]
 
 VALID_PREFIXES = [
+    "【笔记】", "【踩坑】", "【复盘】", "【片段】",
     "【代码片段】", "【最佳实践】", "【踩坑记录】", "【性能数据】",
     "【设计原理】", "【架构决策】", "【系统架构】", "【实战案例】",
     "【教程】", "【源码解析】", "【验证报告】", "【反模式】",
@@ -295,7 +296,7 @@ def validate_file(filepath: Path, strict: bool = False) -> Tuple[List[str], List
     tag_issues = validate_tags(meta, filepath)
     warnings.extend(tag_issues)
 
-    # 日期格式
+    # 日期格式。updated 是可选字段，但填写时仍校验格式。
     warnings.extend(validate_dates(meta, filepath))
 
     # status

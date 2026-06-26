@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782293043184-3gv9kuuj5",
+  "providerId": "claude",
+  "title": "Explain Zhihu interview questions",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782293043184,
+  "updatedAt": 1782293338892,
+  "lastResponseAt": 1782293338892,
+  "sessionId": "f2d12195-20dd-420c-bf3d-190ed3d0029f",
+  "providerState": {
+    "providerSessionId": "f2d12195-20dd-420c-bf3d-190ed3d0029f"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 6469,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 24960,
+    "contextWindow": 200000,
+    "contextTokens": 31429,
+    "percentage": 16,
+    "contextWindowIsAuthoritative": true
+  }
+}

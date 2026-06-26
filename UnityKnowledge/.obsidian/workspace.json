@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "20_核心系统/29_网络系统/【教程】网络编程学习路径.md",
+                "file": "Clippings/【Unity】Playable使用细则.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "【教程】网络编程学习路径"
+              "title": "【Unity】Playable使用细则"
+            }
+          },
+          {
+            "id": "cd1f66bcb732c366",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/【Unity】Playable使用细则.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "【Unity】Playable使用细则"
+            }
+          },
+          {
+            "id": "e202fafa82ef6fd7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40_工具链/【设计原理】热更新方案对比.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "【设计原理】热更新方案对比"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -156,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20_核心系统/24_输入系统/【实战案例】多平台输入统一架构设计.md",
+                "file": "40_工具链/【设计原理】热更新方案对比.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "【实战案例】多平台输入统一架构设计 的大纲"
+              "title": "【设计原理】热更新方案对比 的大纲"
             }
           },
           {
@@ -174,13 +203,23 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "420bfddc3b6fca1f",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 738.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,47 +230,49 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "7f74bab78169ccbf",
+  "active": "e202fafa82ef6fd7",
   "lastOpenFiles": [
-    "00_元数据与模板/【方案】缺失知识点补全文档清单.md",
+    "40_工具链/【教程】自动化规则检查工具.md",
+    "40_工具链/【教程】自动化构建.md",
+    "40_工具链/【代码片段】可移植规则检查工具包.md",
+    "40_工具链/41_编辑器扩展/【教程】EditorWindow开发.md",
+    "40_工具链/41_编辑器扩展/【教程】自定义Inspector.md",
+    "40_工具链/41_编辑器扩展/【教程】编辑器扩展学习路径.md",
+    "36_高级编程/【最佳实践】高性能编程.md",
+    "36_高级编程/【教程】C#高级特性.md",
+    "36_高级编程/【教程】高级编程学习路径.md",
+    "36_高级编程/【教程】并发编程.md",
+    "35_高级主题/【教程】打包与热更新.md",
+    "35_高级主题/【笔记】Lua语法速查.md",
+    "35_高级主题/【踩坑】tolua热更新常见坑.md",
+    "35_高级主题/【笔记】tolua性能与GC优化.md",
+    "35_高级主题/【笔记】tolua入门与调用机制.md",
+    "35_高级主题/README.md",
+    "35_高级主题/tolua专题索引.md",
+    "40_工具链/【设计原理】热更新方案对比.md",
+    "20_核心系统/21_动画系统/【源码解析】IK系统实现.md",
+    "20_核心系统/21_动画系统/【笔记】Playable API 使用指南.md",
+    "20_核心系统/21_动画系统/README.md",
+    "Clippings/【Unity】Playable使用细则.md",
+    "30_性能优化/手机游戏发热性能问题定位与优化.md",
+    "Clippings",
+    "20_核心系统/26_UI系统/【综述】UGUI性能优化实战总览.md",
+    "性能优化/手机游戏发热性能问题定位与优化.md",
+    "20_核心系统/26_UI系统/【片段】UGUI 性能优化规则清单.md",
+    "性能优化",
+    "UGUI",
+    "未命名.base",
+    "未命名 1.canvas",
+    "未命名.canvas",
     "30_性能优化/34_启动时间优化/【最佳实践】Addressables性能优化.md.tmp.24526.d867b3103acd",
     "10_架构设计/【最佳实践】单例模式.md.tmp.24526.ba2e9f2491e6",
     "30_性能优化/32_内存管理/【最佳实践】GC优化清单.md.tmp.24526.b5038bf2e625",
     "10_架构设计/【实战案例】三消游戏架构.md.tmp.24526.0b40319e7ce4",
     "10_架构设计/【最佳实践】架构陷阱修复指南.md.tmp.24526.a2a65f8033e4",
-    "30_性能优化/32_内存管理/【性能数据】字符串拼接方式对比.md.tmp.24526.44a1bcc0721a",
-    "30_性能优化/32_内存管理/【性能数据】字符串拼接方式对比.md.tmp.24526.57fe00c1da6f",
-    "10_架构设计/【架构决策】事件系统实现对比.md.tmp.24526.cb91130561b9",
-    "20_核心系统/23_物理系统/【源码解析】碰撞检测模式对比.md.tmp.24526.64a8eae02b50",
-    "30_性能优化/【验证报告】性能数据真实性检验.md.tmp.24526.68db9b28a785",
-    "_generated/DOC_QUALITY_REPORT.md",
-    "2026-05-29.md",
-    "60_第三方库/【代码片段】UniTask协程转换.md",
-    "60_第三方库/【教程】Zenject依赖注入.md",
-    "60_第三方库/【教程】Odin Inspector.md",
-    "50_平台适配/【最佳实践】Android专项.md",
-    "50_平台适配/【教程】WebGL限制与方案.md",
-    "50_平台适配/【教程】主机平台.md",
-    "20_核心系统/22_渲染系统/【实战案例】三消游戏视觉效果.md",
-    "00_元数据与模板/【方案】现有文档规则迁移规划.md",
-    "20_核心系统/26_UI系统/【源码解析】Unity事件系统实现机制.md",
-    "00_元数据与模板/文档健康检查清单.md",
-    "00_元数据与模板/文档生命周期.md",
-    "00_元数据与模板/文档结构规范.md",
-    "01_Inbox/README.md",
-    "40_工具链/【最佳实践】Addressables性能优化.md",
-    "30_性能优化/34_启动时间优化/【最佳实践】Addressables性能优化.md",
-    "30_性能优化/34_启动时间优化/【实战案例】加载时间优化实战.md",
-    "30_性能优化/33_渲染优化/【最佳实践】遮挡剔除实战.md",
-    "30_性能优化/33_渲染优化/【最佳实践】Overdraw优化实战.md",
-    "30_性能优化/33_渲染优化/【最佳实践】LOD系统实战指南.md",
-    "30_性能优化/33_渲染优化/【教程】Frame Debugger渲染诊断流程.md",
-    "30_性能优化/33_渲染优化/【实战案例】UI卡顿优化全流程.md",
-    "30_性能优化/32_内存管理/【实战案例】内存泄漏排查实战.md",
-    "00_元数据与模板/【模板】系统设计说明书.md",
-    "未命名.canvas"
+    "30_性能优化/32_内存管理/【性能数据】字符串拼接方式对比.md.tmp.24526.44a1bcc0721a"
   ]
 }

@@ -12,7 +12,11 @@
       "Bash(py -3 UnityKnowledge/check_links.py)",
       "Bash(git add:*)",
       "Bash(echo \"EXIT:$?\")",
-      "Bash(mkdir -p /Users/keynes/git/Doc/docs/superpowers/specs)"
+      "Bash(mkdir -p /Users/keynes/git/Doc/docs/superpowers/specs)",
+      "Bash(python3 UnityKnowledge/scripts/migrate_docs_to_latest_rules.py)",
+      "Bash(python3 UnityKnowledge/scripts/validate_metadata.py --strict)",
+      "Bash(python3 UnityKnowledge/scripts/check_links.py)",
+      "Read(//Users/keynes/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0/skills/subagent-driven-development/**)"
     ],
     "additionalDirectories": [
       "/Users/keynes/git/Doc/docs/superpowers"
