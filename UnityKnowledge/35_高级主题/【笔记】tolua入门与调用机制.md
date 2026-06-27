@@ -7,7 +7,7 @@ updated: "2026-06-26"
 description: toLua# 的定位、Wrap 绑定机制、LuaState 与 C#↔Lua 双向调用方式
 status: 待验证
 validation: 未实测
-related: ["[[tolua专题索引]]", "[[【笔记】tolua性能与GC优化]]", "[[../40_工具链/【设计原理】热更新方案对比]]"]
+related: ["[[tolua专题索引]]", "[[【笔记】tolua性能与GC优化]]", "[[【设计原理】热更新方案对比]]"]
 author: llm
 ---
 
