@@ -8,6 +8,8 @@ description: 深入剖析 Lua 面向对象的 __index 查找机制、self 本质
 status: 待验证
 validation: 未实测
 related: ["[[tolua专题索引]]", "[[【笔记】Lua语法速查]]", "[[【笔记】tolua入门与调用机制]]", "[[【笔记】tolua性能与GC优化]]", "[[【踩坑】tolua热更新常见坑]]"]
+sources:
+  - https://www.cnblogs.com/Fflyqaq/p/13292388.html
 author: llm
 ---
 
@@ -151,6 +153,67 @@ local d = Dog.new("Rex", "Lab")
 print(d:speak())   -- Rex barks
 ```
 
+### 进阶流派：云风的虚表 class
+
+上面的 `class()` 把方法直接存在类表上（`cls.__index = cls`）。云风的 `class.lua` 用另一种思路——**虚表（vtb）**：类表本身不存方法，所有 `Cls.foo = v` 经 `__newindex` 代理写进独立虚表，读取经 `__index` 从虚表取。两个工程化收益：
+
+```lua
+local _class = {}
+function class(super)
+    local class_type = { ctor = false, super = super }
+    local vtb = {}                                  -- 虚表：方法真正存放处
+    _class[class_type] = vtb
+    setmetatable(class_type, {                      -- 类表代理到虚表
+        __newindex = function(t, k, v) vtb[k] = v end,
+        __index     = function(t, k) return vtb[k] end,
+    })
+    if super then
+        setmetatable(vtb, { __index = function(t, k)     -- 继承：找到即缓存
+            local ret = _class[super][k]
+            vtb[k] = ret                                  -- ★ 缓存到派生类虚表
+            return ret
+        end })
+    end
+    class_type.new = function(...)
+        local obj = {}
+        local create = function(c, ...)                   -- 构造链：基类优先递归
+            if c.super then create(c.super, ...) end
+            if c.ctor then c.ctor(obj, ...) end
+        end
+        create(class_type, ...)
+        return setmetatable(obj, { __index = vtb })
+    end
+    return class_type
+end
+```
+
+两个关键差异（对比本文简洁版 `class()`）：
+
+| | 简洁版（上） | 云风虚表版 |
+|---|---|---|
+| 方法存放 | 类表自身 | 独立虚表，类表代理 |
+| 继承查找 | `__index` 链递归 | 派生类虚表 `__index` 为 function，**找到后缓存进派生类虚表** |
+| 构造链 | 子类 `ctor` 手动调 `self.base.ctor` | `new` 自动从顶层基类依次调 `ctor`（基类优先） |
+| 深继承性能 | 每次走完整 metatable 链 | **首次查找后缓存，后续一次命中**（呼应第十节） |
+
+> **继承查找缓存**是云风版的精髓：第一次 `obj:foo()` 从父类虚表找到 `foo` 后写入派生类虚表，之后再调直接命中派生类——把"深继承链的多次 metatable 查找"摊销为一次。深继承 + 热点方法场景下，比朴素 `__index` 链显著省开销（呼应第十节性能代价）。
+>
+> **构造链基类优先**：`create` 先递归 `super` 再调自己的 `ctor`，所以 `Animal.ctor` 先于 `Dog.ctor` 执行，无需手写 super（对比第五节手动 `self.base.ctor`）。代价是构造顺序被框架固定，灵活性略低。
+
+### 单例模式
+
+基于 class 的单例是"类方法 + 缓存实例"的标准写法：
+
+```lua
+function Boy.Instance()
+    if Boy.m_instance == nil then
+        Boy.m_instance = Boy.new()
+    end
+    return Boy.m_instance
+end
+-- Boy.Instance() == Boy.Instance()  → 同一个对象
+```
+
 ---
 
 ## 五、super 的正确写法（高频坑）
@@ -243,6 +306,13 @@ print(acc.balance)            -- nil ！外部访问不到，真·private
   end
   ```
 - **多态**：天然有——`d:speak()` 走各自类的方法，无需 `virtual`/`override` 关键字。
+- **重载（overload）**：**Lua 没有真正的重载**——同名方法后定义会覆盖前定义。要"一个方法名多种用法"，靠**可变参 + `nil` 判断**在单方法内分支模拟：
+  ```lua
+  function Hero:eat(food)
+      if food == nil then print(self.name .. "饿了")
+      else print(self.name .. "吃" .. food) end
+  end
+  ```
 
 ---
 

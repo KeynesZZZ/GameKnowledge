@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782487216169-men21q3bz",
+  "providerId": "claude",
+  "title": "Complete Unity hot update comparison document",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782487216169,
+  "updatedAt": 1782575827587,
+  "lastResponseAt": 1782574056026,
+  "sessionId": "0f9125f8-c43f-4993-9afa-0493f53ee37c",
+  "providerState": {
+    "providerSessionId": "0f9125f8-c43f-4993-9afa-0493f53ee37c"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1422,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 179072,
+    "contextWindow": 200000,
+    "contextTokens": 180494,
+    "percentage": 90,
+    "contextWindowIsAuthoritative": true
+  }
+}

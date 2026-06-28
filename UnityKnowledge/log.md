@@ -77,3 +77,30 @@
 - 更新 tolua专题索引（收录数→8、推荐阅读顺序 #8、新增「实战案例」分类/目录/相关链接）与 35_高级主题/README
 - 注：用户同期新增 [[35_高级主题/【笔记】Lua面向对象深入]] 并将 [[【设计原理】热更新方案对比]] 由 40_工具链 移入本目录，索引已同步
 - 重生成 UnityKnowledge/index.md（264 篇）
+
+## [2026-06-27] ingest | 新增 Unity 客户端面试题综述（按域补全答案）
+- 读源：知乎《Unity客户端面试题记录》（Ray小铭）→ https://zhuanlan.zhihu.com/p/449331086
+- 新增 [[35_高级主题/【综述】Unity客户端面试题]]（author:llm，status:待验证，sources 含原文 URL + 6 篇互链笔记）：跨域面试速查 + 复习清单
+- 覆盖 29 道题，按域分 7 章：C#/.NET（GC/闭包/unsafe/值引用类型/il2cpp vs Mono）、渲染（渲染管线/UGUI渲染流程/合批/UGUI优化/粒子层级/实时阴影）、算法（A*/DFS-BFS/快排/三消）、Lua（数据类型/字符串拼接/sort/OOP/GC与泄漏）、3D数学（叉乘判左右/2D射线相交/AABB Slab法）、网络（GET vs POST/TCP握手挥手）、Unity工程（AB打包/Animator优化/骨骼动画/背包虚拟化）
+- 原文已给答案的题目整理自原文（如渲染管线、合批、AB策略、叉乘、TCP）；原文只列题目无答案的由 LLM 补充并明确标注「（LLM 补充）」（如 A*、il2cpp/Mono、实时阴影、AABB Slab、骨骼动画、Lua sort/OOP/GC 等），未编造数据
+- 强调作者经验：中级主考算法/Lua/3D数学，3D数学公式原理为高频失分点
+- 交叉互链既有真相层笔记（Lua面向对象深入/UGUI性能优化综述/打包与热更新/Unity内存管理/tolua GC/三消架构），避免孤儿且可下钻
+- 更新 35_高级主题/README 入口；重生成 UnityKnowledge/index.md（264→266 篇）
+- lint：新文档与 35_高级主题 目录零 issue；总计 ERROR=48/WARN=25 均为既有 UGUI/、Clippings/、性能优化/ 书籍摘录的作者署名 token（黑客不黑/洛桑/MrLiu 等），非本次引入
+
+## [2026-06-27] query | 回填 AB 压缩格式选型（LZMA vs LZ4）
+- 用户追问综述第 26 题 AB 打包的压缩选择，对话答案回填 [[35_高级主题/【综述】Unity客户端面试题]] 第 26 题新增「压缩格式选型」子节
+- 内容：LZMA/LZ4/不压缩 三方对比表（压缩率/解压速度/随机访问）+ 原理（LZMA 流式全局字典 vs LZ4 块压缩可 seek）+ 选型决策（热更用 LZ4、首包用 LZMA、CDN 传 LZMA+本地缓存转可随机访问）
+- 未改 frontmatter（updated 仍 2026-06-27）；无新增断链
+
+## [2026-06-28] ingest | 新增 Unity 资源依赖与打包陷阱综述（原文反爬截断，据片段+官方文档撰写）
+- 读源：知乎《为什么你的包体总是莫名增大？深度解析 Unity 资源依赖关系与打包陷阱》（【Unity 底层与原理向】03）→ https://zhuanlan.zhihu.com/p/1962283012189292152
+  - ⚠️ 反爬限制：web reader / curl / Googlebot / 知乎 API / Wayback / RSSHub 全部受阻，仅获取到原文**开头约 1/3**（标题、开篇四问、图书馆引用链类比、Resources 模式开头），正文后半未获取
+  - 用户决策：基于「已获取片段 + Unity 官方 AssetBundle 依赖文档 + 工程经验」撰写综述，文内严格区分标注
+- 新增 [[35_高级主题/【综述】Unity资源依赖与打包陷阱]]（author:llm，status:待验证，sources 含知乎原文 + Unity 官方文档 ×3 + 互链笔记 ×6）
+- 内容：问题四问（原文）→ 图书馆类比（原文，截断处标注）→ 依赖系统底层机制（LLM 补充，据 Unity 官方）→ 打包冗余成因（LLM 补充，含官方 383KB+377KB→359KB+2×20KB 算账）→ 灵异事件归因 → 依赖分析工具（Browser/Analyzer/Analyze/GetDependencies/BuildReport）→ 优化策略（公共依赖单独成包/加载顺序/Shader 图集字体/分包粒度/Resources 清理）→ 避坑清单
+- 来源分离：`（原文）` 标注整理自原文已获取片段；`（LLM 补充，据 Unity 官方文档）` 标注 LLM 编译部分，并在文首声明"可能与原文后半不一致，引用前对照原文"，未编造 sources
+- 聚焦增量：通用 AB 依赖树/构建期冗余/分析工具/打包策略；不重述 UI 图集冗余（→UGUI性能优化综述）、Addressables 用法（→资源管线-Addressables）、热更选型（→热更新方案对比）
+- 交叉互链既有笔记（打包与热更新/Unity客户端面试题/资源管线-Addressables/资源卸载指南/内存分析工具使用指南/Unity内存管理/资源预加载策略/UGUI性能优化实战总览），避免孤儿且可下钻
+- 更新 35_高级主题/README 入口；重生成 UnityKnowledge/index.md（273 篇）
+- lint：新文档与 35_高级主题 目录零 issue；总计 ERROR=50/WARN=32 均为既有 UGUI/、Clippings/、性能优化/ 书籍摘录的作者署名 token 断链及其在 index.md 的镜像，非本次引入

@@ -4,6 +4,20 @@
   "title": "Complete documentation",
   "titleGenerationStatus": "success",
   "createdAt": 1782485654644,
-  "updatedAt": 1782485659848,
-  "sessionId": null
+  "updatedAt": 1782487216063,
+  "lastResponseAt": 1782487216047,
+  "sessionId": "9d5d3d9e-687e-44ce-b3d8-8f283d56f283",
+  "providerState": {
+    "providerSessionId": "9d5d3d9e-687e-44ce-b3d8-8f283d56f283"
+  },
+  "currentNote": "40_工具链/【设计原理】热更新方案对比.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 261,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 55488,
+    "contextWindow": 200000,
+    "contextTokens": 55749,
+    "percentage": 28
+  }
 }
