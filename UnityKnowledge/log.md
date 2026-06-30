@@ -104,3 +104,63 @@
 - 交叉互链既有笔记（打包与热更新/Unity客户端面试题/资源管线-Addressables/资源卸载指南/内存分析工具使用指南/Unity内存管理/资源预加载策略/UGUI性能优化实战总览），避免孤儿且可下钻
 - 更新 35_高级主题/README 入口；重生成 UnityKnowledge/index.md（273 篇）
 - lint：新文档与 35_高级主题 目录零 issue；总计 ERROR=50/WARN=32 均为既有 UGUI/、Clippings/、性能优化/ 书籍摘录的作者署名 token 断链及其在 index.md 的镜像，非本次引入
+
+## [2026-06-30] query | 新增高级 Unity 游戏开发面试复习地图
+- 用户诉求：整理北京高级 Unity 游戏开发岗面试复习知识点（聚焦游戏方向）
+- 先采岗：Boss 直聘列表页动态加载/反爬，仅得 SEO 通用推荐位；改综合 BOSS直聘/猎聘/智联/职友集/企业官网公开 JD 与聚合数据（2026-06），得四方向（游戏/座舱智驾/AR-VR数字孪生/通用仿真）+ 薪资带 + 学历经验技能要求
+- 新增 [[35_高级主题/【综述】高级Unity游戏开发面试复习地图]]（author:llm，status:待验证，sources 含 JD 来源 + 互链笔记）
+- 定位：与已有 [[【综述】Unity客户端面试题]]（中级「题目+答案」速查）互补——本文是「高级岗能力域 + 笔记导航 + 重要度 + 自评」地图，不重复题库
+- 以 10 个能力域组织（性能优化⭐⭐⭐/渲染Shader⭐⭐⭐/资源热更⭐⭐⭐/UGUI⭐⭐⭐/架构/C#/动画/算法3D数学/DOTS等加分/项目STAR），每个考点 wikilink 关联 vault 既有笔记，突出高级岗增量
+- 更新 35_高级主题/README（入口）、index.md（新增行）；与【综述】Unity客户端面试题 互链
+- 内容为 LLM 基于 JD 数据 + 既有笔记编译，未编造 sources；建议用户结合自评 Checklist 与 STAR 项目话术复习
+
+## [2026-06-30] query | 面试复习问答系列 4 篇（性能/STAR/热更/渲染）
+- 承 [[【综述】高级Unity游戏开发面试复习地图]]，按用户多选依次产出 4 份独立问答/话术，全部落 35_高级主题
+- 新增：[[【综述】性能优化面试问答]]（CPU/内存GC/渲染/启动/工具，Q1-Q17 + 自测）、[[【片段】项目面试STAR话术]]（云存档/休闲框架两项目的 STAR 骨架 + 高频追问）、[[【综述】热更新面试问答]]（代码热更方案对比 / 资源热更 / toLua 深入 / 工程流程，严格对齐 [[【设计原理】热更新方案对比]]）、[[【综述】渲染与Shader面试问答]]（管线 / URP选型 / HLSL / 光照阴影 / 后处理 / Compute / 移动端 TBDR）
+- 诚实处理：项目 STAR 话术因 vault 项目复盘为骨架（无实测数据），量化指标全部 [待填]，未编造任何项目指标；性能/热更/渲染问答的关联数据均来自 vault 既有笔记或标注 LLM 编译
+- 互链：4 篇与复习地图 / 已有面试题综述 / 性能·渲染·热更专题索引双向关联
+- 修复：热更文档「相关文档」节 5 个 wikilink 笔误（【综述）→【综述】）、渲染文档目录型链接 [[30_性能优化/33_渲染优化]] 改指 README，避免断链
+- 更新 35_高级主题/README（入口 +4）、index.md（新增行 +4）；lint 见本次结果
+
+## [2026-06-30] ingest | 新增 Entities 1.4 + Entities Graphics 1.4 官方文档综述
+- 读源：Unity 官方手册 com.unity.entities@1.4（1.4.7）+ com.unity.entities.graphics@1.4（1.4.17）
+  - https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/index.html
+  - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/index.html
+  - 抓取方式：3 个并行 agent 分域深读手册子页（Baking/内容管理、Entities Graphics、编程模型）
+- 新增综述页：25_DOTS技术栈/【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档.md（author:llm，sources 含 15 条官方手册 URL，互链 6 篇既有笔记）
+- 定位：补全 [[【教程】ECS架构入门]] 未覆盖的 1.4 量产栈三块拼图——Baking 烘焙管线、SubScene/Entity Scene/内容管理、Entities Graphics 渲染；ECS 基础概念不重复，仅修正 1.4 现代 API（LocalTransform 取代旧 Position、MaterialMeshInfo 取代 RenderMesh）
+- 核心内容：①范式转移（Conversion→Baking、ISystem 默认、LocalTransform+TransformUsageFlags）；②组件类型全表（含 managed/cleanup/enableable/shared）；③ISystem vs SystemBase（据 systems-comparison.html）+ 生命周期；④Baker 工作流 + TransformUsageFlags 取值表 + IBaker vs Baking System；⑤SubScene/SceneSection 流式 + Resolve→Load + SceneSystem API（LoadSubScene 已弃用）+ Content Management；⑥Entities Graphics 定位（非管线，构建于 BatchRendererGroup）/ Requirements（不支持 Built-in RP 与 WebGL，URP 仅 Forward+）/ 渲染 6 阶段 / MaterialMeshInfo+RenderMeshUtility / Companion / Material Overrides / 性能要点 / 限制速查
+- 关键版本事实：**IAspect 在 Entities 1.4 已废弃**（据 aspects-concepts.html），新代码用裸组件查询；Entity Scene 文件格式变更需重建缓存
+- 诚实标注：Baking/SubScene/Graphics/ISystem对比/托管组件/Aspects废弃 据官方页面编译；SystemAPI 与系统更新顺序两页官方站点持续 500 抓取失败，相关小节据其它页引用与 ECS 通用机制归纳并已在文内标注「建议对照原文」
+- 更新 DOTS专题索引（收录数 6→7、类型分布 +综述、推荐阅读顺序 #3、新增「综述」分类 + 目录条目）；重生成 UnityKnowledge/index.md（289 篇）
+- lint：新文档零 issue；总计 ERROR=50/WARN=38 均为既有 UGUI/、Clippings/、性能优化/ 书籍摘录作者署名断链，非本次引入
+
+## [2026-06-30] query | 回填同屏大规模单位渲染方案
+- 用户追问「如何实现同屏 10w 单位渲染」，对话答案沉淀为 [[25_DOTS技术栈/【笔记】同屏大规模单位渲染方案]]（author:llm，sources 含 Entities Graphics 综述 + performance/runtime-entity-creation 官方页 + 3 篇互链笔记）
+- 核心论点：瓶颈不在「画」而在 CPU 提交（DrawCall）与每帧更新；方案 = ECS + Entities Graphics + Jobs/Burst
+- 覆盖：①最少 archetype（每 archetype 一个 batch）②BRG + DOTS Instancing 合批（澄清 per-instance 属性不拆 batch，拆 batch 的是材质/网格/设置/archetype）③IJobEntity+Burst+ScheduleParallel 更新 ④LOD/剔除 ⑤避坑（IEnableableComponent 替代频繁增删、SharedComponent 不每帧改）⑥最小骨架代码（RenderMeshUtility+Instantiate+MoveJob）⑦性能预算（经验估算 10w 位移 ~1-2ms）⑧GPU-driven 进阶与「ECS 非最优解」边界
+- 性能数字明确标注为经验估算（非实测基准），建议上线前 Profiler 实测，未编造精确基准
+- 更新 DOTS专题索引（收录 7→8、类型分布 +笔记、推荐阅读顺序 #4、新增「笔记」分类 + 目录条目）；重生成 UnityKnowledge/index.md（290 篇）
+
+## [2026-06-30] query | 回填大规模单位动画方案
+- 用户追问「10w 单位 × 12 怪 × 每怪 death/move/attack1/attack2/idle 动画如何实现」，对话答案沉淀为 [[25_DOTS技术栈/【笔记】大规模单位动画方案]]（author:llm，sources 含渲染笔记 + Entities Graphics 综述 + material-overrides/mesh-deformations 官方页 + 互链笔记）
+- 核心论点：Animator/SkinnedMeshRenderer 撑不到 10w；标准答案是 GPU 顶点动画(VAT) + ECS 状态机驱动，CPU 零骨骼
+- 覆盖：①方案选型表（Animator/DOTS Animation/Mesh Deformations/VAT/Sprite 对比，VAT 为 10w 标配）②VAT 原理（顶点×帧纹理 + LUT，12 怪 ×5 动画=60 段烘焙）③ECS 状态机（UnitAnim 组件 + IJobEntity 优先级 死亡>攻击>移动>待机 + MaterialPropertyOverride 传参 + shader 采样伪代码）④12 怪数据组织（MonsterType byte + 索引区分，保持 1 archetype，禁不同组件）⑤VAT 烘焙管线 ⑥性能预算（状态机 10w ~1-3ms，overdraw 才是真瓶颈）⑦避坑（IEnableableComponent 替代 DestroyEntity、事件触发不扫全场、2D 用 sprite 序列）
+- 诚实标注：DOTS Animation 标为 1.4 期 preview/千级；性能数字为经验估算非实测基准
+- 更新 DOTS专题索引（收录 8→9、笔记分布 1→2、推荐阅读顺序 #5、笔记分类/目录新增条目）；重生成 UnityKnowledge/index.md（291 篇）；lint ERROR=50/WARN=38 不变，新文档零 issue
+
+## [2026-06-30] ingest | 大规模单位工程化三件套（VAT脚本/Demo/AI寻路）
+- 承用户「1,2,3 都需要」，新增 3 篇互链笔记（均 author:llm + sources），落 25_DOTS技术栈：
+- [[25_DOTS技术栈/【片段】VAT顶点动画烘焙脚本]]：可复用 Editor 脚本骨架——逐帧 `AnimationMode.SampleAnimationClip`+`SkinnedMeshRenderer.BakeMesh` 采样 → 写 RGBAFloat `Texture2D` + `VatLUT`(ScriptableObject)，配套 URP shader 端（SV_VertexID + DOTS Instanced `_AnimIndex/_AnimTime` + LUT StructuredBuffer 采样）。标注多 mesh/法线/half 精度等工程化要点
+- [[25_DOTS技术栈/【实战案例】10w单位渲染与动画最小Demo]]：把渲染+VAT动画+状态机串成可跑最小工程骨架——manifest 依赖（URP Forward+）、目录结构、Components/Authoring/Baker、SpawnSystem(`Instantiate(prefab,count)` 批量克隆)、Movement/Anim 系统、Profiler 验证清单（archetype/batch 数、各系统 ms、内存）与已知坑表（batch 爆炸/VAT 错乱/动画同步播放等）。status:草稿，明确标注为参考实现非真实复盘，性能数字为经验估算/待实测
+- [[25_DOTS技术栈/【笔记】大规模单位AI决策与寻路]]：10w 寻路/决策——为何 NavMesh/独立 A* 撑不住 → Flow Field 流场（Cost→Integration→Vector 三场，同目标预计算单位 O(1) 查表）、Burst Job 化(桶式 BFS 替代优先队列)、UniformGrid(`NativeMultiHashMap<int3,Entity>`)邻域查询、RVO/boids 避障、分帧决策(分桶轮询/事件驱动/AI LOD)；诚实标注 1.4 期无稳定官方 DOTS NavMesh 包
+- 诚实标注：三篇性能数字均为经验估算（非实测基准）；DOTS Animation 标 1.4 期 preview/千级；官方 DOTS NavMesh 缺位；代码为骨架需按项目调整
+- 更新 DOTS专题索引（收录 9→12、类型分布 +笔记3/片段1/实战案例1、推荐阅读顺序 #6-#8、新增「片段」「实战案例」分类 + 笔记分类补条目 + 目录条目）；重生成 UnityKnowledge/index.md（294 篇）；lint ERROR=50/WARN=38 不变，三篇零 issue
+
+## [2026-06-30] ingest | 大规模单位计算内核三件套（FlowField/RVO2/战斗结算）
+- 承用户「继续深挖」，新增 3 篇互链笔记（均 author:llm + sources），落 25_DOTS技术栈，补全大规模单位的「计算内核」：
+- [[25_DOTS技术栈/【片段】FlowField流场Job实现]]：Flow Field 三场完整 Burst Job——CostField + IntegrationField(wavefront Dijkstra 松弛，NativeQueue 并发，标注 Burst 无堆故用桶式/wavefront 替代优先队列) + VectorField(8 邻域梯度 IJobParallelFor)，含对角线代价、穿墙检查、桶式 Dijkstra 扩展要点、跨系统 NativeArray 共享的 JobHandle 依赖；标注可读版用托管数组需改 NativeArray 才能 Burst
+- [[25_DOTS技术栈/【片段】RVO2局部避障ECS移植]]：RVO2/ORCA 忠实 Burst 移植（来源 gamma.cs.unc.edu/RVO2 BSD）——XZ 2D 投影、UniformGrid 邻域查询(ComponentLookup)、computeORCALines(无碰撞截断圆锥/leg/碰撞三种分支 + ORCA 半责任 0.5)、linearProgram1/2/3 完整数学(Det2/dot/判别式)、AvoidanceJob(IJobEntity 串联)、参数调优表(NeighborDist/TimeHorizon/MaxNeighbors)与避坑(写竞争/Grid 一致性/MaxNeighbors 截断)
+- [[25_DOTS技术栈/【笔记】大规模单位战斗结算]]：战斗 DOTS 事件化——为何 OnTriggerEnter/SendMessage 不行 → 碰撞只产出事件(Unity.Physics ITriggerEventsJob + NativeQueue.ParallelWriter，或自建 UniformGrid) → 伤害 DynamicBuffer<DamageEvent>+ECB 单点结算(无写竞争) → 死亡 IEnableableComponent(AliveTag) 软禁用 + ECB 延迟回收(禁每帧 DestroyEntity) → AOE 复用伤害管线 → 系统时序(碰撞→伤害→回收→动画 UpdateAfter + Lookup 每帧刷新)
+- 诚实标注：FlowField 可读版托管数组需改 NativeArray 才能 Burst；RVO2 数学忠实移植自公开 RVO2 库；Unity.Physics API 据 1.4 手册；性能无编造基准，代码为骨架需按项目调
+- 更新 DOTS专题索引（收录 12→15、类型分布 +笔记4/片段3、推荐阅读顺序 #9-#11、片段分类补 2 条 + 笔记分类补 1 条 + 目录条目）；重生成 UnityKnowledge/index.md（297 篇）；lint ERROR=50/WARN=38 不变，三篇零 issue
