@@ -159,6 +159,8 @@ public struct UnsupportedTypesJob : IJob
 
 ## 4. SIMD 向量化
 
+> SIMD 底层原理（CPU 寄存器、LLVM 编译流水线、内存布局影响、无分支编程）详见 [[【笔记】Burst SIMD原理详解]]。
+
 ### 4.1 自动向量化
 
 ```csharp

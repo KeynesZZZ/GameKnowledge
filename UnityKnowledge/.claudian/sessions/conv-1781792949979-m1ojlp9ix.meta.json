@@ -4,8 +4,8 @@
   "title": "Explain Unity UI optimization practices",
   "titleGenerationStatus": "success",
   "createdAt": 1781792949979,
-  "updatedAt": 1781793193385,
-  "lastResponseAt": 1781793193385,
+  "updatedAt": 1782874548111,
+  "lastResponseAt": 1782873912314,
   "sessionId": "8554b46c-d95e-4763-bafd-289927d3dd62",
   "providerState": {
     "providerSessionId": "8554b46c-d95e-4763-bafd-289927d3dd62",
@@ -256,12 +256,13 @@
     }
   },
   "usage": {
-    "model": "haiku",
+    "model": "opus",
     "inputTokens": 21488,
     "cacheCreationInputTokens": 0,
     "cacheReadInputTokens": 1856,
     "contextWindow": 200000,
     "contextTokens": 23344,
-    "percentage": 12
+    "percentage": 12,
+    "contextWindowIsAuthoritative": false
   }
 }

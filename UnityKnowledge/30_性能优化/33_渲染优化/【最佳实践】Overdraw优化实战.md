@@ -8,7 +8,7 @@ description: Unity Overdraw(过度绘制)优化实战指南，包含检测方法
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: ["[[【最佳实践】UI性能优化]]", "[[【最佳实践】3D渲染优化指南]]", "[[../../【教程】渲染性能优化]]"]
+related: ["[[【最佳实践】UI性能优化速查]]", "[[【最佳实践】3D渲染优化指南]]", "[[../../【教程】渲染性能优化]]"]
 author: llm
 ---
 
@@ -615,9 +615,9 @@ public class ZPrepassExample : MonoBehaviour
 
 ## 相关链接
 
-- [[【最佳实践】UI性能优化]] - UI性能优化完整指南
+- [[【最佳实践】UI性能优化速查]] - UI性能优化完整指南
 - [[【教程】渲染性能优化]] - 渲染优化基础
-- [[【性能数据】UGUI DrawCall影响因素]] - DrawCall优化数据
+- [[【性能数据】UGUI DrawCall影响因素全面测试]] - DrawCall优化数据
 
 ---
 

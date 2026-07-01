@@ -3,7 +3,7 @@ title: 【片段】RVO2 局部避障 ECS 移植
 tags: ["Unity", "DOTS", "DOTS技术栈", "ECS", "RVO", "ORCA", "避障", "JobSystem", "Burst", "代码片段", "片段"]
 category: DOTS技术栈
 created: "2026-06-30"
-updated: "2026-06-30"
+updated: "2026-07-01"
 description: RVO2/ORCA 局部避障的完整 Burst ECS 移植——邻域查询、computeORCALines、linearProgram1/2/3 数学、AvoidanceJob 驱动与参数调优。
 unity_version: 2022.3 LTS+ / Unity 6
 status: 待验证
@@ -12,13 +12,14 @@ sources:
   - "[[【笔记】大规模单位AI决策与寻路]]"
   - "https://gamma.cs.unc.edu/RVO2/ (ORCA 算法参考)"
   - "[[【教程】JobSystem详解]]"
-related: ["[[【笔记】大规模单位AI决策与寻路]]", "[[【片段】FlowField流场Job实现]]", "[[【笔记】大规模单位战斗结算]]", "[[【实战案例】10w单位渲染与动画最小Demo]]", "[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[DOTS专题索引]]"]
+related: ["[[【笔记】RVO避障算法原理]]", "[[【笔记】大规模单位AI决策与寻路]]", "[[【片段】FlowField流场Job实现]]", "[[【笔记】大规模单位战斗结算]]", "[[【实战案例】10w单位渲染与动画最小Demo]]", "[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[DOTS专题索引]]"]
 ---
 
 # 【片段】RVO2 局部避障 ECS 移植
 
 > 承 [[【笔记】大规模单位AI决策与寻路]]。Flow Field 只给方向，单位会叠挤穿模。本篇给 **RVO2/ORCA** 的完整 Burst ECS 移植，让 10w 单位互不穿透。
 > **算法来源**：UNC gamma 实验室 RVO2 库（`gamma.cs.unc.edu/RVO2`，BSD）。以下为忠实 C#→Burst 移植，数学部分按其公开实现还原，标注来源。
+> **算法原理**：VO → RVO → ORCA 的完整推演见 [[【笔记】RVO避障算法原理]]，本文聚焦代码实现。
 
 ## 一、ORCA 原理（30 秒）
 
@@ -253,9 +254,10 @@ partial struct AvoidanceSystem : ISystem
             // ComputeORCALines(in agent, lines, neighbors, Lookup, 1f/TimeHorizon);
 
             // 2) 求 ORCA 速度
-            float2 newVel = agent.PrefVelocity;
+            // optVelocity 用当前速度（惯性策略），而非期望速度——见 [[【笔记】RVO避障算法原理]] 第五节
+            float2 newVel = agent.Velocity.xz;
             int numLines = lines.Length;
-            int lineFail = LinearProgram2(lines.AsArray(), agent.MaxSpeed, agent.PrefVelocity, false, ref newVel, numLines);
+            int lineFail = LinearProgram2(lines.AsArray(), agent.MaxSpeed, agent.Velocity.xz, false, ref newVel, numLines);
             if (lineFail < numLines)
                 LinearProgram3(lines.AsArray(), 0, numLines, agent.MaxSpeed, ref newVel, /*projLines*/ lines);
 

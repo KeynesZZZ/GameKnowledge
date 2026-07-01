@@ -1098,7 +1098,7 @@ public class EventSystemDebugger : MonoBehaviour
 
 - [[【设计原理】UGUI合批机制深度解析]]
 - [[【性能数据】UGUI DrawCall影响因素全面测试]]
-- [[../../30_性能优化/33_渲染优化/【最佳实践】UI性能优化]]
+- [[【最佳实践】UI性能优化速查]]
 - [[【踩坑记录】UGUI常见性能陷阱与根因分析]]
 - [[UI系统专题索引]]
 

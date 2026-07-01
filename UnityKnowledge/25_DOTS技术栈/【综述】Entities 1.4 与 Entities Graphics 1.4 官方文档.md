@@ -24,7 +24,7 @@ sources:
   - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/runtime-entity-creation.html
   - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/companion-components.html
   - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/performance.html
-related: ["[[【教程】ECS架构入门]]", "[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[【教程】DOTS学习路径]]", "[[DOTS专题索引]]", "[[../10_架构设计/【设计原理】ECS为什么快]]"]
+related: ["[[【教程】ECS架构入门]]", "[[【教程】JobSystem详解]]", "[[【教程】Burst编译器]]", "[[【教程】DOTS学习路径]]", "[[DOTS专题索引]]", "[[【设计原理】ECS为什么快]]", "[[【笔记】ECS与GameObject通信]]"]
 ---
 
 # 【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档
@@ -433,6 +433,8 @@ em.AddComponentData(proto, new LocalToWorld());
 ### 4.5 Companion Components（跨界对象）
 
 一些图形组件（`Light`/`ParticleSystem`/`VisualEffect`/`DecalProjector`/`Volume` 等）不适合转成纯 ECS 数据，可**作为托管组件附加到实体**（Companion），在 ECS system 中查询。代价：不走 chunk 内存布局，**不享 ECS 性能**，不能 Burst/进 Job。规则：不在支持列表的 MonoBehaviour 会被剥离；Transform 层级不保留（重建为根 GameObject）；Camera 转换默认禁用。
+
+> Companion 是 ECS ↔ GameObject 通信的六种模式之一，完整通信方案见 [[【笔记】ECS与GameObject通信]]。
 
 ```csharp
 // 查询托管 companion —— 不能 Burst，必须主线程

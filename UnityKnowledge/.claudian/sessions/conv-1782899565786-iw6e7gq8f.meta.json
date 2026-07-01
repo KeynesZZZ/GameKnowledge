@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782899565786-iw6e7gq8f",
+  "providerId": "claude",
+  "title": "我需要先说明一个限制：**我无法直接访问微信文章链接**。\n\n不过，我有两个方案可以帮你：\n\n...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782899565787,
+  "updatedAt": 1782908994900,
+  "lastResponseAt": 1782899648169,
+  "sessionId": "c9b1d316-ca8a-4c32-b129-80ac306adde8",
+  "providerState": {
+    "providerSessionId": "c9b1d316-ca8a-4c32-b129-80ac306adde8"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 27283,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 37120,
+    "contextWindow": 200000,
+    "contextTokens": 64403,
+    "percentage": 32,
+    "contextWindowIsAuthoritative": true
+  }
+}

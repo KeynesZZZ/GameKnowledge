@@ -1,11 +1,11 @@
 {
   "id": "conv-1782573684612-wehr3cnd4",
   "providerId": "claude",
-  "title": "Organize interview questions from Zhihu",
+  "title": "你好！我是 Claude Code，很高兴为你服务。\n\n我可以帮你处理各种软件工程任务，包括：...",
   "titleGenerationStatus": "success",
   "createdAt": 1782573684613,
-  "updatedAt": 1782575730222,
-  "lastResponseAt": 1782575730222,
+  "updatedAt": 1782870026853,
+  "lastResponseAt": 1782824497472,
   "sessionId": "d6d6c6df-eeeb-4cde-9f82-f7a00a74a65f",
   "providerState": {
     "providerSessionId": "d6d6c6df-eeeb-4cde-9f82-f7a00a74a65f"

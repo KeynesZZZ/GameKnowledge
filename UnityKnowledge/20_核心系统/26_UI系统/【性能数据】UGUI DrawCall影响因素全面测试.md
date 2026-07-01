@@ -1008,7 +1008,7 @@ public class UIPerformanceBenchmark : MonoBehaviour
 ## 相关链接
 
 - 设计原理: [UGUI合批机制深度解析](【设计原理】UGUI合批机制深度解析.md)
-- 最佳实践: [UI性能优化](../../30_性能优化/33_渲染优化/【最佳实践】UI性能优化.md)
+- 最佳实践: [UI性能优化速查](./【最佳实践】UI性能优化速查.md)
 - 文本优化: [TextMeshPro性能优化实战](【最佳实践】TextMeshPro性能优化实战.md)
 - 踩坑记录: [UGUI常见性能陷阱与根因分析](【踩坑记录】UGUI常见性能陷阱与根因分析.md)
 
