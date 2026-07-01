@@ -8,7 +8,7 @@ description: WebSocket客户端连接代码实现
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: ["【代码片段】TCP客户端", "【教程】Socket编程基础", "【踩坑记录】网络常见问题"]
+related: ["【代码片段】TCP客户端", "【教程】Socket编程基础", "【踩坑】网络常见问题"]
 author: llm
 ---
 
@@ -20,7 +20,7 @@ author: llm
 
 提供可直接复用的WebSocket客户端代码实现，对比WebSocketSharp、NativeWebSocket等方案的优缺点，涵盖连接、收发、心跳、重连等完整功能。
 
-**相关文档**：[[【代码片段】TCP客户端]]、[[【教程】Socket编程基础]]、[[【踩坑记录】网络常见问题]]
+**相关文档**：[[【代码片段】TCP客户端]]、[[【教程】Socket编程基础]]、[[【踩坑】网络常见问题]]
 
 ---
 
@@ -811,4 +811,4 @@ private async Task ReconnectWithBackoff()
 
 - [TCP客户端](【代码片段】TCP客户端.md)
 - [网络同步模型](【最佳实践】网络同步模型.md)
-- [踩坑记录-网络常见问题](【踩坑记录】网络常见问题.md)
+- [踩坑记录-网络常见问题](【踩坑】网络常见问题.md)

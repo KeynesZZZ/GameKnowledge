@@ -8,7 +8,7 @@ description: Unity网络同步原理与实现
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: ["[[【设计原理】Unity内存管理]]", "[[../20_核心系统/29_网络系统/【教程】网络同步模型]]"]
+related: ["[[【设计原理】Unity内存管理]]", "[[../20_核心系统/29_网络系统/【最佳实践】网络同步模型]]"]
 author: llm
 ---
 

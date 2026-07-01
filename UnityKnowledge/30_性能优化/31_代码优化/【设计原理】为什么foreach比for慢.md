@@ -8,7 +8,7 @@ description: 深入解析foreach和for的性能差异本质，包含枚举器实
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: ["[[【性能数据】foreach vs for]]", "[[【最佳实践】Update优化清单]]", "[[【踩坑记录】常见性能陷阱]]"]
+related: ["[[【笔记】foreach vs for]]", "[[【最佳实践】Update优化清单]]", "[[【踩坑】常见性能陷阱]]"]
 author: llm
 ---
 
@@ -494,9 +494,9 @@ GC分配：
 
 ## 相关链接
 
-- [[【性能数据】foreach vs for]] ← 详细性能数据
+- [[【笔记】foreach vs for]] ← 详细性能数据
 - [[【最佳实践】Update优化清单]] ← Update优化
-- [[【踩坑记录】常见性能陷阱]] ← 常见陷阱
+- [[【踩坑】常见性能陷阱]] ← 常见陷阱
 - [[../../30_性能优化/32_内存管理/【最佳实践】GC优化清单]] ← GC优化
 
 ---

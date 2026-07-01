@@ -8,7 +8,7 @@ description: UGUI合批机制原理深度分析
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: ["【性能数据】UGUI DrawCall影响因素全面测试", "【踩坑记录】UGUI常见性能陷阱与根因分析", "【源码解析】Unity事件系统实现机制"]
+related: ["【笔记】UGUI DrawCall影响因素全面测试", "【踩坑】UGUI常见性能陷阱与根因分析", "【笔记】Unity事件系统实现机制"]
 author: llm
 ---
 
@@ -20,7 +20,7 @@ author: llm
 
 从底层机制深度剖析UGUI的合批（Batching）原理，包括Canvas重构流程、UI Vertex Buffer管理、DrawCall产生的根因分析，以及材质/纹理/层级对合批的影响规则。
 
-**相关文档**：[[【性能数据】UGUI DrawCall影响因素全面测试]]、[[【踩坑记录】UGUI常见性能陷阱与根因分析]]、[[【源码解析】Unity事件系统实现机制]]、
+**相关文档**：[[【笔记】UGUI DrawCall影响因素全面测试]]、[[【踩坑】UGUI常见性能陷阱与根因分析]]、[[【笔记】Unity事件系统实现机制]]、
 
 ---
 
@@ -961,10 +961,10 @@ public class DepthManager : MonoBehaviour
 
 ## 相关链接
 
-- [[【性能数据】UGUI DrawCall影响因素全面测试]]
-- [[【源码解析】Unity事件系统实现机制]]
+- [[【笔记】UGUI DrawCall影响因素全面测试]]
+- [[【笔记】Unity事件系统实现机制]]
 - [[【最佳实践】TextMeshPro性能优化实战]]
-- [[【踩坑记录】UGUI常见性能陷阱与根因分析]]
+- [[【踩坑】UGUI常见性能陷阱与根因分析]]
 - [[【最佳实践】UI性能优化速查]]
 - [[UI系统专题索引]]
 

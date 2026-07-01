@@ -29,7 +29,7 @@ author: llm
 
 1. [【设计原理】ECS为什么快](./【设计原理】ECS为什么快.md) - 理解数据导向设计的性能原理，深入分析ECS架构的性能优势来源：内存布局、缓存命中、SIMD优化。
 2. [【教程】ECS 入门与迁移指南](../10_架构设计/【教程】ECS入门与迁移指南.md) - Unity DOTS 技术栈中 ECS 架构的入门指南，包含从 OOP 到 ECS 的迁移策略和最佳实践。
-3. [【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档.md) - 综合 Unity 官方手册，补全 Baking 烘焙管线、SubScene/内容管理、ECS 渲染与现代 1.4 编程模型（含 IAspect 废弃、TransformUsageFlags、MaterialMeshInfo）。
+3. [【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档.md) - 综合 Unity 官方手册，补全 Baking 烘焙管线、SubScene/内容管理、ECS 渲染与现代 1.4 编程模型（含 IAspect 废弃、TransformUsageFlags、MaterialMeshInfo）。
 4. [【笔记】ECS 与 GameObject 通信](./【笔记】ECS与GameObject通信.md) - 混合开发中的六种通信模式：EntityManager 直操作、托管 Singleton、事件队列、Companion Components 与分层策略。
 5. [【笔记】同屏大规模单位渲染方案](./【笔记】同屏大规模单位渲染方案.md) - 同屏 10w+ 单位渲染的 DOTS 落地方案：合批、Burst 并行更新、LOD/剔除、避坑与 GPU-driven 进阶。
 6. [【笔记】大规模单位动画方案](./【笔记】大规模单位动画方案.md) - 10w 单位 × 多类型 × 多动画的落地方案：GPU 顶点动画(VAT) + ECS 状态机，附方案选型与 12 怪数据组织。
@@ -47,7 +47,7 @@ author: llm
 
 ### 综述
 
-- [【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档.md) - `DOTS技术栈` - 综合 Unity 官方手册，补全 Baking 烘焙管线、SubScene/内容管理、ECS 渲染与现代 1.4 编程模型。
+- [【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档.md) - `DOTS技术栈` - 综合 Unity 官方手册，补全 Baking 烘焙管线、SubScene/内容管理、ECS 渲染与现代 1.4 编程模型。
 
 ### 笔记
 
@@ -91,7 +91,7 @@ author: llm
 
 ### 25_DOTS技术栈
 
-- [【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档.md)
+- [【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档](./【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档.md)
 - [【设计原理】ECS为什么快](./【设计原理】ECS为什么快.md)
 - [【笔记】ECS与GameObject通信](./【笔记】ECS与GameObject通信.md)
 - [【笔记】同屏大规模单位渲染方案](./【笔记】同屏大规模单位渲染方案.md)

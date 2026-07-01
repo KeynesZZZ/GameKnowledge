@@ -15,7 +15,7 @@
 
 ## [2026-06-26] ingest | UGUI性能优化实战总览
 - 读源：知乎《Unity性能优化总结-UI》(DragonL, 2025-08) → https://zhuanlan.zhihu.com/p/1941865546690827415
-- 新增综述页：20_核心系统/26_UI系统/【综述】UGUI性能优化实战总览.md（author:llm，sources 含原文 URL + 4 篇既有笔记）
+- 新增综述页：20_核心系统/26_UI系统/【笔记】UGUI性能优化实战总览.md（author:llm，sources 含原文 URL + 4 篇既有笔记）
 - 新增主题：图集/SpriteAtlas 打包冗余规则、RawImage 陷阱、图集尺寸策略、Mask vs RectMask2D 数量决策、动静分离、界面切换开销数据、刘海屏/横竖屏适配、UI 混合粒子、字体加粗与 Font Texture
 - 重叠主题（合批/DrawCall/SendWill/TMP）以链接指向既有深度笔记，未重复展开；并与 [[【片段】UGUI 性能优化规则清单]] 互链
 - 更新 README.md、UI系统专题索引.md（综述分类 + 推荐阅读首位 + 目录条目）；重生成 UnityKnowledge/index.md（254 篇）
@@ -80,7 +80,7 @@
 
 ## [2026-06-27] ingest | 新增 Unity 客户端面试题综述（按域补全答案）
 - 读源：知乎《Unity客户端面试题记录》（Ray小铭）→ https://zhuanlan.zhihu.com/p/449331086
-- 新增 [[35_高级主题/【综述】Unity客户端面试题]]（author:llm，status:待验证，sources 含原文 URL + 6 篇互链笔记）：跨域面试速查 + 复习清单
+- 新增 [[35_高级主题/【笔记】Unity客户端面试题]]（author:llm，status:待验证，sources 含原文 URL + 6 篇互链笔记）：跨域面试速查 + 复习清单
 - 覆盖 29 道题，按域分 7 章：C#/.NET（GC/闭包/unsafe/值引用类型/il2cpp vs Mono）、渲染（渲染管线/UGUI渲染流程/合批/UGUI优化/粒子层级/实时阴影）、算法（A*/DFS-BFS/快排/三消）、Lua（数据类型/字符串拼接/sort/OOP/GC与泄漏）、3D数学（叉乘判左右/2D射线相交/AABB Slab法）、网络（GET vs POST/TCP握手挥手）、Unity工程（AB打包/Animator优化/骨骼动画/背包虚拟化）
 - 原文已给答案的题目整理自原文（如渲染管线、合批、AB策略、叉乘、TCP）；原文只列题目无答案的由 LLM 补充并明确标注「（LLM 补充）」（如 A*、il2cpp/Mono、实时阴影、AABB Slab、骨骼动画、Lua sort/OOP/GC 等），未编造数据
 - 强调作者经验：中级主考算法/Lua/3D数学，3D数学公式原理为高频失分点
@@ -89,7 +89,7 @@
 - lint：新文档与 35_高级主题 目录零 issue；总计 ERROR=48/WARN=25 均为既有 UGUI/、Clippings/、性能优化/ 书籍摘录的作者署名 token（黑客不黑/洛桑/MrLiu 等），非本次引入
 
 ## [2026-06-27] query | 回填 AB 压缩格式选型（LZMA vs LZ4）
-- 用户追问综述第 26 题 AB 打包的压缩选择，对话答案回填 [[35_高级主题/【综述】Unity客户端面试题]] 第 26 题新增「压缩格式选型」子节
+- 用户追问综述第 26 题 AB 打包的压缩选择，对话答案回填 [[35_高级主题/【笔记】Unity客户端面试题]] 第 26 题新增「压缩格式选型」子节
 - 内容：LZMA/LZ4/不压缩 三方对比表（压缩率/解压速度/随机访问）+ 原理（LZMA 流式全局字典 vs LZ4 块压缩可 seek）+ 选型决策（热更用 LZ4、首包用 LZMA、CDN 传 LZMA+本地缓存转可随机访问）
 - 未改 frontmatter（updated 仍 2026-06-27）；无新增断链
 
@@ -97,7 +97,7 @@
 - 读源：知乎《为什么你的包体总是莫名增大？深度解析 Unity 资源依赖关系与打包陷阱》（【Unity 底层与原理向】03）→ https://zhuanlan.zhihu.com/p/1962283012189292152
   - ⚠️ 反爬限制：web reader / curl / Googlebot / 知乎 API / Wayback / RSSHub 全部受阻，仅获取到原文**开头约 1/3**（标题、开篇四问、图书馆引用链类比、Resources 模式开头），正文后半未获取
   - 用户决策：基于「已获取片段 + Unity 官方 AssetBundle 依赖文档 + 工程经验」撰写综述，文内严格区分标注
-- 新增 [[35_高级主题/【综述】Unity资源依赖与打包陷阱]]（author:llm，status:待验证，sources 含知乎原文 + Unity 官方文档 ×3 + 互链笔记 ×6）
+- 新增 [[35_高级主题/【笔记】Unity资源依赖与打包陷阱]]（author:llm，status:待验证，sources 含知乎原文 + Unity 官方文档 ×3 + 互链笔记 ×6）
 - 内容：问题四问（原文）→ 图书馆类比（原文，截断处标注）→ 依赖系统底层机制（LLM 补充，据 Unity 官方）→ 打包冗余成因（LLM 补充，含官方 383KB+377KB→359KB+2×20KB 算账）→ 灵异事件归因 → 依赖分析工具（Browser/Analyzer/Analyze/GetDependencies/BuildReport）→ 优化策略（公共依赖单独成包/加载顺序/Shader 图集字体/分包粒度/Resources 清理）→ 避坑清单
 - 来源分离：`（原文）` 标注整理自原文已获取片段；`（LLM 补充，据 Unity 官方文档）` 标注 LLM 编译部分，并在文首声明"可能与原文后半不一致，引用前对照原文"，未编造 sources
 - 聚焦增量：通用 AB 依赖树/构建期冗余/分析工具/打包策略；不重述 UI 图集冗余（→UGUI性能优化综述）、Addressables 用法（→资源管线-Addressables）、热更选型（→热更新方案对比）
@@ -108,18 +108,18 @@
 ## [2026-06-30] query | 新增高级 Unity 游戏开发面试复习地图
 - 用户诉求：整理北京高级 Unity 游戏开发岗面试复习知识点（聚焦游戏方向）
 - 先采岗：Boss 直聘列表页动态加载/反爬，仅得 SEO 通用推荐位；改综合 BOSS直聘/猎聘/智联/职友集/企业官网公开 JD 与聚合数据（2026-06），得四方向（游戏/座舱智驾/AR-VR数字孪生/通用仿真）+ 薪资带 + 学历经验技能要求
-- 新增 [[35_高级主题/【综述】高级Unity游戏开发面试复习地图]]（author:llm，status:待验证，sources 含 JD 来源 + 互链笔记）
-- 定位：与已有 [[【综述】Unity客户端面试题]]（中级「题目+答案」速查）互补——本文是「高级岗能力域 + 笔记导航 + 重要度 + 自评」地图，不重复题库
+- 新增 [[35_高级主题/【笔记】高级Unity游戏开发面试复习地图]]（author:llm，status:待验证，sources 含 JD 来源 + 互链笔记）
+- 定位：与已有 [[【笔记】Unity客户端面试题]]（中级「题目+答案」速查）互补——本文是「高级岗能力域 + 笔记导航 + 重要度 + 自评」地图，不重复题库
 - 以 10 个能力域组织（性能优化⭐⭐⭐/渲染Shader⭐⭐⭐/资源热更⭐⭐⭐/UGUI⭐⭐⭐/架构/C#/动画/算法3D数学/DOTS等加分/项目STAR），每个考点 wikilink 关联 vault 既有笔记，突出高级岗增量
-- 更新 35_高级主题/README（入口）、index.md（新增行）；与【综述】Unity客户端面试题 互链
+- 更新 35_高级主题/README（入口）、index.md（新增行）；与【笔记】Unity客户端面试题 互链
 - 内容为 LLM 基于 JD 数据 + 既有笔记编译，未编造 sources；建议用户结合自评 Checklist 与 STAR 项目话术复习
 
 ## [2026-06-30] query | 面试复习问答系列 4 篇（性能/STAR/热更/渲染）
-- 承 [[【综述】高级Unity游戏开发面试复习地图]]，按用户多选依次产出 4 份独立问答/话术，全部落 35_高级主题
-- 新增：[[【综述】性能优化面试问答]]（CPU/内存GC/渲染/启动/工具，Q1-Q17 + 自测）、[[【片段】项目面试STAR话术]]（云存档/休闲框架两项目的 STAR 骨架 + 高频追问）、[[【综述】热更新面试问答]]（代码热更方案对比 / 资源热更 / toLua 深入 / 工程流程，严格对齐 [[【设计原理】热更新方案对比]]）、[[【综述】渲染与Shader面试问答]]（管线 / URP选型 / HLSL / 光照阴影 / 后处理 / Compute / 移动端 TBDR）
+- 承 [[【笔记】高级Unity游戏开发面试复习地图]]，按用户多选依次产出 4 份独立问答/话术，全部落 35_高级主题
+- 新增：[[【笔记】性能优化面试问答]]（CPU/内存GC/渲染/启动/工具，Q1-Q17 + 自测）、[[【片段】项目面试STAR话术]]（云存档/休闲框架两项目的 STAR 骨架 + 高频追问）、[[【笔记】热更新面试问答]]（代码热更方案对比 / 资源热更 / toLua 深入 / 工程流程，严格对齐 [[【设计原理】热更新方案对比]]）、[[【笔记】渲染与Shader面试问答]]（管线 / URP选型 / HLSL / 光照阴影 / 后处理 / Compute / 移动端 TBDR）
 - 诚实处理：项目 STAR 话术因 vault 项目复盘为骨架（无实测数据），量化指标全部 [待填]，未编造任何项目指标；性能/热更/渲染问答的关联数据均来自 vault 既有笔记或标注 LLM 编译
 - 互链：4 篇与复习地图 / 已有面试题综述 / 性能·渲染·热更专题索引双向关联
-- 修复：热更文档「相关文档」节 5 个 wikilink 笔误（【综述）→【综述】）、渲染文档目录型链接 [[30_性能优化/33_渲染优化]] 改指 README，避免断链
+- 修复：热更文档「相关文档」节 5 个 wikilink 笔误（【综述）→【笔记】）、渲染文档目录型链接 [[30_性能优化/33_渲染优化]] 改指 README，避免断链
 - 更新 35_高级主题/README（入口 +4）、index.md（新增行 +4）；lint 见本次结果
 
 ## [2026-06-30] ingest | 新增 Entities 1.4 + Entities Graphics 1.4 官方文档综述
@@ -127,7 +127,7 @@
   - https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/index.html
   - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/index.html
   - 抓取方式：3 个并行 agent 分域深读手册子页（Baking/内容管理、Entities Graphics、编程模型）
-- 新增综述页：25_DOTS技术栈/【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档.md（author:llm，sources 含 15 条官方手册 URL，互链 6 篇既有笔记）
+- 新增综述页：25_DOTS技术栈/【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档.md（author:llm，sources 含 15 条官方手册 URL，互链 6 篇既有笔记）
 - 定位：补全 [[【教程】ECS架构入门]] 未覆盖的 1.4 量产栈三块拼图——Baking 烘焙管线、SubScene/Entity Scene/内容管理、Entities Graphics 渲染；ECS 基础概念不重复，仅修正 1.4 现代 API（LocalTransform 取代旧 Position、MaterialMeshInfo 取代 RenderMesh）
 - 核心内容：①范式转移（Conversion→Baking、ISystem 默认、LocalTransform+TransformUsageFlags）；②组件类型全表（含 managed/cleanup/enableable/shared）；③ISystem vs SystemBase（据 systems-comparison.html）+ 生命周期；④Baker 工作流 + TransformUsageFlags 取值表 + IBaker vs Baking System；⑤SubScene/SceneSection 流式 + Resolve→Load + SceneSystem API（LoadSubScene 已弃用）+ Content Management；⑥Entities Graphics 定位（非管线，构建于 BatchRendererGroup）/ Requirements（不支持 Built-in RP 与 WebGL，URP 仅 Forward+）/ 渲染 6 阶段 / MaterialMeshInfo+RenderMeshUtility / Companion / Material Overrides / 性能要点 / 限制速查
 - 关键版本事实：**IAspect 在 Entities 1.4 已废弃**（据 aspects-concepts.html），新代码用裸组件查询；Entity Scene 文件格式变更需重建缓存

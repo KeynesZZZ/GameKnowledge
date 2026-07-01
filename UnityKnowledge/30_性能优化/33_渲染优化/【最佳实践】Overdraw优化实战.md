@@ -617,7 +617,7 @@ public class ZPrepassExample : MonoBehaviour
 
 - [[【最佳实践】UI性能优化速查]] - UI性能优化完整指南
 - [[【教程】渲染性能优化]] - 渲染优化基础
-- [[【性能数据】UGUI DrawCall影响因素全面测试]] - DrawCall优化数据
+- [[【笔记】UGUI DrawCall影响因素全面测试]] - DrawCall优化数据
 
 ---
 

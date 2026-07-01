@@ -8,7 +8,7 @@ description: 状态机模型在动画系统中的应用
 unity_version: 2021.3+
 status: 待验证
 validation: 未经测试
-related: ["【设计原理】Animator深度解析", "【最佳实践】Animator状态机最佳实践", "【源码解析】动画事件与回调"]
+related: ["【设计原理】Animator深度解析", "【最佳实践】Animator状态机最佳实践", "【笔记】动画事件与回调"]
 author: llm
 ---
 
@@ -21,7 +21,7 @@ author: llm
 
 系统讲解Animator组件的状态机模型，包括参数类型与控制、状态切换与CrossFade、动画层操作、StateMachineBehaviour自定义行为、根运动处理和动画覆盖控制器等核心机制。
 
-**相关文档**：[[【设计原理】Animator深度解析]]、[[【最佳实践】Animator状态机最佳实践]]、[[【源码解析】动画事件与回调]]、
+**相关文档**：[[【设计原理】Animator深度解析]]、[[【最佳实践】Animator状态机最佳实践]]、[[【笔记】动画事件与回调]]、
 
 ---
 

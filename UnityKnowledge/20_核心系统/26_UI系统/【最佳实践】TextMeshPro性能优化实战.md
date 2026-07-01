@@ -8,7 +8,7 @@ description: TextMeshPro性能优化实战指南
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: ["【设计原理】UGUI合批机制深度解析", "【性能数据】UGUI DrawCall影响因素全面测试", "【踩坑记录】UGUI常见性能陷阱与根因分析"]
+related: ["【设计原理】UGUI合批机制深度解析", "【笔记】UGUI DrawCall影响因素全面测试", "【踩坑】UGUI常见性能陷阱与根因分析"]
 author: llm
 ---
 
@@ -20,7 +20,7 @@ author: llm
 
 总结TextMeshPro的性能优化实战经验，涵盖字体图集管理策略、Mesh生成优化、动态文本GC零分配方案、文字缓存池等关键技术。
 
-**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【性能数据】UGUI DrawCall影响因素全面测试]]、[[【踩坑记录】UGUI常见性能陷阱与根因分析]]
+**相关文档**：[[【设计原理】UGUI合批机制深度解析]]、[[【笔记】UGUI DrawCall影响因素全面测试]]、[[【踩坑】UGUI常见性能陷阱与根因分析]]
 
 ---
 
@@ -1037,9 +1037,9 @@ public class OptimizedChatSystem : MonoBehaviour
 ## 相关链接
 
 - [[【设计原理】UGUI合批机制深度解析]]
-- [[【性能数据】UGUI DrawCall影响因素全面测试]]
-- [[【源码解析】Unity事件系统实现机制]]
-- [[【踩坑记录】UGUI常见性能陷阱与根因分析]]
+- [[【笔记】UGUI DrawCall影响因素全面测试]]
+- [[【笔记】Unity事件系统实现机制]]
+- [[【踩坑】UGUI常见性能陷阱与根因分析]]
 - [[UI系统专题索引]]
 
 ---

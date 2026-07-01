@@ -9,12 +9,12 @@ unity_version: 2022.3 LTS+ / Unity 6
 status: 待验证
 author: llm
 sources:
-  - "[[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]]"
+  - "[[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]]"
   - "[[【教程】ECS架构入门]]"
   - "[[【设计原理】ECS为什么快]]"
   - https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/index.html
   - https://docs.unity3d.com/Packages/com.unity.entities.graphics@1.4/manual/companion-components.html
-related: ["[[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]]", "[[【教程】ECS架构入门]]", "[[【设计原理】ECS为什么快]]", "[[【实战案例】10w单位渲染与动画最小Demo]]", "[[DOTS专题索引]]"]
+related: ["[[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]]", "[[【教程】ECS架构入门]]", "[[【设计原理】ECS为什么快]]", "[[【实战案例】10w单位渲染与动画最小Demo]]", "[[DOTS专题索引]]"]
 ---
 
 # 【笔记】ECS 与 GameObject 通信
@@ -372,7 +372,7 @@ public class KillFeedUI : MonoBehaviour
 
 ## ⑤ Companion Components：GameObject 与 Entity 共存
 
-Unity 1.4 Baking 管线支持把**不适合纯数据化的组件**保留为 Companion。详见 [[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]] 的 Companion Components 章节。
+Unity 1.4 Baking 管线支持把**不适合纯数据化的组件**保留为 Companion。详见 [[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]] 的 Companion Components 章节。
 
 ### 适用场景
 
@@ -414,7 +414,7 @@ public partial class DayNightSystem : SystemBase
 
 ## ⑥ Baking 管线：编辑期 GameObject → Entity
 
-Baking 是 GameObject → Entity 的**一次性桥梁**——在编辑器/SubScene 加载时完成转换，运行时零开销。详见 [[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]] 的 Baking 章节。
+Baking 是 GameObject → Entity 的**一次性桥梁**——在编辑器/SubScene 加载时完成转换，运行时零开销。详见 [[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]] 的 Baking 章节。
 
 ```csharp
 using Unity.Entities;
@@ -530,7 +530,7 @@ public class EnemyBaker : Baker<EnemyAuthoring>
 
 ## 相关链接
 
-- [[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]] — Baking 管线 / Companion Components / 托管组件
+- [[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]] — Baking 管线 / Companion Components / 托管组件
 - [[【教程】ECS架构入门]] — Entity / Component / System 基础
 - [[【设计原理】ECS为什么快]] — Chunk 内存模型 / 混合架构建议
 - [[【笔记】大规模技能特效方案]] — VFX Graph（托管组件）与 ECS 桥接示例

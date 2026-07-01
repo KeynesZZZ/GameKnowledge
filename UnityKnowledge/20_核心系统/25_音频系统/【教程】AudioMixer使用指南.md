@@ -7,7 +7,7 @@ updated: "2026-05-29 19:20"
 description: 介绍 AudioMixer 的分组方式、参数暴露、音量控制和场景化使用方式。
 status: 草稿
 validation: 未经测试
-related: ["【系统架构】音频系统", "【最佳实践】音频资源管理与加载策略", "【性能数据】AudioSource数量与性能影响"]
+related: ["【系统架构】音频系统", "【最佳实践】音频资源管理与加载策略", "【笔记】AudioSource数量与性能影响"]
 author: llm
 ---
 
@@ -57,5 +57,5 @@ author: llm
 
 - [[【系统架构】音频系统]]
 - [[【最佳实践】音频资源管理与加载策略]]
-- [[【性能数据】AudioSource数量与性能影响]]
+- [[【笔记】AudioSource数量与性能影响]]
 - [[音频系统专题索引]]

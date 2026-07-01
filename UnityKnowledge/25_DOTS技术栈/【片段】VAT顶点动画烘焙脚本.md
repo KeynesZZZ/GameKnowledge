@@ -11,7 +11,7 @@ author: llm
 sources:
   - "[[【笔记】大规模单位动画方案]]"
   - "[[【笔记】同屏大规模单位渲染方案]]"
-  - "[[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]]"
+  - "[[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]]"
 related: ["[[【笔记】大规模单位动画方案]]", "[[【笔记】同屏大规模单位渲染方案]]", "[[【笔记】大规模单位AI决策与寻路]]", "[[【实战案例】10w单位渲染与动画最小Demo]]", "[[DOTS专题索引]]"]
 ---
 
@@ -256,4 +256,4 @@ Varyings Vert(Attributes IN)
 
 ## 相关链接
 
-- [[【笔记】大规模单位动画方案]] · [[【实战案例】10w单位渲染与动画最小Demo]] · [[【综述】Entities 1.4 与 Entities Graphics 1.4 官方文档]]
+- [[【笔记】大规模单位动画方案]] · [[【实战案例】10w单位渲染与动画最小Demo]] · [[【笔记】Entities 1.4 与 Entities Graphics 1.4 官方文档]]

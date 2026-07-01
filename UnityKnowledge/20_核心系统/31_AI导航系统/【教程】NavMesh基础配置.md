@@ -8,7 +8,7 @@ description: NavMesh导航系统基础配置教程
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: ["【教程】AI行为树实现", "【设计原理】状态机AI设计", "【性能数据】寻路算法对比", "AI导航系统专题索引"]
+related: ["【教程】AI行为树实现", "【设计原理】状态机AI设计", "【笔记】寻路算法对比", "AI导航系统专题索引"]
 author: llm
 ---
 
@@ -243,7 +243,7 @@ public class OptimizedPathfinding : MonoBehaviour
 
 - [AI行为树实现](./【教程】AI行为树实现.md)
 - [[【设计原理】状态机AI设计]]
-- [[【性能数据】寻路算法对比]]
+- [[【笔记】寻路算法对比]]
 - [[AI导航系统专题索引]]
 
 ---

@@ -203,7 +203,7 @@ output.SetSourcePlayable(mixer);
 
 ## 五、程序化动画：AnimationScriptPlayable + IAnimationJob
 
-Playable 的**杀手锏**——在多线程 Job 里写自定义动画逻辑（IK、惯性混合、布娃娃辅助、骨骼修正……）。详见 [[【源码解析】IK系统实现]]。
+Playable 的**杀手锏**——在多线程 Job 里写自定义动画逻辑（IK、惯性混合、布娃娃辅助、骨骼修正……）。详见 [[【笔记】IK系统实现]]。
 
 ```csharp
 using UnityEngine;
@@ -288,5 +288,5 @@ public void ProcessAnimation(AnimationStream stream)
 - [[【设计原理】Animator深度解析]] —— Animator 内部机制（Playable 的上层封装）
 - [[【设计原理】Animator状态机]] —— 状态机模型与 Playable 的取舍
 - [[【设计原理】混合树与动画混合]] —— BlendTree 混合原理，对照 Playable 手动混合
-- [[【源码解析】IK系统实现]] —— IAnimationJob 的典型应用场景
+- [[【笔记】IK系统实现]] —— IAnimationJob 的典型应用场景
 - [[动画系统专题索引]]

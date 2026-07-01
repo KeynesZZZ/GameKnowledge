@@ -8,7 +8,7 @@ description: Animator状态机设计与优化最佳实践
 unity_version: 2021.3+
 status: 待验证
 validation: Demo验证
-related: ["【设计原理】Animator状态机", "【设计原理】Animator深度解析", "【源码解析】动画事件与回调"]
+related: ["【设计原理】Animator状态机", "【设计原理】Animator深度解析", "【笔记】动画事件与回调"]
 author: llm
 ---
 
@@ -20,7 +20,7 @@ author: llm
 
 总结Animator状态机在参数优化（Hash缓存）、状态检测、层级管理、GPU Skinning等方面的最佳实践和常见模式，帮助开发者写出高效且可维护的动画控制代码。
 
-**相关文档**：[[【设计原理】Animator状态机]]、[[【设计原理】Animator深度解析]]、[[【源码解析】动画事件与回调]]
+**相关文档**：[[【设计原理】Animator状态机]]、[[【设计原理】Animator深度解析]]、[[【笔记】动画事件与回调]]
 
 ---
 
@@ -28,7 +28,7 @@ author: llm
 
 - [[【设计原理】Animator状态机]]
 - [[【设计原理】Animator深度解析]]
-- [[【源码解析】动画事件与回调]]
+- [[【笔记】动画事件与回调]]
 
 ---
 
